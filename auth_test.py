@@ -5,7 +5,23 @@ import pickle
 import os
 
 # Scopes define what data you can access
-SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+'''
+Drive: 
+    1. See all your Google Docs documents
+
+Gmail: 
+    1. View your email messages and settings
+    2. See and edit your email labels
+
+Photos: 
+    1. See, upload, and organize items in your Google Photos library
+'''
+
+SCOPES = ['https://www.googleapis.com/auth/drive.readonly', 
+          'https://www.googleapis.com/auth/gmail.readonly',
+          'https://www.googleapis.com/auth/photoslibrary'
+          ]
+
 
 def authenticate():
     creds = None
