@@ -1,0 +1,979 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:a05:6000:43d5:b0:43b:5bb4:d91 with SMTP id 21csp175996wrf;
+        Thu, 19 Mar 2026 03:17:10 -0700 (PDT)
+X-Received: by 2002:a05:620a:1726:b0:8c7:1119:2994 with SMTP id af79cd13be357-8cfad38d52amr885207285a.64.1773915430178;
+        Thu, 19 Mar 2026 03:17:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773915430; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MYAXwV8jOGsWM4v+XjkkGimGS28ZFQp9Ld+yX0uuXm/PEZ4TrW/3m5N9Ik9MFc4TNa
+         qAHr9PJ7mQC1ovpiAS62hQsE9HtsstA387sPfyiKXS1l2ve/m8Yd0JAlTIgys/o4iRIX
+         sHLYolRsZ/DTLjH7iR8gK4u8Las1NDuneSV/q6ovnHHW9BOm/aK4AQtEU+kVzrXNUhD6
+         GkOWpgforBFXqdzyC3oh6/aJ2PQYSbI+iNKCeD0uPdaqHFFf1XVtiSJxMshC4qNf7fAr
+         EBpN8Y/bT4vF33ui3rbSzBu6SEV2Rwh8DXoOt7/RvmbWyyKQgIW5zAwZzlh86EAaWXTW
+         VWzQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:to:from:subject
+         :mime-version:date:dkim-signature:dkim-signature;
+        bh=2neP8iusHUtb01slWqbTHljIUG8cryP5l7QGlkaoV8M=;
+        fh=gYIh15b8nGBadAT/ysZc0l9lwLnBlxCACkFrvbnfWaw=;
+        b=H99LWW05GBR1RRcAA1NL+8MvyvJ5OsFigYUwpg8ns3K0X27+CRwidPm/44lgh8TgQL
+         D3YM9wYeyCHCGZND3t8cXNLnSSiYsgYjCevEcirCvmmec+rEmWuJtBh44REiX7WsgdlW
+         fZYT/1gqriHtl18qWRkWISCmjZD5RjAG0YBUhLq1R9LZvPN59m94At9Nd4U9RdNorni0
+         Y4KFxzmp1ey/mUd4lDWkFSOq/7IVk8jUevgJ8shnHyf1EsRDr9gxD32Ob4HrIhooDaP6
+         DHpFNedcA87fvlzuP/HX1B+Yn2L9vYVWfzZOgDb0fOAGE0KasjKKCVnTy3/ob9GNuk7E
+         KKqw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio78870.mobbin.com header.s=mx header.b=BVfOXOa3;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=NruoxQ2N;
+       spf=pass (google.com: domain of postmaster@cio78870.mobbin.com designates 159.112.243.18 as permitted sender) smtp.mailfrom=postmaster@cio78870.mobbin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mobbin.com
+Return-Path: <postmaster@cio78870.mobbin.com>
+Received: from v518.v5be21903.use4.send.mailgun.net (v518.v5be21903.use4.send.mailgun.net. [159.112.243.18])
+        by mx.google.com with UTF8SMTPS id af79cd13be357-8cfad24e853si629857985a.161.2026.03.19.03.17.09
+        for <jasmind009@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 19 Mar 2026 03:17:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of postmaster@cio78870.mobbin.com designates 159.112.243.18 as permitted sender) client-ip=159.112.243.18;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio78870.mobbin.com header.s=mx header.b=BVfOXOa3;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=NruoxQ2N;
+       spf=pass (google.com: domain of postmaster@cio78870.mobbin.com designates 159.112.243.18 as permitted sender) smtp.mailfrom=postmaster@cio78870.mobbin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mobbin.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio78870.mobbin.com; q=dns/txt; s=mx; t=1773915429; x=1773922629;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=2neP8iusHUtb01slWqbTHljIUG8cryP5l7QGlkaoV8M=;
+ b=BVfOXOa3F207vAx+AUdazw6XywUaWkl900FUI4ANk9nVgMBRva1Tmd3QLE72dQDVjFmP1sZRG4miH9hS3h5W07+1kKZaE9AFoqtmVCuKnUxKj9MypT2fOl7ztBW4TvmBwUxwCI62ae3wk0UyMIRzsjrvFAtebRCPSj81eirOhBA=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1773915429; x=1773922629;
+ h=Message-Id: List-Unsubscribe-Post: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=2neP8iusHUtb01slWqbTHljIUG8cryP5l7QGlkaoV8M=;
+ b=NruoxQ2NLEoFCKMXD+wDSfeSjGhwd9gGrQAMm3FBSU0mkyvCnze5HMD2LelxSGWjJDNciVTrtZwFTQW2CtFm0kJojvLLotQvsLW36Otca6jxuPPLJHETwNKLhDpr4q/39cRgHlQ1P15NW9dCx9kXwBidU0K8o2PGeP+Vv4sMoTs=
+X-Mailgun-Sid: WyI5ZTIwMiIsImphc21pbmQwMDlAZ21haWwuY29tIiwiMWE0YTdjIl0=
+X-Feedback-Id: postmaster@cio78870.mobbin.com::632bcc002a9e40cca68b7860:mailgun
+Received: by a84ce03bcfcfb062a4c31b09d0d14bdf25c2bd607309f13b33891cf122b222a9 with HTTP
+ id 69bbcd2516bcc70617ec5199; Thu, 19 Mar 2026 10:17:09 GMT
+X-Mailgun-Sending-Ip: 159.112.243.18
+Date: Thu, 19 Mar 2026 10:17:09 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="97ed0a7cbb31d218c0a3e53d3e1b77b48d066f17be3aae12a57a46041260"
+Subject: Web Weekly Drop
+From: Mobbin <newsletter@mobbin.com>
+To: jasmind009@gmail.com
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: false
+X-Report-Abuse-To: badactor@customer.io
+List-Unsubscribe: <mailto:32.MRTVI3JRIFRUIQKOMVHVSTTBJ5MUCR3EIJMXINSYFU3VOM2TKVYE24LKOVWGGUJ5@unsubscribe2.customer.io>,
+ <https://e.customeriomail.com/unsubscribe/dgTm1AcDANeOYNaOYAGdBYt6X-7W3SUpMqjulcQ=>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Mailer: Customer.io (dgTm1AcDANeOYNaOYAGdBYt6X-7W3SUpMqjulcQ=;
+ +https://whatis.customeriomail.com)
+X-Mailgun-Variables: {"email_id": "dgTm1AcDANeOYNaOYAGdBYt6X-7W3SUpMqjulcQ="}
+Message-Id: <20260319101709.fbcb72b4c9870993@cio78870.mobbin.com>
+
+--97ed0a7cbb31d218c0a3e53d3e1b77b48d066f17be3aae12a57a46041260
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+New web apps on Mobbin this week. Featuring Link, Sana AI, and Glassdoor.
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=
+=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=
+=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=
+=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=
+=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF
+
+New web apps on Mobbin this week.
+
+Featuring Link, Sana AI, and Glassdoor.
+
+( https://mobbin.com/apps/link-web-2ebb5225-1688-4cd9-a3f0-91c307ffbd16/da1=
+3a5eb-0a53-4b4a-90c0-de48ac585e13/screens?utm_campaign=3DWeb+Weekly+Drop+%2=
+3347&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_sou=
+rce=3Dcustomer.io )
+Link helps you pay quickly and securely with your preferred payment methods=
+=2E
+
+( https://mobbin.com/apps/sana-ai-web-d64c7169-7bee-42b7-9a8b-bae78ff36f8b/=
+4342798b-0c61-4afa-b57e-b71a543dca40/screens?utm_campaign=3DWeb+Weekly+Drop=
++%23347&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_=
+source=3Dcustomer.io )
+Sana AI is a knowledge assistant for work.
+
+( https://mobbin.com/apps/glassdoor-web-3657e433-ef1d-487b-b7a7-34e54db82b1=
+3/69729182-9db3-4a67-8bdc-626d86c554ee/flows?utm_campaign=3DWeb+Weekly+Drop=
++%23347&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_=
+source=3Dcustomer.io )
+Glassdoor lets you search millions of jobs, salaries and company reviews an=
+d chat anonymously about worklife.
+
+Notion Mail
+
+The inbox that thinks like you ( https://mobbin.com/apps/notion-mail-web-cb=
+8fe271-2c0d-4923-a270-fa419cfd9cc3/f35d6116-6753-49ac-9e39-b6a8ffe05d4f/scr=
+eens?utm_campaign=3DWeb+Weekly+Drop+%23347&utm_content=3DWeb+Weekly+Drop+%2=
+3347&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+
+View on Mobbin ( https://mobbin.com?utm_campaign=3DWeb+Weekly+Drop+%23347&u=
+tm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_source=3D=
+customer.io )
+
+Request apps
+
+Can=E2=80=99t find the app that you=E2=80=99re looking for? Let us know whi=
+ch one and we=E2=80=99ll do our best to add it!
+
+Request app ( https://mobbin.com/request-content?utm_campaign=3DWeb+Weekly+=
+Drop+%23347&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&=
+utm_source=3Dcustomer.io )
+
+Share your feedback
+
+Have any ideas on how we can make Mobbin even better? Let us know, we read =
+everything.
+
+Give feedback ( support@mobbin.com?utm_campaign=3DWeb+Weekly+Drop+%23347&ut=
+m_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_source=3Dc=
+ustomer.io )
+
+Invite friends and earn rewards
+
+Give someone 10% discount on Pro or Team plan and earn rewards from Apple, =
+Aesop & more when they sign up using your unique link.
+
+Available to all Pro members.
+
+Start inviting ( https://mobbin.com?utm_campaign=3DWeb+Weekly+Drop+%23347&u=
+tm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_source=3D=
+customer.io )
+
+( https://mobbin.com?utm_campaign=3DWeb+Weekly+Drop+%23347&utm_content=3DWe=
+b+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+
+Enjoyed this week=E2=80=99s update?
+
+If you have any feedback on Mobbin, drop us a line at
+
+support@mobbin.com ( support@mobbin.com?utm_campaign=3DWeb+Weekly+Drop+%233=
+47&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_sourc=
+e=3Dcustomer.io )
+
+( https://x.com/mobbin?utm_campaign=3DWeb+Weekly+Drop+%23347&utm_content=3D=
+Web+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+( https://www.linkedin.com/company/mobbin/?utm_campaign=3DWeb+Weekly+Drop+%=
+23347&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_so=
+urce=3Dcustomer.io )
+
+Unsubscribe ( https://track.customer.io/manage_subscription_preferences/dgT=
+m1AcDANeOYNaOYAGdBYt6X-7W3SUpMqjulcQ=3D )
+Become an affiliate ( https://tally.so/r/wk9zlo?utm_campaign=3DWeb+Weekly+D=
+rop+%23347&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&u=
+tm_source=3Dcustomer.io )
+Help center ( https://help.mobbin.com?utm_campaign=3DWeb+Weekly+Drop+%23347=
+&utm_content=3DWeb+Weekly+Drop+%23347&utm_medium=3Demail_action&utm_source=
+=3Dcustomer.io )
+
+=C2=A9 Mobbin
+
+2026
+
+=2E All rights reserved
+
+75 Ayer Rajah Crescent, Singapore 139953
+--97ed0a7cbb31d218c0a3e53d3e1b77b48d066f17be3aae12a57a46041260
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html dir=3D"ltr" lang=3D"en"=
+ style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: antiali=
+ased; -moz-osx-font-smoothing: grayscale;"><head>
+    <meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type=
+"/>
+    <meta name=3D"x-apple-disable-message-reformatting"/>
+    <style>
+@media (min-width: 640px) {
+  .sm_mr-24 {
+    margin-right: 24px !important;
+  }
+
+  .sm_mb-0 {
+    margin-bottom: 0px !important;
+  }
+
+  .sm_ml-24 {
+    margin-left: 24px !important;
+  }
+
+  .sm_block {
+    display: block !important;
+  }
+
+  .sm_flex {
+    display: flex !important;
+  }
+
+  .sm_max-w-268px {
+    max-width: 268px !important;
+  }
+}
+@media (min-width: 768px) {
+  .md_block {
+    display: block !important;
+  }
+
+  .md_hidden {
+    display: none !important;
+  }
+}
+</style>
+    <style>
+@font-face {
+  font-family: "Saans";
+  font-style: normal;
+  font-weight: 400 700;
+  mso-font-alt: "sans-serif";
+  src: url(https://storage.googleapis.com/assets.mobbin.com/customer.io/fon=
+ts/MSaansVF.woff2) format("woff2");}
+</style>
+   =20
+  </head>
+  <body style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale;">
+    <!--$-->
+    <!--html-->
+    <!--head-->
+    <!--body-->
+    <table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" align=3D"center" style=3D"font-family: 'Saans', sans-=
+serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale;">
+      <tbody style=3D"font-family: 'Saans', sans-serif; -webkit-font-smooth=
+ing: antialiased; -moz-osx-font-smoothing: grayscale;">
+        <tr style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale;">
+          <td style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoot=
+hing: antialiased; -moz-osx-font-smoothing: grayscale;">
+            <div style=3D"font-family: 'Saans', sans-serif; -webkit-font-sm=
+oothing: antialiased; -moz-osx-font-smoothing: grayscale; display: none; ov=
+erflow: hidden; line-height: 1px; opacity: 0; max-height: 0; max-width: 0;"=
+ data-skip-in-text=3D"true">
+              New web apps on Mobbin this week. Featuring Link, Sana AI, an=
+d Glassdoor.
+              <div style=3D"font-family: 'Saans', sans-serif; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing:
+grayscale;">=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=
+=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=
+=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=
+=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=
+=8F=EF=BB=BF</div>
+            </div>
+            <table align=3D"center" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family: 'Saans=
+', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale; max-width: 560px; margin-right: auto; margin-left: auto; margi=
+n-bottom: 40px; margin-top: 40px;">
+              <tbody style=3D"font-family: 'Saans', sans-serif; -webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                <tr style=3D"font-family: 'Saans', sans-serif; -webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100%;">
+                  <td style=3D"font-family: 'Saans', sans-serif; -webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                    <table align=3D"center" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; margin-bottom: 32px;">
+                      <tbody style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <tr style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                          <td style=3D"font-family: 'Saans', sans-serif; -w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                            <img src=3D"https://storage.googleapis.com/asse=
+ts.mobbin.com/customer.io/2025_04_07_t_09_31_46_592_z--mobbin_logo.png" sty=
+le=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased=
+; -moz-osx-font-smoothing: grayscale; display: block; outline: none; border=
+: none; text-decoration: none; margin-bottom: 40px;" width=3D"42.7"/>
+                            <div class=3D"sm_block" style=3D"font-family: '=
+Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; font-size: 20px; line-height: 28px; letter-spacing: 0; fo=
+nt-weight: 600; color: rgb(17, 17, 17); display: inline;">New web apps on M=
+obbin this week.</div>
+                            <div class=3D"sm_block" style=3D"font-family: '=
+Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoo=
+thing: grayscale; font-size: 20px; line-height: 28px; letter-spacing: 0; fo=
+nt-weight: 440; color: rgb(116, 116, 116); display: inline;">Featuring Link=
+, Sana AI, and Glassdoor.</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table align=3D"center" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; margin-bottom: 32px;">
+                      <tbody style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <tr style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                          <td style=3D"font-family: 'Saans', sans-serif; -w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                            <a href=3D"https://e.customeriomail.com/e/c/eyJ=
+lbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJocm=
+VmIjoiaHR0cHM6Ly9tb2JiaW4uY29tL2FwcHMvbGluay13ZWItMmViYjUyMjUtMTY4OC00Y2Q5L=
+WEzZjAtOTFjMzA3ZmZiZDE2L2RhMTNhNWViLTBhNTMtNGI0YS05MGMwLWRlNDhhYzU4NWUxMy9z=
+Y3JlZW5zP3V0bV9jYW1wYWlnbj1XZWIrV2Vla2x5K0Ryb3ArJTIzMzQ3XHUwMDI2dXRtX2NvbnR=
+lbnQ9V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXH=
+UwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZTZkNDA3MzQ5NjczZDc4Z=
+TYwIiwibGlua19pZCI6MjE0OTd9/e09000831c4b78f2513fb43837e0657a28981b4b9606717=
+6dab749182a84693e" style=3D"font-family: 'Saans', sans-serif; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                              <img class=3D"md_block" src=3D"https://storag=
+e.googleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_11_55_535_z-=
+-web_link.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; display: none; outl=
+ine: 1px solid rgba(0, 0, 0, 0.1); border: none; text-decoration: none; wid=
+th: 100%; border-radius: 16px; outline-offset: -1px;"/>
+                              <img class=3D"md_hidden" src=3D"https://stora=
+ge.googleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_12_05_851_z=
+--mobile_link.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block;=
+ outline: 1px solid rgba(0, 0, 0, 0.1); border: none; text-decoration: none=
+; width: 100%; border-radius: 16px; outline-offset: -1px;"/>
+                            </a>
+                            <p style=3D"font-family: 'Saans', sans-serif; -=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; fon=
+t-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weight: 456;=
+ color: rgb(116, 116, 116); text-decoration-line: none; margin-top: 16px; m=
+argin-bottom: 16px;">Link helps you pay quickly and securely with your pref=
+erred payment methods.</p>
+                            <table align=3D"center" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"f=
+ont-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; margin-bottom: 16px;">
+                              <tbody style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 100%;">
+                                <tr style=3D"font-family: 'Saans', sans-ser=
+if; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; width: 100%;"></tr>
+                              </tbody>
+                            </table>
+                            <a href=3D"https://e.customeriomail.com/e/c/eyJ=
+lbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJocm=
+VmIjoiaHR0cHM6Ly9tb2JiaW4uY29tL2FwcHMvc2FuYS1haS13ZWItZDY0YzcxNjktN2JlZS00M=
+mI3LTlhOGItYmFlNzhmZjM2ZjhiLzQzNDI3OThiLTBjNjEtNGFmYS1iNTdlLWI3MWE1NDNkY2E0=
+MC9zY3JlZW5zP3V0bV9jYW1wYWlnbj1XZWIrV2Vla2x5K0Ryb3ArJTIzMzQ3XHUwMDI2dXRtX2N=
+vbnRlbnQ9V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW=
+9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZTZkNDA3MzQ5NjczZ=
+Dc4ZTYwIiwibGlua19pZCI6MjE0OTh9/54725824bf91d3d2fc1a2fc4793829f0b85a63abef0=
+f52ae91a8e4ac10a86f2c" style=3D"font-family: 'Saans', sans-serif; -webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                              <img class=3D"md_block" src=3D"https://storag=
+e.googleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_12_30_733_z-=
+-web_sana_ai.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale; display: none; o=
+utline: none; border: none; text-decoration: none; width: 100%; border-radi=
+us: 16px;"/>
+                              <img class=3D"md_hidden" src=3D"https://stora=
+ge.googleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_12_38_035_z=
+--mobile_sana_ai.png" style=3D"font-family: 'Saans', sans-serif; -webkit-fo=
+nt-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: blo=
+ck; outline: none; border: none; text-decoration: none; width: 100%; border=
+-radius: 16px;"/>
+                            </a>
+                            <p style=3D"font-family: 'Saans', sans-serif; -=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; fon=
+t-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weight: 456;=
+ color: rgb(116, 116, 116); text-decoration-line: none; margin-top: 16px; m=
+argin-bottom: 16px;">Sana AI is a knowledge assistant for work.</p>
+                            <table align=3D"center" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"f=
+ont-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; margin-bottom: 16px;">
+                              <tbody style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 100%;">
+                                <tr style=3D"font-family: 'Saans', sans-ser=
+if; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; width: 100%;"></tr>
+                              </tbody>
+                            </table>
+                            <a href=3D"https://e.customeriomail.com/e/c/eyJ=
+lbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJocm=
+VmIjoiaHR0cHM6Ly9tb2JiaW4uY29tL2FwcHMvZ2xhc3Nkb29yLXdlYi0zNjU3ZTQzMy1lZjFkL=
+TQ4N2ItYjdhNy0zNGU1NGRiODJiMTMvNjk3MjkxODItOWRiMy00YTY3LThiZGMtNjI2ZDg2YzU1=
+NGVlL2Zsb3dzP3V0bV9jYW1wYWlnbj1XZWIrV2Vla2x5K0Ryb3ArJTIzMzQ3XHUwMDI2dXRtX2N=
+vbnRlbnQ9V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW=
+9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZTZkNDA3MzQ5NjczZ=
+Dc4ZTYwIiwibGlua19pZCI6MjE0OTl9/196aa4dc60fce39bf3e6184b37fbf59b9b73438d269=
+eeee92147baf8fe34c0bf" style=3D"font-family: 'Saans', sans-serif; -webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                              <img class=3D"md_block" src=3D"https://storag=
+e.googleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_13_03_713_z-=
+-web_glassdoor.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: none;=
+ outline: none; border: none; text-decoration: none; width: 100%; border-ra=
+dius: 16px;"/>
+                              <img class=3D"md_hidden" src=3D"https://stora=
+ge.googleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_13_13_438_z=
+--mobile_glassdoor.png" style=3D"font-family: 'Saans', sans-serif; -webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: b=
+lock; outline: none; border: none; text-decoration: none; width: 100%; bord=
+er-radius: 16px;"/>
+                            </a>
+                            <p style=3D"font-family: 'Saans', sans-serif; -=
+webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; fon=
+t-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weight: 456;=
+ color: rgb(116, 116, 116); text-decoration-line: none; margin-top: 16px; m=
+argin-bottom: 16px;">Glassdoor lets you search millions of jobs, salaries a=
+nd company reviews and chat anonymously about worklife.</p>
+                            <table align=3D"center" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"f=
+ont-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; margin-bottom: 16px;">
+                              <tbody style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; width: 100%;">
+                                <tr style=3D"font-family: 'Saans', sans-ser=
+if; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+; width: 100%;"></tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table align=3D"center" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; margin-bottom: 32px;">
+                      <tbody style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <tr style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                          <td style=3D"font-family: 'Saans', sans-serif; -w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                            <a href=3D"https://e.customeriomail.com/e/c/eyJ=
+lbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJocm=
+VmIjoiaHR0cHM6Ly9tb2JiaW4uY29tL2FwcHMvbm90aW9uLW1haWwtd2ViLWNiOGZlMjcxLTJjM=
+GQtNDkyMy1hMjcwLWZhNDE5Y2ZkOWNjMy9mMzVkNjExNi02NzUzLTQ5YWMtOWUzOS1iNmE4ZmZl=
+MDVkNGYvc2NyZWVucz91dG1fY2FtcGFpZ249V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV=
+0bV9jb250ZW50PVdlYitXZWVrbHkrRHJvcCslMjMzNDdcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2=
+FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImU2ZDQwNzM0O=
+TY3M2Q3OGU2MCIsImxpbmtfaWQiOjIxNTAwfQ/3cb13f3bf843d0c6a5c01db005c7114fc6758=
+a308c403dabb1bf8a873eb0044f" style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-=
+decoration-line: none;">
+                              <div style=3D"font-family: 'Saans', sans-seri=
+f; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ display: flex;">
+                                <img height=3D"48" src=3D"https://storage.g=
+oogleapis.com/assets.mobbin.com/customer.io/2026_03_18_t_02_13_37_984_z--no=
+tion_mail.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; out=
+line: 1px solid rgba(0, 0, 0, 0.1); border: none; text-decoration: none; bo=
+rder-radius: 16px; outline-offset: -1px;" width=3D"48"/>
+                                <div style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; margin-bottom: auto; margin-top: auto; margin-left: 12px;">
+                                  <div style=3D"font-family: 'Saans', sans-=
+serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; font-size: 16px; line-height: 24px; letter-spacing: 0.009em; font-weig=
+ht: 600; color: rgb(17, 17, 17);">Notion Mail</div>
+                                  <div style=3D"font-family: 'Saans', sans-=
+serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; font-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weig=
+ht: 456; color: rgb(116, 116, 116);">The inbox that thinks like you</div>
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <a href=3D"https://e.customeriomail.com/e/c/eyJlbWFpbF9=
+pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJocmVmIjoiaH=
+R0cHM6Ly9tb2JiaW4uY29tP3V0bV9jYW1wYWlnbj1XZWIrV2Vla2x5K0Ryb3ArJTIzMzQ3XHUwM=
+DI2dXRtX2NvbnRlbnQ9V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9tZWRpdW09ZW1h=
+aWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiZTZkNDA=
+3MzQ5NjczZDc4ZTYwIiwibGlua19pZCI6MjY5MX0/81a01a1bc15e4029432b8db73d4b62975a=
+77c82e69f313d04277a030f6ae5673" style=3D"font-family: 'Saans', sans-serif; =
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; li=
+ne-height: 24px; text-decoration: none; display: inline-block; max-width: 1=
+00%; mso-padding-alt: 0px; background-color: rgb(17, 17, 17); border-radius=
+: 9999px; color: rgb(255, 255, 255); width: 100%; padding-bottom: 10px; pad=
+ding-top: 10px; text-align: center; margin-bottom: 64px; font-size: 16px; l=
+etter-spacing: 0.009em; font-weight: 600;" target=3D"_blank">
+                      <span style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <!--[if mso]><i style=3D"mso-font-width: 0%; mso-te=
+xt-raise: 15" hidden></i><![endif]-->
+                      </span>
+                      <span style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; max-wi=
+dth: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; =
+mso-text-raise: 7.5px;">View on Mobbin</span>
+                      <span style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <!--[if mso]><i style=3D"mso-font-width: 0%" hidden=
+>=E2=80=8B</i><![endif]-->
+                      </span>
+                    </a>
+                    <table align=3D"center" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; margin-bottom: 64px;">
+                      <tbody style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <tr style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                          <td style=3D"font-family: 'Saans', sans-serif; -w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                            <div class=3D"sm_flex" style=3D"font-family: 'S=
+aans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot=
+hing: grayscale; display: block;">
+                              <div class=3D"sm_max-w-268px sm_mb-0 sm_mr-24=
+" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; max-width: 335px; margin-bottom:=
+ 32px; margin-right: 0px;">
+                                <img height=3D"20" src=3D"https://storage.g=
+oogleapis.com/assets.mobbin.com/customer.io/2025_06_11_t_10_28_30_926_z--ad=
+d_icon.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale; display: block; outlin=
+e: none; border: none; text-decoration: none; margin-bottom: 8px;" width=3D=
+"20"/>
+                                <div style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; font-size: 16px; line-height: 24px; letter-spacing: 0.009em; font-weight=
+: 600; margin-bottom: 4px;">Request apps</div>
+                                <div style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; font-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weight=
+: 456; color: rgb(116, 116, 116); margin-bottom: 20px;">Can=E2=80=99t find =
+the app that you=E2=80=99re looking for? Let us know which one and we=E2=80=
+=99ll do our best to add it!</div>
+                                <a href=3D"https://e.customeriomail.com/e/c=
+/eyJlbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLC=
+JocmVmIjoiaHR0cHM6Ly9tb2JiaW4uY29tL3JlcXVlc3QtY29udGVudD91dG1fY2FtcGFpZ249V=
+2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9jb250ZW50PVdlYitXZWVrbHkrRHJvcCsl=
+MjMzNDdcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9=
+tZXIuaW8iLCJpbnRlcm5hbCI6ImU2ZDQwNzM0OTY3M2Q3OGU2MCIsImxpbmtfaWQiOjU4MDZ9/8=
+ec47fd377bd94e221c013570f91d5f987f80989da778c26b88402dcd6261578" style=3D"f=
+ont-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; line-height: 20px; text-decoration: none; di=
+splay: inline-block; max-width: 100%; mso-padding-alt: 0px; background-colo=
+r: rgb(240, 240, 240); border-radius: 9999px; color: rgb(17, 17, 17); paddi=
+ng-right: 12px; padding-left: 12px; padding-bottom: 8px; padding-top: 8px; =
+text-align: center; font-size: 14px; letter-spacing: 0.014em; font-weight: =
+600;" target=3D"_blank">
+                                  <span style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale;">
+                                    <!--[if mso]><i style=3D"mso-font-width=
+: 300%; mso-text-raise: 12" hidden>=E2=80=8A=E2=80=8A</i><![endif]-->
+                                  </span>
+                                  <span style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; max-width: 100%; display: inline-block; line-height: 120%; mso-paddin=
+g-alt: 0px; mso-text-raise: 6px;">Request app</span>
+                                  <span style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale;">
+                                    <!--[if mso]><i style=3D"mso-font-width=
+: 300%" hidden>=E2=80=8A=E2=80=8A=E2=80=8B</i><![endif]-->
+                                  </span>
+                                </a>
+                              </div>
+                              <div class=3D"sm_max-w-268px" style=3D"font-f=
+amily: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-f=
+ont-smoothing: grayscale; max-width: 335px;">
+                                <img height=3D"20" src=3D"https://storage.g=
+oogleapis.com/assets.mobbin.com/customer.io/2026_03_09_t_06_12_02_852_z--me=
+ssage.png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothin=
+g: antialiased; -moz-osx-font-smoothing: grayscale; display: block; outline=
+: none; border: none; text-decoration: none; margin-bottom: 8px;" width=3D"=
+20"/>
+                                <div style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; font-size: 16px; line-height: 24px; letter-spacing: 0.009em; font-weight=
+: 600; margin-bottom: 4px;">Share your feedback</div>
+                                <div style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; font-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weight=
+: 456; color: rgb(116, 116, 116); margin-bottom: 20px;">Have any ideas on h=
+ow we can make Mobbin even better? Let us know, we read everything.</div>
+                                <a href=3D"mailto:support@mobbin.com?utm_ca=
+mpaign=3DWeb+Weekly+Drop+%23347&amp;utm_content=3DWeb+Weekly+Drop+%23347&am=
+p;utm_medium=3Demail_action&amp;utm_source=3Dcustomer.io" style=3D"font-fam=
+ily: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-fon=
+t-smoothing: grayscale; line-height: 20px; text-decoration: none; display: =
+inline-block; max-width: 100%; mso-padding-alt: 0px; background-color: rgb(=
+240, 240, 240); border-radius: 9999px; color: rgb(17, 17, 17); padding-righ=
+t: 12px; padding-left: 12px; padding-bottom: 8px; padding-top: 8px; text-al=
+ign: center; font-size: 14px; letter-spacing: 0.014em; font-weight: 600;" t=
+arget=3D"_blank">
+                                  <span style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale;">
+                                    <!--[if mso]><i style=3D"mso-font-width=
+: 300%; mso-text-raise: 12" hidden>=E2=80=8A=E2=80=8A</i><![endif]-->
+                                  </span>
+                                  <span style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale; max-width: 100%; display: inline-block; line-height: 120%; mso-paddin=
+g-alt: 0px; mso-text-raise: 6px;">Give feedback</span>
+                                  <span style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale;">
+                                    <!--[if mso]><i style=3D"mso-font-width=
+: 300%" hidden>=E2=80=8A=E2=80=8A=E2=80=8B</i><![endif]-->
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr style=3D"font-family: 'Saans', sans-serif; -webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100=
+%; border: none; border-top: 1px solid #eaeaea; margin-bottom: 64px; border=
+-color: rgba(64, 64, 64, 0.06);"/>
+                    <table align=3D"center" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; margin-bottom: 64px;">
+                      <tbody style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <tr style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                          <td style=3D"font-family: 'Saans', sans-serif; -w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                            <div style=3D"font-family: 'Saans', sans-serif;=
+ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                              <div style=3D"font-family: 'Saans', sans-seri=
+f; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ margin-bottom: 32px; padding: 12px; border-radius: 16px; background-color:=
+ rgb(253, 253, 253); outline: 1px solid rgba(0, 0, 0, 0.1); outline-offset:=
+ -1px;">
+                                <img src=3D"https://storage.googleapis.com/=
+assets.mobbin.com/customer.io/2024_11_25_t_09_13_04_044_z--mobbin_referral.=
+png" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: ant=
+ialiased; -moz-osx-font-smoothing: grayscale; display: block; outline: none=
+; border: none; text-decoration: none; border-radius: 12px; margin: 48px au=
+to;" width=3D"320"/>
+                              </div>
+                              <div style=3D"font-family: 'Saans', sans-seri=
+f; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ font-size: 20px; line-height: 28px; letter-spacing: 0; font-weight: 600; m=
+argin-bottom: 8px;">Invite friends and earn rewards</div>
+                              <div style=3D"font-family: 'Saans', sans-seri=
+f; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ font-size: 16px; line-height: 24px; letter-spacing: 0.009em; font-weight: =
+456; color: rgb(116, 116, 116); margin-bottom: 32px;">
+                                <p style=3D"font-family: 'Saans', sans-seri=
+f; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ margin-top: 0; margin-bottom: 16px;">Give someone 10% discount on Pro or T=
+eam plan and earn rewards from Apple, Aesop &amp; more when they sign up us=
+ing your unique link.</p>
+                                <p style=3D"font-family: 'Saans', sans-seri=
+f; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ margin: 0;">Available to all Pro members.</p>
+                              </div>
+                              <a href=3D"https://e.customeriomail.com/e/c/e=
+yJlbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJo=
+cmVmIjoiaHR0cHM6Ly9tb2JiaW4uY29tP3V0bV9jYW1wYWlnbj1XZWIrV2Vla2x5K0Ryb3ArJTI=
+zMzQ3XHUwMDI2dXRtX2NvbnRlbnQ9V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9tZW=
+RpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsI=
+joiZTZkNDA3MzQ5NjczZDc4ZTYwIiwibGlua19pZCI6MjY5MX0/81a01a1bc15e4029432b8db7=
+3d4b62975a77c82e69f313d04277a030f6ae5673" style=3D"font-family: 'Saans', sa=
+ns-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gra=
+yscale; line-height: 24px; text-decoration: none; display: inline-block; ma=
+x-width: 100%; mso-padding-alt: 0px; background-color: rgb(240, 240, 240); =
+border-radius: 9999px; color: rgb(17, 17, 17); width: 100%; padding-bottom:=
+ 10px; padding-top: 10px; text-align: center; font-size: 16px; letter-spaci=
+ng: 0.009em; font-weight: 600;" target=3D"_blank">
+                                <span style=3D"font-family: 'Saans', sans-s=
+erif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le;">
+                                  <!--[if mso]><i style=3D"mso-font-width: =
+0%; mso-text-raise: 15" hidden></i><![endif]-->
+                                </span>
+                                <span style=3D"font-family: 'Saans', sans-s=
+erif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le; max-width: 100%; display: inline-block; line-height: 120%; mso-padding-=
+alt: 0px; mso-text-raise: 7.5px;">Start inviting</span>
+                                <span style=3D"font-family: 'Saans', sans-s=
+erif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le;">
+                                  <!--[if mso]><i style=3D"mso-font-width: =
+0%" hidden>=E2=80=8B</i><![endif]-->
+                                </span>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <hr style=3D"font-family: 'Saans', sans-serif; -webkit-=
+font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: 100=
+%; border: none; border-top: 1px solid #eaeaea; margin-bottom: 64px; border=
+-color: rgba(64, 64, 64, 0.06);"/>
+                    <table align=3D"center" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale;">
+                      <tbody style=3D"font-family: 'Saans', sans-serif; -we=
+bkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                        <tr style=3D"font-family: 'Saans', sans-serif; -web=
+kit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                          <td style=3D"font-family: 'Saans', sans-serif; -w=
+ebkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+                            <a href=3D"https://e.customeriomail.com/e/c/eyJ=
+lbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJocm=
+VmIjoiaHR0cHM6Ly9tb2JiaW4uY29tP3V0bV9jYW1wYWlnbj1XZWIrV2Vla2x5K0Ryb3ArJTIzM=
+zQ3XHUwMDI2dXRtX2NvbnRlbnQ9V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9tZWRp=
+dW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjo=
+iZTZkNDA3MzQ5NjczZDc4ZTYwIiwibGlua19pZCI6MjY5MX0/81a01a1bc15e4029432b8db73d=
+4b62975a77c82e69f313d04277a030f6ae5673" style=3D"font-family: 'Saans', sans=
+-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grays=
+cale;"><img src=3D"https://storage.googleapis.com/assets.mobbin.com/custome=
+r.io/2025_06_19_t_09_32_33_674_z--logop_wordmark.png" style=3D"font-family:=
+ 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; display: block; outline: none; border: none; text-decor=
+ation: none; margin-bottom: 32px;" width=3D"90"/></a>
+                            <div style=3D"font-family: 'Saans', sans-serif;=
+ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; f=
+ont-size: 14px; line-height: 20px; letter-spacing: 0.014em; font-weight: 45=
+6; color: rgb(116, 116, 116); margin-bottom: 26px;">
+                              Enjoyed this week=E2=80=99s update?
+                              <br style=3D"font-family: 'Saans', sans-serif=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+/>
+                              If you have any feedback on Mobbin, drop us a=
+ line at
+                              <!-- -->
+                              <br style=3D"font-family: 'Saans', sans-serif=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+/>
+                              <a href=3D"mailto:support@mobbin.com?utm_camp=
+aign=3DWeb+Weekly+Drop+%23347&amp;utm_content=3DWeb+Weekly+Drop+%23347&amp;=
+utm_medium=3Demail_action&amp;utm_source=3Dcustomer.io" style=3D"font-famil=
+y: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale; color: rgb(116, 116, 116);">support@mobbin.com</a>
+                            </div>
+                            <div style=3D"font-family: 'Saans', sans-serif;=
+ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; d=
+isplay: flex; margin-bottom: 32px;">
+                              <a href=3D"https://e.customeriomail.com/e/c/e=
+yJlbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJo=
+cmVmIjoiaHR0cHM6Ly94LmNvbS9tb2JiaW4_dXRtX2NhbXBhaWduPVdlYitXZWVrbHkrRHJvcCs=
+lMjMzNDdcdTAwMjZ1dG1fY29udGVudD1XZWIrV2Vla2x5K0Ryb3ArJTIzMzQ3XHUwMDI2dXRtX2=
+1lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuY=
+WwiOiJlNmQ0MDczNDk2NzNkNzhlNjAiLCJsaW5rX2lkIjo5MTEzfQ/5ccc82864c4d9fd584036=
+f6e632082507dcb496b8477a5da730ed7dfabc712e4" style=3D"font-family: 'Saans',=
+ sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: =
+grayscale;"><img src=3D"https://storage.googleapis.com/assets.mobbin.com/cu=
+stomer.io/2023-12-14T09:22:56.710Z--x_logo.png" style=3D"font-family: 'Saan=
+s', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothin=
+g: grayscale; display: block; outline: none; border: none; text-decoration:=
+ none;" width=3D"16"/></a>
+                              <a href=3D"https://e.customeriomail.com/e/c/e=
+yJlbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0iLCJo=
+cmVmIjoiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvbW9iYmluLz91dG1fY2FtcGF=
+pZ249V2ViK1dlZWtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9jb250ZW50PVdlYitXZWVrbHkrRH=
+JvcCslMjMzNDdcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y=
+3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6ImU2ZDQwNzM0OTY3M2Q3OGU2MCIsImxpbmtfaWQiOjM4=
+Mzl9/8199f6a0356bb90a998eaed9af1202add388aea95d4ad1a2e23294d6f3c1fd7c" styl=
+e=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased;=
+ -moz-osx-font-smoothing: grayscale;"><img src=3D"https://storage.googleapi=
+s.com/assets.mobbin.com/customer.io/linkedin_logo.png" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; display: block; outline: none; border: none; text-deco=
+ration: none; margin-left: 16px;" width=3D"16"/></a>
+                            </div>
+                            <table align=3D"center" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"f=
+ont-family: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-=
+osx-font-smoothing: grayscale; margin-bottom: 32px;">
+                              <tbody style=3D"font-family: 'Saans', sans-se=
+rif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e;">
+                                <tr style=3D"font-family: 'Saans', sans-ser=
+if; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale=
+;">
+                                  <td style=3D"font-family: 'Saans', sans-s=
+erif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysca=
+le;">
+                                    <a href=3D"https://e.customeriomail.com=
+/manage_subscription_preferences/dgTm1AcDANeOYNaOYAGdBYt6X-7W3SUpMqjulcQ=3D=
+" style=3D"font-family: 'Saans', sans-serif; -webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; font-size: 12px; line-height: 16=
+px; letter-spacing: 0.017em; font-weight: 456; color: rgb(116, 116, 116); m=
+argin-right: 16px;">Unsubscribe</a>
+                                    <a href=3D"https://e.customeriomail.com=
+/e/c/eyJlbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT=
+0iLCJocmVmIjoiaHR0cHM6Ly90YWxseS5zby9yL3drOXpsbz91dG1fY2FtcGFpZ249V2ViK1dlZ=
+WtseStEcm9wKyUyMzM0N1x1MDAyNnV0bV9jb250ZW50PVdlYitXZWVrbHkrRHJvcCslMjMzNDdc=
+dTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8=
+iLCJpbnRlcm5hbCI6ImU2ZDQwNzM0OTY3M2Q3OGU2MCIsImxpbmtfaWQiOjI2MTN9/1b5438e7d=
+1d03179ffa5bb44a522bbcdecf294c2cb9256f564352bbdec74d18f" style=3D"font-fami=
+ly: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font=
+-smoothing: grayscale; font-size: 12px; line-height: 16px; letter-spacing: =
+0.017em; font-weight: 456; color: rgb(116, 116, 116); margin-right: 16px;">=
+Become an affiliate</a>
+                                    <a href=3D"https://e.customeriomail.com=
+/e/c/eyJlbWFpbF9pZCI6ImRnVG0xQWNEQU5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT=
+0iLCJocmVmIjoiaHR0cHM6Ly9oZWxwLm1vYmJpbi5jb20_dXRtX2NhbXBhaWduPVdlYitXZWVrb=
+HkrRHJvcCslMjMzNDdcdTAwMjZ1dG1fY29udGVudD1XZWIrV2Vla2x5K0Ryb3ArJTIzMzQ3XHUw=
+MDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiw=
+iaW50ZXJuYWwiOiJlNmQ0MDczNDk2NzNkNzhlNjAiLCJsaW5rX2lkIjo1ODEwfQ/63651e84d5f=
+1ccdc445d4fdde90215920f3bb46f1bd31102e72419c9dd463a8d" style=3D"font-family=
+: 'Saans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-s=
+moothing: grayscale; font-size: 12px; line-height: 16px; letter-spacing: 0.=
+017em; font-weight: 456; color: rgb(116, 116, 116);">Help center</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div style=3D"font-family: 'Saans', sans-serif;=
+ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; f=
+ont-size: 12px; line-height: 16px; letter-spacing: 0.017em; font-weight: 45=
+6; color: rgb(116, 116, 116);">
+                              =C2=A9 Mobbin
+                              <!-- -->
+                              <!-- -->
+                              2026
+                              <!-- -->
+                              . All rights reserved
+                              <br style=3D"font-family: 'Saans', sans-serif=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+/>
+                              75 Ayer Rajah Crescent, Singapore 139953
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--/$-->
+ =20
+
+
+<img src=3D"https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6ImRnVG0xQWNEQU=
+5lT1lOYU9ZQUdkQll0NlgtN1czU1VwTXFqdWxjUT0ifQ=3D=3D" style=3D"height: 1px !i=
+mportant; max-height: 1px !important; max-width: 1px !important; width: 1px=
+ !important; display: none !important;" alt=3D""/></body></html>
+--97ed0a7cbb31d218c0a3e53d3e1b77b48d066f17be3aae12a57a46041260--

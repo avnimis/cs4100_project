@@ -1,0 +1,739 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:a05:6000:43d5:b0:43b:5bb4:d91 with SMTP id 21csp20383wrf;
+        Wed, 18 Mar 2026 17:26:45 -0700 (PDT)
+X-Received: by 2002:a17:90b:4cc9:b0:359:fe72:3554 with SMTP id 98e67ed59e1d1-35bb9e6f440mr4865725a91.5.1773880005054;
+        Wed, 18 Mar 2026 17:26:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773880005; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BoCUd2YK8p01DLBRIORv6dmzS216xs0pFsOvp4GO8kthZrt+HFOlv+clj5weKSCEib
+         hoEgv6xqbdwGmK9Fc+4C6T90bIrUbiLpCJuqhDbjQrQOwETHC+bVpsCg8+ZYvN6F/oUG
+         LsEhn5rSDDt3Sn4cw2m8LuLA5eY2uQdJeIHoPZLjk/hYHD3G8OSYHiAoMBcV97bMLZ03
+         3SRs4T9CabQ2oXsdDfhte+g0rcbzwLHgI+xeN0gAMVDj54yfLZ4sIDko+TxZscTcIpPJ
+         4DOiYko2T1A4mxl1cFqez9cENMQ4rRK9iKvLgma8IsHDw2lWwaCq3jE1MijJ402vdSsL
+         GNlw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:list-unsubscribe:message-id
+         :content-transfer-encoding:mime-version:subject:to:from:date
+         :dkim-signature:dkim-signature;
+        bh=z2fh21D6TKQ4XHDILNgri/UJR4eI+HvkzZuqTmKqNBY=;
+        fh=gYIh15b8nGBadAT/ysZc0l9lwLnBlxCACkFrvbnfWaw=;
+        b=UbEDIwUHAQqKaORhWvNPW82dfxKgYYppTIPd0x/aLSiCPmeFNGqBhOxVuXxievocTO
+         7XTujvyOipyi4UnjcNbDenFelTG1K0EObIMcP/jDzWpAhFyFr6TkHmM1QrBTjB5b+Tgx
+         a1YPgPAXqhXGgdpWpe1sSN1Veeb/jZVUvHPDeuflyGP/6SvPIOctbsYNTpjEJi6gCGML
+         CdaWJLLbaEa0DSoLy/LEwiE453jQoXAVsGw06Rik2RjClVuSmiqTLKLChOfEBIWnKkFA
+         a/5Zb5njECfHL6tCzrhOZ6RQP4acb+PVKFGGL8HqzFMoJc+miQt/UBzG56edWTx7gx3P
+         k8fA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jobright.ai header.s=7zic2cdsxcbxgkue4kbggitjw3yybgmj header.b=FCL5viob;
+       dkim=pass header.i=@amazonses.com header.s=hsbnp7p3ensaochzwyq5wwmceodymuwv header.b=dYs6570q;
+       spf=pass (google.com: domain of 0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@msg.jobright.ai designates 54.240.27.203 as permitted sender) smtp.mailfrom=0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@msg.jobright.ai;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jobright.ai
+Return-Path: <0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@msg.jobright.ai>
+Received: from a27-203.smtp-out.us-west-2.amazonses.com (a27-203.smtp-out.us-west-2.amazonses.com. [54.240.27.203])
+        by mx.google.com with ESMTPS id 98e67ed59e1d1-35bc61320efsi2036288a91.12.2026.03.18.17.26.44
+        for <jasmind009@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 18 Mar 2026 17:26:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@msg.jobright.ai designates 54.240.27.203 as permitted sender) client-ip=54.240.27.203;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jobright.ai header.s=7zic2cdsxcbxgkue4kbggitjw3yybgmj header.b=FCL5viob;
+       dkim=pass header.i=@amazonses.com header.s=hsbnp7p3ensaochzwyq5wwmceodymuwv header.b=dYs6570q;
+       spf=pass (google.com: domain of 0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@msg.jobright.ai designates 54.240.27.203 as permitted sender) smtp.mailfrom=0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@msg.jobright.ai;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jobright.ai
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=7zic2cdsxcbxgkue4kbggitjw3yybgmj; d=jobright.ai; t=1773880004;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:List-Unsubscribe:List-Unsubscribe-Post;
+	bh=Br28PfLT1WucOKwtytI/5NgbVUptPzr7XBKyJKu/sgk=;
+	b=FCL5viobwuItrdUONETjoWWkZ3WBk/U0+CLW+e9g1cKsYwStadpAbNO5T7ia7GTh
+	SM2gMaRqIQKQ2/qkGM2wOv9c/IXHawYDUMxF0EoET/t4CMgs6eBaz3P0Rf1jQ9xfOXX
+	gJBR2iwyFOKXnsL3MCajW6f8TW3IXm08VSxjiwLnSLMUkYYXVRGgd3CdERb0kiW/Om2
+	4BvtH935AQ74iWiW9nRshea/Wkl2hVrOdX5s3fgDjGJVaLQz4CNEPMoBKsqp3ESsd3V
+	RBjvuSGOYviylKcSD1rnF9Y0cSJUDUznTWyhpS2hvyEGTmAprjnnhgaW0bFgCEb+H0G
+	fYV1pmYnMA==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1773880004;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:List-Unsubscribe:List-Unsubscribe-Post:Feedback-ID;
+	bh=Br28PfLT1WucOKwtytI/5NgbVUptPzr7XBKyJKu/sgk=;
+	b=dYs6570qyuyabGH26nJAujIxujSEotPe51+2JBNpC/y3hzo283NwrpVl8SkdMSEk
+	+U5XDOGAuwK+jgKFBCvKnt1wZHbL69XTvIejnSAKAMIwigC/ATO89BitonDPcr0Auwz
+	MRnGzzujEj27EuZAe4OxtvfJlrANdfCusHa9/fII=
+Date: Thu, 19 Mar 2026 00:26:44 +0000
+From: Jobright Job Alert <noreply@jobright.ai>
+To: jasmind009@gmail.com
+Subject: Slack just posted a 77% match Summer 2026 Intern - Undergrad User
+ Research - Slack role just now
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@us-west-2.amazonses.com>
+List-Unsubscribe: <mailto:unsubscribe-0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000@us-west-2.amazonses.com?subject=https://o.us-west-2.user-subscription.com/oc/a6b0edf8-c4a4-458b-9614-d14e91feefa1/88b8707f-25df-46db-86d0-9dbbbbb3409a/0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000>, <https://o.us-west-2.user-subscription.com/oc/a6b0edf8-c4a4-458b-9614-d14e91feefa1/88b8707f-25df-46db-86d0-9dbbbbb3409a/0101019d037ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: ::1.us-west-2.4C39RMpGyq0ZwbCdBQ82E+pKNMldtYA3haz0+lbG2Hk=:AmazonSES
+X-SES-Outgoing: 2026.03.19-54.240.27.203
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html dir=3D"ltr" lang=3D"en"=
+><head><meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-T=
+ype"/><meta name=3D"x-apple-disable-message-reformatting"/><style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      mso-font-alt: 'Helvetica';
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQt=
+MwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+    }
+
+    * {
+      font-family: 'Inter', Helvetica;
+    }
+  </style><style>
+        @media (min-width: 1080px) {
+          .container {
+            padding: 48px !important;
+            border: 12px solid var(--green, #00F0A0) !important;
+            border-radius: 32px !important;
+          }
+
+          #header-section {
+          width: 600px !important;
+          }
+
+          #header-logo {
+          width: 128px !important;
+          height: 32px !important;
+          }
+
+          #alert-section {
+          padding: 16px !important;
+          margin-bottom: 8px !important;
+          width: 600px !important;
+          }
+
+          .alert-section-icon-column {
+          width: 40px !important;
+          }
+
+          #alert-section-icon {
+          width: 40px !important;
+          height: 40px !important;
+          }
+
+          #alert-section-title {
+          font-size: 20px !important;
+          line-height: 20px !important;
+          }
+
+          #alert-section-description {
+          font-size: 16px !important;
+          line-height: 20px !important;
+          }
+
+          #job-section {
+          width: 600px !important;
+          }
+
+          #job-container {
+          padding: 12px 12px 8px 12px!important;
+          }
+
+          #job-icon-column {
+          width: 44px !important;
+          }
+
+          #job-icon {
+          width: 44px !important;
+          height: 44px !important;
+          }
+
+          #job-icon-img {
+          width: 44px !important;
+          height: 44px !important;
+          }
+
+          #job-company-name {
+          font-size: 13px !important;
+          line-height: 16px !important;
+          }
+
+          #job-company-categories {
+          margin-top: 4px !important;
+          font-size: 13px !important;
+          line-height: 16px !important;
+          }
+
+          #job-company-categories {
+          max-width: 400px !important;
+          }
+
+          #job-match-percentage {
+          font-size: 22px !important;
+          line-height: 44px !important;
+          height: 44px !important;
+          border-radius: 8px !important;
+          width: 72px !important;
+          }
+
+          #job-title {
+          font-size: 16px !important;
+          line-height: 20px !important;
+          width: 568px !important;
+          }
+
+          #job-tag {
+          font-size: 13px !important;
+          line-height: 16px !important;
+          }
+          #time-apply-container {
+          padding: 0px 12px 12px 12px !important;
+          }
+
+          #job-time-posted, #job-be-an-early-applicant {
+          font-size: 13px !important;
+          line-height: 16px !important;
+          }
+
+          #apply-now-button {
+          width: 120px !important;
+          font-size: 16px !important;
+          font-weight: 700 !important;
+          }
+
+          #view-more-button {
+          height: 54px !important;
+          line-height: 54px !important;
+          border-radius: 26px !important;
+          font-size: 18px !important;
+          }
+
+          #more-great-matches-text {
+          font-size: 20px !important;
+          line-height: 32px !important;
+          }
+
+          #footer-section {
+            width: 600px !important;
+            padding: 32px 0px !important;
+          }
+
+          #footer-text, #footer-text-bold {
+            font-size: 16px !important;
+            line-height: 24px !important;
+          }
+
+          #footer-text-bold {
+            font-weight: 700 !important;
+          }
+
+          #footer-logo {
+            width: 128px !important;
+            height: 32px !important;
+          }
+
+          #autofill-icon {
+            padding: 12px 22px !important;
+          }
+
+          #autofill-text-strong {
+            font-size: 13px !important;
+            line-height: 20px !important;
+          }
+         =20
+          #autofill-text-pc {
+            font-size: 13px !important;
+            line-height: 16px !important;
+            display: block !important;
+          }
+
+          #autofill-text-mobile {
+            display: none !important;
+          }
+
+          #install-button {
+            padding: 0 12px !important;
+            height: 28px !important;
+            line-height: 28px !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+          }
+        }
+        @media (max-width: 1079px) {
+          .container {
+            padding: 12px !important;
+            width: 100% !important;
+          }
+        }
+
+        @media (max-width: 1078px) and (min-width: 640px) {
+          #job-company-categories {
+            max-width: 380px !important;
+          }
+        }
+
+        @media (max-width: 639px) and (min-width: 400px) {
+          #job-company-categories {
+            max-width: 250px !important;
+          }
+        }
+
+        @media (max-width: 399px) and (min-width: 375px) {
+          #job-company-categories {
+            max-width: 200px !important;
+          }
+        }
+
+      </style></head><body style=3D"background-color:#FFF;font-family:Inter=
+, -apple-system, Roboto, Helvetica, sans-serif;margin:0;padding:0">
+<img alt=3D"" src=3D"https://l7l8jwcn.r.us-west-2.awstrack.me/I0/0101019d03=
+7ccea3-782d21aa-32d3-424b-8bc2-3bef8ac07a9b-000000/5A5iPFWqm4THWxjr_ZoQm6lw=
+u6o=3D471" style=3D"display: none; width: 1px; height: 1px;">
+<!--$--><span style=3D"display:none;font-size:1px;color:#fff;line-height:1p=
+x;max-height:0px;max-width:0px;opacity:0;overflow:hidden"><!-- -->$53/hr - =
+$55/hr / San Francisco, CA / 5+ referrals<!-- --></span><table align=3D"cen=
+ter" width=3D"100%" class=3D"container" border=3D"0" cellPadding=3D"0" cell=
+Spacing=3D"0" role=3D"presentation" style=3D"max-width:640px;padding:12px;w=
+idth:100%;background-color:#FFF;margin:0 auto"><tbody><tr style=3D"width:10=
+0%"><td><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"=
+0" cellSpacing=3D"0" role=3D"presentation" id=3D"alert-section" style=3D"wi=
+dth:100%;border-radius:0px 16px 16px 16px;background-color:rgba(0, 240, 160=
+, 0.30);padding:12px;margin-bottom:8px"><tbody><tr><td><table align=3D"cent=
+er" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D=
+"presentation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td ali=
+gn=3D"left" id=3D"alert-section-icon-column" data-id=3D"__react-email-colum=
+n" style=3D"width:32px"><img id=3D"alert-section-icon" alt=3D"Jobright.ai J=
+ob Icon" src=3D"https://static.jobright.ai/img/logo/alert_nav.png" style=3D=
+"display:block;outline:none;border:none;text-decoration:none;width:32px;hei=
+ght:32px;margin:0 auto"/></td><td width=3D"8px" data-id=3D"__react-email-co=
+lumn"></td><td data-id=3D"__react-email-column"><p id=3D"alert-section-titl=
+e" style=3D"font-size:14px;line-height:16px;margin:0;font-family:Inter, -ap=
+ple-system, Roboto, Helvetica, sans-serif;font-weight:700;color:rgba(0,0,0,=
+1);margin-top:0;margin-bottom:0;margin-left:0;margin-right:0">Jobright Inst=
+ant Alert</p><p id=3D"alert-section-description" style=3D"font-size:12px;li=
+ne-height:16px;margin:0;font-family:Inter, -apple-system, Roboto, Helvetica=
+, sans-serif;font-weight:400;color:rgba(0,0,0,1);margin-top:0;margin-bottom=
+:0;margin-left:0;margin-right:0">Always be the first to apply</p></td></tr>=
+</tbody></table></td></tr></tbody></table><a href=3D"https://jobright.ai/jo=
+bs/info/69bb29993b74eb1e2c89995c?utm_source=3D1121&amp;imp_id=3D37153120787=
+02786608__instant_push__1773880004183_6108&amp;utm_medium=3Demail" style=3D=
+"color:inherit;text-decoration-line:none;text-decoration:none;display:block=
+" target=3D"_blank"><table align=3D"center" width=3D"100%" border=3D"0" cel=
+lPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" id=3D"job-section" s=
+tyle=3D"border:1px solid #F2F3F4;border-radius:16px;margin-top:8px"><tbody>=
+<tr><td><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"=
+0" cellSpacing=3D"0" role=3D"presentation" id=3D"job-container" style=3D"pa=
+dding:12px 12px 4px 12px"><tbody><tr><td><table align=3D"center" width=3D"1=
+00%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"=
+ style=3D"margin-bottom:8px"><tbody><tr><td><table align=3D"center" width=
+=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presenta=
+tion"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"_=
+_react-email-column"><table align=3D"center" width=3D"100%" border=3D"0" ce=
+llPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody style=3D"wid=
+th:100%"><tr style=3D"width:100%"><td align=3D"left" id=3D"job-icon-column"=
+ data-id=3D"__react-email-column" style=3D"width:32px;height:32px"><div id=
+=3D"job-icon" style=3D"width:32px;height:32px;border:1px solid rgba(0, 0, 0=
+, 0.04);border-radius:6px;overflow:hidden"><a href=3D"https://jobright.ai/j=
+obs/info/69bb29993b74eb1e2c89995c?utm_source=3D1121&amp;imp_id=3D3715312078=
+702786608__instant_push__1773880004183_6108&amp;utm_medium=3Demail" style=
+=3D"color:rgba(0,0,0,1);text-decoration-line:none;text-decoration:none" tar=
+get=3D"_blank"><img src=3D"https://media.licdn.com/dms/image/v2/D560BAQEAL5=
+hognrKuA/company-logo_400_400/B56ZvdYni2HcAc-/0/1768945777147/tiny_spec_inc=
+_logo?e=3D1775692800&v=3Dbeta&t=3Dya1E7n-sLmseU6PmaRTmmcdFhr134cdkFQ7_H2-21=
+Jk" id=3D"job-icon-img" style=3D"width:32px;height:32px;border-radius:6px" =
+alt=3D"Jobright.ai Job Icon"/></a></div></td><td width=3D"8px" data-id=3D"_=
+_react-email-column"></td><td align=3D"left" data-id=3D"__react-email-colum=
+n"><p id=3D"job-company-name" style=3D"font-size:11px;line-height:16px;colo=
+r:#000;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font=
+-weight:600;margin:0;padding:0;margin-bottom:0;margin-top:0;margin-left:0;m=
+argin-right:0">Slack</p><p id=3D"job-company-categories" style=3D"font-size=
+:11px;line-height:16px;color:rgba(0, 0, 0, 0.40);font-family:Inter, -apple-=
+system, Roboto, Helvetica, sans-serif;font-style:normal;font-weight:400;mar=
+gin:0;max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:elli=
+psis;height:16px;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0"=
+><!-- -->Enterprise Software<!-- --><!-- --><!-- --> =C2=B7 Public Company<=
+!-- --></p></td></tr></tbody></table></td><td align=3D"right" width=3D"48px=
+" data-id=3D"__react-email-column"><p id=3D"job-match-percentage" style=3D"=
+font-size:14px;line-height:32px;font-family:Titillium Web, -apple-system, R=
+oboto, Helvetica, sans-serif;font-weight:700;color:rgba(0,0,0,1);text-align=
+:center;margin:0 auto;width:48px;height:32px;border-radius:6px;background:#=
+00F0A033;margin-top:0;margin-right:auto;margin-bottom:0;margin-left:auto"><=
+span>77<!-- -->%</span></p></td></tr></tbody></table></td></tr></tbody></ta=
+ble><p id=3D"job-title" style=3D"font-size:15px;line-height:20px;margin:0;p=
+adding:0;margin-bottom:8px;font-family:Inter, -apple-system, Roboto, Helvet=
+ica, sans-serif;font-weight:700;color:rgba(0,0,0,1);margin-top:0;margin-lef=
+t:0;margin-right:0"><a href=3D"https://jobright.ai/jobs/info/69bb29993b74eb=
+1e2c89995c?utm_source=3D1121&amp;imp_id=3D3715312078702786608__instant_push=
+__1773880004183_6108&amp;utm_medium=3Demail" style=3D"color:rgba(0,0,0,1);t=
+ext-decoration-line:none;text-decoration:none" target=3D"_blank">Summer 202=
+6 Intern - Undergrad User Research - Slack</a></p><table align=3D"center" w=
+idth=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"pres=
+entation"><tbody><tr><td><p id=3D"job-tag" style=3D"font-size:12px;line-hei=
+ght:16px;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;fo=
+nt-weight:400;color:rgba(0,0,0,1);padding:4px 8px;border-radius:6px;backgro=
+und-color:#F2F3F4;display:inline-block;margin:0 4px 4px 0;max-width:240px;o=
+verflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:0;margi=
+n-right:4px;margin-bottom:4px;margin-left:0">$53/hr - $55/hr</p><p id=3D"jo=
+b-tag" style=3D"font-size:12px;line-height:16px;font-family:Inter, -apple-s=
+ystem, Roboto, Helvetica, sans-serif;font-weight:400;color:rgba(0,0,0,1);pa=
+dding:4px 8px;border-radius:6px;background-color:#F2F3F4;display:inline-blo=
+ck;margin:0 4px 4px 0;max-width:240px;overflow:hidden;text-overflow:ellipsi=
+s;white-space:nowrap;margin-top:0;margin-right:4px;margin-bottom:4px;margin=
+-left:0">San Francisco, CA</p><p id=3D"job-tag" style=3D"font-size:12px;lin=
+e-height:16px;font-family:Inter, -apple-system, Roboto, Helvetica, sans-ser=
+if;font-weight:400;color:rgba(0,0,0,1);padding:4px 8px;border-radius:6px;ba=
+ckground-color:#F2F3F4;display:inline-block;margin:0 4px 4px 0;max-width:24=
+0px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:0;=
+margin-right:4px;margin-bottom:4px;margin-left:0">5+ referrals</p></td></tr=
+></tbody></table></td></tr></tbody></table><table align=3D"center" width=3D=
+"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentatio=
+n" id=3D"time-apply-container" style=3D"padding:4px 12px 12px 12px"><tbody>=
+<tr><td><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"=
+0" cellSpacing=3D"0" role=3D"presentation"><tbody><tr><td><table align=3D"c=
+enter" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=
+=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td =
+data-id=3D"__react-email-column"><p style=3D"font-size:14px;line-height:24p=
+x;margin:0;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0"><span=
+ style=3D"font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;f=
+ont-weight:400;font-size:11px;color:rgba(0,0,0,1);line-height:16px" id=3D"j=
+ob-time-posted">just now<!-- --> =C2=B7<!-- --> </span><span style=3D"font-=
+family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-weight:600;=
+font-size:11px;color:rgba(0,0,0,1);line-height:16px" id=3D"job-be-an-early-=
+applicant">Be an early applicant</span></p></td><td align=3D"right" data-id=
+=3D"__react-email-column"><a id=3D"apply-now-button" href=3D"https://jobrig=
+ht.ai/jobs/info/69bb29993b74eb1e2c89995c?utm_source=3D1121&amp;imp_id=3D371=
+5312078702786608__instant_push__1773880004183_6108&amp;utm_medium=3Demail" =
+style=3D"line-height:30px;text-decoration:none;display:inline-block;max-wid=
+th:100%;mso-padding-alt:0px;background-color:#00F0A0;width:96px;height:30px=
+;border-radius:15px;text-align:center;font-family:Inter, -apple-system, Rob=
+oto, Helvetica, sans-serif;font-weight:600;font-size:13px;color:#000" targe=
+t=3D"_blank"><span><!--[if mso]><i style=3D"mso-font-width:0%;mso-text-rais=
+e:0" hidden></i><![endif]--></span><span style=3D"max-width:100%;display:in=
+line-block;line-height:120%;mso-padding-alt:0px">APPLY NOW</span><span><!--=
+[if mso]><i style=3D"mso-font-width:0%" hidden>&#8203;</i><![endif]--></spa=
+n></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody=
+></table></td></tr></tbody></table></a><!-- --><p id=3D"more-great-matches-=
+text" style=3D"font-size:16px;line-height:20px;color:#000;font-family:Inter=
+, -apple-system, Roboto, Helvetica, sans-serif;font-style:normal;font-weigh=
+t:700;margin-top:24px;margin-bottom:24px">More Great Matches Posted in the =
+Last 24 Hours</p><!-- --><a href=3D"https://jobright.ai/jobs/info/69bae14e0=
+6c1ba00c54d2a5d?utm_source=3D1121&amp;imp_id=3D3715312078702786608__instant=
+_push__1773880004183_4596&amp;utm_medium=3Demail" style=3D"color:inherit;te=
+xt-decoration-line:none;text-decoration:none;display:block" target=3D"_blan=
+k"><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" ce=
+llSpacing=3D"0" role=3D"presentation" id=3D"job-section" style=3D"border:1p=
+x solid #F2F3F4;border-radius:16px;margin-top:8px"><tbody><tr><td><table al=
+ign=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D=
+"0" role=3D"presentation" id=3D"job-container" style=3D"padding:12px 12px 4=
+px 12px"><tbody><tr><td><table align=3D"center" width=3D"100%" border=3D"0"=
+ cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"margin-=
+bottom:8px"><tbody><tr><td><table align=3D"center" width=3D"100%" border=3D=
+"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody style=
+=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"__react-email-colum=
+n"><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" ce=
+llSpacing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr style=
+=3D"width:100%"><td align=3D"left" id=3D"job-icon-column" data-id=3D"__reac=
+t-email-column" style=3D"width:32px;height:32px"><div id=3D"job-icon" style=
+=3D"width:32px;height:32px;border:1px solid rgba(0, 0, 0, 0.04);border-radi=
+us:6px;overflow:hidden"><a href=3D"https://jobright.ai/jobs/info/69bae14e06=
+c1ba00c54d2a5d?utm_source=3D1121&amp;imp_id=3D3715312078702786608__instant_=
+push__1773880004183_4596&amp;utm_medium=3Demail" style=3D"color:rgba(0,0,0,=
+1);text-decoration-line:none;text-decoration:none" target=3D"_blank"><img s=
+rc=3D"https://media.licdn.com/dms/image/v2/D4D0BAQGMG0NNPtrjJA/company-logo=
+_100_100/B4DZyazZWTGQAQ-/0/1772123690815?e=3D1775692800&v=3Dbeta&t=3D2e1ZKb=
+D-t1gb7O3BwLQ1uQNHfRZT03ZURr-dvBmexbY" id=3D"job-icon-img" style=3D"width:3=
+2px;height:32px;border-radius:6px" alt=3D"Jobright.ai Job Icon"/></a></div>=
+</td><td width=3D"8px" data-id=3D"__react-email-column"></td><td align=3D"l=
+eft" data-id=3D"__react-email-column"><p id=3D"job-company-name" style=3D"f=
+ont-size:11px;line-height:16px;color:#000;font-family:Inter, -apple-system,=
+ Roboto, Helvetica, sans-serif;font-weight:600;margin:0;padding:0;margin-bo=
+ttom:0;margin-top:0;margin-left:0;margin-right:0">Marketeq Talent</p><p id=
+=3D"job-company-categories" style=3D"font-size:11px;line-height:16px;color:=
+rgba(0, 0, 0, 0.40);font-family:Inter, -apple-system, Roboto, Helvetica, sa=
+ns-serif;font-style:normal;font-weight:400;margin:0;max-width:160px;white-s=
+pace:nowrap;overflow:hidden;text-overflow:ellipsis;height:16px;margin-top:0=
+;margin-bottom:0;margin-left:0;margin-right:0"><!-- -->Information Technolo=
+gy & Services<!-- --><!-- --><!-- --> =C2=B7 Growth Stage<!-- --></p></td><=
+/tr></tbody></table></td><td align=3D"right" width=3D"48px" data-id=3D"__re=
+act-email-column"><p id=3D"job-match-percentage" style=3D"font-size:14px;li=
+ne-height:32px;font-family:Titillium Web, -apple-system, Roboto, Helvetica,=
+ sans-serif;font-weight:700;color:rgba(0,0,0,1);text-align:center;margin:0 =
+auto;width:48px;height:32px;border-radius:6px;background:#00F0A033;margin-t=
+op:0;margin-right:auto;margin-bottom:0;margin-left:auto"><span>94<!-- -->%<=
+/span></p></td></tr></tbody></table></td></tr></tbody></table><p id=3D"job-=
+title" style=3D"font-size:15px;line-height:20px;margin:0;padding:0;margin-b=
+ottom:8px;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;f=
+ont-weight:700;color:rgba(0,0,0,1);margin-top:0;margin-left:0;margin-right:=
+0"><a href=3D"https://jobright.ai/jobs/info/69bae14e06c1ba00c54d2a5d?utm_so=
+urce=3D1121&amp;imp_id=3D3715312078702786608__instant_push__1773880004183_4=
+596&amp;utm_medium=3Demail" style=3D"color:rgba(0,0,0,1);text-decoration-li=
+ne:none;text-decoration:none" target=3D"_blank">UX Research & Design Intern=
+ship</a></p><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=
+=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody><tr><td><p id=3D"job-=
+tag" style=3D"font-size:12px;line-height:16px;font-family:Inter, -apple-sys=
+tem, Roboto, Helvetica, sans-serif;font-weight:400;color:rgba(0,0,0,1);padd=
+ing:4px 8px;border-radius:6px;background-color:#F2F3F4;display:inline-block=
+;margin:0 4px 4px 0;max-width:240px;overflow:hidden;text-overflow:ellipsis;=
+white-space:nowrap;margin-top:0;margin-right:4px;margin-bottom:4px;margin-l=
+eft:0">Remote</p></td></tr></tbody></table></td></tr></tbody></table><table=
+ align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=
+=3D"0" role=3D"presentation" id=3D"time-apply-container" style=3D"padding:4=
+px 12px 12px 12px"><tbody><tr><td><table align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody=
+><tr><td><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D=
+"0" cellSpacing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr=
+ style=3D"width:100%"><td data-id=3D"__react-email-column"><p style=3D"font=
+-size:14px;line-height:24px;margin:0;margin-top:0;margin-bottom:0;margin-le=
+ft:0;margin-right:0"><span style=3D"font-family:Inter, -apple-system, Robot=
+o, Helvetica, sans-serif;font-weight:400;font-size:11px;color:rgba(0,0,0,1)=
+;line-height:16px" id=3D"job-time-posted">6 hours ago<!-- --> =C2=B7<!-- --=
+> </span><span style=3D"font-family:Inter, -apple-system, Roboto, Helvetica=
+, sans-serif;font-weight:600;font-size:11px;color:rgba(0,0,0,1);line-height=
+:16px" id=3D"job-be-an-early-applicant">Be an early applicant</span></p></t=
+d><td align=3D"right" data-id=3D"__react-email-column"><a id=3D"apply-now-b=
+utton" href=3D"https://jobright.ai/jobs/info/69bae14e06c1ba00c54d2a5d?utm_s=
+ource=3D1121&amp;imp_id=3D3715312078702786608__instant_push__1773880004183_=
+4596&amp;utm_medium=3Demail" style=3D"line-height:30px;text-decoration:none=
+;display:inline-block;max-width:100%;mso-padding-alt:0px;background-color:#=
+00F0A0;width:96px;height:30px;border-radius:15px;text-align:center;font-fam=
+ily:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-weight:600;fon=
+t-size:13px;color:#000" target=3D"_blank"><span><!--[if mso]><i style=3D"ms=
+o-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span><span style=
+=3D"max-width:100%;display:inline-block;line-height:120%;mso-padding-alt:0p=
+x">APPLY NOW</span><span><!--[if mso]><i style=3D"mso-font-width:0%" hidden=
+>&#8203;</i><![endif]--></span></a></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table></a><a href=
+=3D"https://jobright.ai/jobs/info/699ee12981476f6176b85af9?utm_source=3D112=
+1&amp;imp_id=3D3715312078702786608__instant_push__1773880004183_4596&amp;ut=
+m_medium=3Demail" style=3D"color:inherit;text-decoration-line:none;text-dec=
+oration:none;display:block" target=3D"_blank"><table align=3D"center" width=
+=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presenta=
+tion" id=3D"job-section" style=3D"border:1px solid #F2F3F4;border-radius:16=
+px;margin-top:8px"><tbody><tr><td><table align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" id=3D"=
+job-container" style=3D"padding:12px 12px 4px 12px"><tbody><tr><td><table a=
+lign=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=
+=3D"0" role=3D"presentation" style=3D"margin-bottom:8px"><tbody><tr><td><ta=
+ble align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpac=
+ing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"wi=
+dth:100%"><td data-id=3D"__react-email-column"><table align=3D"center" widt=
+h=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"present=
+ation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td align=3D"le=
+ft" id=3D"job-icon-column" data-id=3D"__react-email-column" style=3D"width:=
+32px;height:32px"><div id=3D"job-icon" style=3D"width:32px;height:32px;bord=
+er:1px solid rgba(0, 0, 0, 0.04);border-radius:6px;overflow:hidden"><a href=
+=3D"https://jobright.ai/jobs/info/699ee12981476f6176b85af9?utm_source=3D112=
+1&amp;imp_id=3D3715312078702786608__instant_push__1773880004183_4596&amp;ut=
+m_medium=3Demail" style=3D"color:rgba(0,0,0,1);text-decoration-line:none;te=
+xt-decoration:none" target=3D"_blank"><img src=3D"https://media.licdn.com/d=
+ms/image/v2/C560BAQGC-_3qMPlKow/company-logo_200_200/company-logo_200_200/0=
+/1657039539070/rakuten_americas_logo?e=3D1775692800&v=3Dbeta&t=3DTfwofOCxcy=
+7Ee8Q3aOuOIF8rsqppXrJBnO7tbPaxb24" id=3D"job-icon-img" style=3D"width:32px;=
+height:32px;border-radius:6px" alt=3D"Jobright.ai Job Icon"/></a></div></td=
+><td width=3D"8px" data-id=3D"__react-email-column"></td><td align=3D"left"=
+ data-id=3D"__react-email-column"><p id=3D"job-company-name" style=3D"font-=
+size:11px;line-height:16px;color:#000;font-family:Inter, -apple-system, Rob=
+oto, Helvetica, sans-serif;font-weight:600;margin:0;padding:0;margin-bottom=
+:0;margin-top:0;margin-left:0;margin-right:0">Rakuten International</p><p i=
+d=3D"job-company-categories" style=3D"font-size:11px;line-height:16px;color=
+:rgba(0, 0, 0, 0.40);font-family:Inter, -apple-system, Roboto, Helvetica, s=
+ans-serif;font-style:normal;font-weight:400;margin:0;max-width:160px;white-=
+space:nowrap;overflow:hidden;text-overflow:ellipsis;height:16px;margin-top:=
+0;margin-bottom:0;margin-left:0;margin-right:0"><!-- -->E-Commerce<!-- --><=
+!-- --><!-- --> =C2=B7 Late Stage<!-- --></p></td></tr></tbody></table></td=
+><td align=3D"right" width=3D"48px" data-id=3D"__react-email-column"><p id=
+=3D"job-match-percentage" style=3D"font-size:14px;line-height:32px;font-fam=
+ily:Titillium Web, -apple-system, Roboto, Helvetica, sans-serif;font-weight=
+:700;color:rgba(0,0,0,1);text-align:center;margin:0 auto;width:48px;height:=
+32px;border-radius:6px;background:#00F0A033;margin-top:0;margin-right:auto;=
+margin-bottom:0;margin-left:auto"><span>89<!-- -->%</span></p></td></tr></t=
+body></table></td></tr></tbody></table><p id=3D"job-title" style=3D"font-si=
+ze:15px;line-height:20px;margin:0;padding:0;margin-bottom:8px;font-family:I=
+nter, -apple-system, Roboto, Helvetica, sans-serif;font-weight:700;color:rg=
+ba(0,0,0,1);margin-top:0;margin-left:0;margin-right:0"><a href=3D"https://j=
+obright.ai/jobs/info/699ee12981476f6176b85af9?utm_source=3D1121&amp;imp_id=
+=3D3715312078702786608__instant_push__1773880004183_4596&amp;utm_medium=3De=
+mail" style=3D"color:rgba(0,0,0,1);text-decoration-line:none;text-decoratio=
+n:none" target=3D"_blank">Intern - Graphic Design, Internal Communications<=
+/a></p><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0=
+" cellSpacing=3D"0" role=3D"presentation"><tbody><tr><td><p id=3D"job-tag" =
+style=3D"font-size:12px;line-height:16px;font-family:Inter, -apple-system, =
+Roboto, Helvetica, sans-serif;font-weight:400;color:rgba(0,0,0,1);padding:4=
+px 8px;border-radius:6px;background-color:#F2F3F4;display:inline-block;marg=
+in:0 4px 4px 0;max-width:240px;overflow:hidden;text-overflow:ellipsis;white=
+-space:nowrap;margin-top:0;margin-right:4px;margin-bottom:4px;margin-left:0=
+">$20/hr - $25/hr</p><p id=3D"job-tag" style=3D"font-size:12px;line-height:=
+16px;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-w=
+eight:400;color:rgba(0,0,0,1);padding:4px 8px;border-radius:6px;background-=
+color:#F2F3F4;display:inline-block;margin:0 4px 4px 0;max-width:240px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:0;margin-ri=
+ght:4px;margin-bottom:4px;margin-left:0">San Mateo, CA</p><p id=3D"job-tag"=
+ style=3D"font-size:12px;line-height:16px;font-family:Inter, -apple-system,=
+ Roboto, Helvetica, sans-serif;font-weight:400;color:rgba(0,0,0,1);padding:=
+4px 8px;border-radius:6px;background-color:#F2F3F4;display:inline-block;mar=
+gin:0 4px 4px 0;max-width:240px;overflow:hidden;text-overflow:ellipsis;whit=
+e-space:nowrap;margin-top:0;margin-right:4px;margin-bottom:4px;margin-left:=
+0">2+ referrals</p></td></tr></tbody></table></td></tr></tbody></table><tab=
+le align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpaci=
+ng=3D"0" role=3D"presentation" id=3D"time-apply-container" style=3D"padding=
+:4px 12px 12px 12px"><tbody><tr><td><table align=3D"center" width=3D"100%" =
+border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbo=
+dy><tr><td><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=
+=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody style=3D"width:100%">=
+<tr style=3D"width:100%"><td data-id=3D"__react-email-column"><p style=3D"f=
+ont-size:14px;line-height:24px;margin:0;margin-top:0;margin-bottom:0;margin=
+-left:0;margin-right:0"><span style=3D"font-family:Inter, -apple-system, Ro=
+boto, Helvetica, sans-serif;font-weight:400;font-size:11px;color:rgba(0,0,0=
+,1);line-height:16px" id=3D"job-time-posted">5 hours ago<!-- --> =C2=B7<!--=
+ --> </span><span style=3D"font-family:Inter, -apple-system, Roboto, Helvet=
+ica, sans-serif;font-weight:600;font-size:11px;color:rgba(0,0,0,1);line-hei=
+ght:16px" id=3D"job-be-an-early-applicant">Be an early applicant</span></p>=
+</td><td align=3D"right" data-id=3D"__react-email-column"><a id=3D"apply-no=
+w-button" href=3D"https://jobright.ai/jobs/info/699ee12981476f6176b85af9?ut=
+m_source=3D1121&amp;imp_id=3D3715312078702786608__instant_push__17738800041=
+83_4596&amp;utm_medium=3Demail" style=3D"line-height:30px;text-decoration:n=
+one;display:inline-block;max-width:100%;mso-padding-alt:0px;background-colo=
+r:#00F0A0;width:96px;height:30px;border-radius:15px;text-align:center;font-=
+family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-weight:600;=
+font-size:13px;color:#000" target=3D"_blank"><span><!--[if mso]><i style=3D=
+"mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span><span st=
+yle=3D"max-width:100%;display:inline-block;line-height:120%;mso-padding-alt=
+:0px">APPLY NOW</span><span><!--[if mso]><i style=3D"mso-font-width:0%" hid=
+den>&#8203;</i><![endif]--></span></a></td></tr></tbody></table></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table></a><a h=
+ref=3D"https://jobright.ai/jobs/info/69bafbba569738374140cf3c?utm_source=3D=
+1121&amp;imp_id=3D3715312078702786608__instant_push__1773880004183_4596&amp=
+;utm_medium=3Demail" style=3D"color:inherit;text-decoration-line:none;text-=
+decoration:none;display:block" target=3D"_blank"><table align=3D"center" wi=
+dth=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"prese=
+ntation" id=3D"job-section" style=3D"border:1px solid #F2F3F4;border-radius=
+:16px;margin-top:8px"><tbody><tr><td><table align=3D"center" width=3D"100%"=
+ border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" id=
+=3D"job-container" style=3D"padding:12px 12px 4px 12px"><tbody><tr><td><tab=
+le align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpaci=
+ng=3D"0" role=3D"presentation" style=3D"margin-bottom:8px"><tbody><tr><td><=
+table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSp=
+acing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"=
+width:100%"><td data-id=3D"__react-email-column"><table align=3D"center" wi=
+dth=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"prese=
+ntation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td align=3D"=
+left" id=3D"job-icon-column" data-id=3D"__react-email-column" style=3D"widt=
+h:32px;height:32px"><div id=3D"job-icon" style=3D"width:32px;height:32px;bo=
+rder:1px solid rgba(0, 0, 0, 0.04);border-radius:6px;overflow:hidden"><a hr=
+ef=3D"https://jobright.ai/jobs/info/69bafbba569738374140cf3c?utm_source=3D1=
+121&amp;imp_id=3D3715312078702786608__instant_push__1773880004183_4596&amp;=
+utm_medium=3Demail" style=3D"color:rgba(0,0,0,1);text-decoration-line:none;=
+text-decoration:none" target=3D"_blank"><img src=3D"https://media.licdn.com=
+/dms/image/v2/D560BAQE5oNPBhvlEPg/company-logo_100_100/B56Zwp0UODI8AQ-/0/17=
+70228106481/talkspace_online_therapy_logo?e=3D1775692800&v=3Dbeta&t=3DW5wdw=
+wHl1Wp1ZdEiKps7kZ9dfZcqTcrnctNRTSbD3C8" id=3D"job-icon-img" style=3D"width:=
+32px;height:32px;border-radius:6px" alt=3D"Jobright.ai Job Icon"/></a></div=
+></td><td width=3D"8px" data-id=3D"__react-email-column"></td><td align=3D"=
+left" data-id=3D"__react-email-column"><p id=3D"job-company-name" style=3D"=
+font-size:11px;line-height:16px;color:#000;font-family:Inter, -apple-system=
+, Roboto, Helvetica, sans-serif;font-weight:600;margin:0;padding:0;margin-b=
+ottom:0;margin-top:0;margin-left:0;margin-right:0">Talkspace</p><p id=3D"jo=
+b-company-categories" style=3D"font-size:11px;line-height:16px;color:rgba(0=
+, 0, 0, 0.40);font-family:Inter, -apple-system, Roboto, Helvetica, sans-ser=
+if;font-style:normal;font-weight:400;margin:0;max-width:160px;white-space:n=
+owrap;overflow:hidden;text-overflow:ellipsis;height:16px;margin-top:0;margi=
+n-bottom:0;margin-left:0;margin-right:0"><!-- -->Consulting<!-- --><!-- -->=
+<!-- --> =C2=B7 Public Company<!-- --></p></td></tr></tbody></table></td><t=
+d align=3D"right" width=3D"48px" data-id=3D"__react-email-column"><p id=3D"=
+job-match-percentage" style=3D"font-size:14px;line-height:32px;font-family:=
+Titillium Web, -apple-system, Roboto, Helvetica, sans-serif;font-weight:700=
+;color:rgba(0,0,0,1);text-align:center;margin:0 auto;width:48px;height:32px=
+;border-radius:6px;background:#00F0A033;margin-top:0;margin-right:auto;marg=
+in-bottom:0;margin-left:auto"><span>89<!-- -->%</span></p></td></tr></tbody=
+></table></td></tr></tbody></table><p id=3D"job-title" style=3D"font-size:1=
+5px;line-height:20px;margin:0;padding:0;margin-bottom:8px;font-family:Inter=
+, -apple-system, Roboto, Helvetica, sans-serif;font-weight:700;color:rgba(0=
+,0,0,1);margin-top:0;margin-left:0;margin-right:0"><a href=3D"https://jobri=
+ght.ai/jobs/info/69bafbba569738374140cf3c?utm_source=3D1121&amp;imp_id=3D37=
+15312078702786608__instant_push__1773880004183_4596&amp;utm_medium=3Demail"=
+ style=3D"color:rgba(0,0,0,1);text-decoration-line:none;text-decoration:non=
+e" target=3D"_blank">Marketing Design Intern</a></p><table align=3D"center"=
+ width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"pr=
+esentation"><tbody><tr><td><p id=3D"job-tag" style=3D"font-size:12px;line-h=
+eight:16px;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;=
+font-weight:400;color:rgba(0,0,0,1);padding:4px 8px;border-radius:6px;backg=
+round-color:#F2F3F4;display:inline-block;margin:0 4px 4px 0;max-width:240px=
+;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:0;mar=
+gin-right:4px;margin-bottom:4px;margin-left:0">$15/hr - $15/hr</p><p id=3D"=
+job-tag" style=3D"font-size:12px;line-height:16px;font-family:Inter, -apple=
+-system, Roboto, Helvetica, sans-serif;font-weight:400;color:rgba(0,0,0,1);=
+padding:4px 8px;border-radius:6px;background-color:#F2F3F4;display:inline-b=
+lock;margin:0 4px 4px 0;max-width:240px;overflow:hidden;text-overflow:ellip=
+sis;white-space:nowrap;margin-top:0;margin-right:4px;margin-bottom:4px;marg=
+in-left:0">Remote</p><p id=3D"job-tag" style=3D"font-size:12px;line-height:=
+16px;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-w=
+eight:400;color:rgba(0,0,0,1);padding:4px 8px;border-radius:6px;background-=
+color:#F2F3F4;display:inline-block;margin:0 4px 4px 0;max-width:240px;overf=
+low:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:0;margin-ri=
+ght:4px;margin-bottom:4px;margin-left:0">1+ referrals</p></td></tr></tbody>=
+</table></td></tr></tbody></table><table align=3D"center" width=3D"100%" bo=
+rder=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" id=3D"=
+time-apply-container" style=3D"padding:4px 12px 12px 12px"><tbody><tr><td><=
+table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSp=
+acing=3D"0" role=3D"presentation"><tbody><tr><td><table align=3D"center" wi=
+dth=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"prese=
+ntation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td data-id=
+=3D"__react-email-column"><p style=3D"font-size:14px;line-height:24px;margi=
+n:0;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0"><span style=
+=3D"font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-we=
+ight:400;font-size:11px;color:rgba(0,0,0,1);line-height:16px" id=3D"job-tim=
+e-posted">5 hours ago<!-- --> =C2=B7<!-- --> </span><span style=3D"font-fam=
+ily:Inter, -apple-system, Roboto, Helvetica, sans-serif;font-weight:600;fon=
+t-size:11px;color:rgba(0,0,0,1);line-height:16px" id=3D"job-be-an-early-app=
+licant">Be an early applicant</span></p></td><td align=3D"right" data-id=3D=
+"__react-email-column"><a id=3D"apply-now-button" href=3D"https://jobright.=
+ai/jobs/info/69bafbba569738374140cf3c?utm_source=3D1121&amp;imp_id=3D371531=
+2078702786608__instant_push__1773880004183_4596&amp;utm_medium=3Demail" sty=
+le=3D"line-height:30px;text-decoration:none;display:inline-block;max-width:=
+100%;mso-padding-alt:0px;background-color:#00F0A0;width:96px;height:30px;bo=
+rder-radius:15px;text-align:center;font-family:Inter, -apple-system, Roboto=
+, Helvetica, sans-serif;font-weight:600;font-size:13px;color:#000" target=
+=3D"_blank"><span><!--[if mso]><i style=3D"mso-font-width:0%;mso-text-raise=
+:0" hidden></i><![endif]--></span><span style=3D"max-width:100%;display:inl=
+ine-block;line-height:120%;mso-padding-alt:0px">APPLY NOW</span><span><!--[=
+if mso]><i style=3D"mso-font-width:0%" hidden>&#8203;</i><![endif]--></span=
+></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody>=
+</table></td></tr></tbody></table></a><a href=3D"https://jobright.ai/jobs/r=
+ecommend?utm_source=3D1121&amp;utm_medium=3Demail" id=3D"view-more-button" =
+style=3D"line-height:40px;text-decoration:none;display:inline-block;max-wid=
+th:100%;mso-padding-alt:0px;width:100%;height:40px;border-radius:26px;backg=
+round-color:#000;color:#FFF;font-size:16px;font-family:Inter, -apple-system=
+, Roboto, Helvetica, sans-serif;font-weight:700;text-align:center;margin-to=
+p:24px" target=3D"_blank"><span><!--[if mso]><i style=3D"mso-font-width:0%;=
+mso-text-raise:0" hidden></i><![endif]--></span><span style=3D"max-width:10=
+0%;display:inline-block;line-height:120%;mso-padding-alt:0px">View More Opp=
+ortunities</span><span><!--[if mso]><i style=3D"mso-font-width:0%" hidden>&=
+#8203;</i><![endif]--></span></a><table align=3D"center" width=3D"100%" bor=
+der=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" id=3D"f=
+ooter-section" style=3D"padding:0px;margin:24px 0px"><tbody><tr><td><table =
+align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=
+=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"width=
+:100%"><td align=3D"left" data-id=3D"__react-email-column"><p id=3D"footer-=
+text" style=3D"font-size:11px;line-height:16px;color:#000;font-family:Inter=
+, -apple-system, Roboto, Helvetica, sans-serif;font-weight:400;margin:0;mar=
+gin-top:0;margin-bottom:0;margin-left:0;margin-right:0">Happy Job Hunting,<=
+/p><p id=3D"footer-text-bold" style=3D"font-size:11px;line-height:16px;colo=
+r:#000;font-family:Inter, -apple-system, Roboto, Helvetica, sans-serif;font=
+-weight:700;margin:0;margin-top:0;margin-bottom:0;margin-left:0;margin-righ=
+t:0">The Jobright.ai Team</p></td><td data-id=3D"__react-email-column" styl=
+e=3D"text-align:right"><table cellPadding=3D"0" cellSpacing=3D"0" align=3D"=
+right"><tr><td align=3D"right"><img id=3D"footer-logo" alt=3D"Jobright.ai L=
+ogo" src=3D"https://static.jobright.ai/img/logo/logo_mail.png" style=3D"dis=
+play:block;outline:none;border:0;text-decoration:none;width:96px;height:24p=
+x"/></td></tr></table></td></tr></tbody></table></td></tr></tbody></table><=
+a href=3D"https://jobright.ai/?retarget=3Djobalert" id=3D"update-job-alert-=
+preference" style=3D"color:#000;text-decoration-line:none;font-family:Inter=
+, -apple-system, Roboto, Helvetica, sans-serif;font-size:11px;font-style:no=
+rmal;font-weight:400;line-height:16px" target=3D"_blank">Update Job Alert P=
+reference</a><span style=3D"color:#000;margin:0 8px">|</span><a href=3D"htt=
+ps://us-west-2.user-subscription.com/uw/a6b0edf8-c4a4-458b-9614-d14e91feefa=
+1/88b8707f-25df-46db-86d0-9dbbbbb3409a/0101019d037ccea3-782d21aa-32d3-424b-=
+8bc2-3bef8ac07a9b-000000" id=3D"unsubscribe-link" style=3D"color:#000;text-=
+decoration-line:none;font-family:Inter, -apple-system, Roboto, Helvetica, s=
+ans-serif;font-size:11px;font-style:normal;font-weight:400;line-height:16px=
+" target=3D"_blank">Unsubscribe</a></td></tr></tbody></table><!--7--><!--/$=
+--></body></html>

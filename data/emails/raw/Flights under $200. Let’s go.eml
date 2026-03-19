@@ -1,0 +1,309 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:a05:6000:4709:b0:43b:44c0:9cea with SMTP id gx9csp107328wrb;
+        Tue, 17 Mar 2026 21:09:01 -0700 (PDT)
+X-Received: by 2002:a05:6000:184d:b0:439:b3ff:9ab9 with SMTP id ffacd0b85a97d-43b527cb2f2mr2732203f8f.48.1773806941465;
+        Tue, 17 Mar 2026 21:09:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773806941; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HVU1YqZSPqy5F9pgf6zscpTyXHGk0t7lWMkkH3kj0l1G3d8FPZT3pZlT7+RlTd4Nx2
+         gKbGie4nKeox5gwhudSr4hWnGwa7mYOEpM8NskGEDeDmqahoZcJUJdPvOdcGioK7lmp8
+         pjvksVIFccti1C+ahn2aq7U/PtDfQa+L5wCWXb1tkHNhmCJgWIcttkuzi3Gm642K+qwU
+         BAYcIz93cxZjwoeTS2607ZdUG6f9/Zzqc7x46B1qYjSEQad9GYQCMZ4TRgps6Io2z6dp
+         Vn2xnAHhAaM08iBjOZ7plgrc+GCc/pg8WL1DHtD2MyUdNpPv2VmWHrVBZKP8rf5qPBJp
+         0vjg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=11NpJl5B7HIk+VnPnwdJugxQAVCBYetmYiISXQ9l1/c=;
+        fh=OBQZhZdKh+s1nStlG0xBZw0OXPS7KsMe4Q4Db2GkbRg=;
+        b=A6jggsLfGJxN0aS79N5kQJi/D77FjAeQuKAnJ0dyqXUiqGnuScRurmo6y2+l6PkF/L
+         NB1c4+b4UB4qjPhsjjBixeLsVFQC4F3qXViRo9wu67U1DCHDM9n6cpqdg10W1itKfPg1
+         8ekF1B7QxDzg0sYdNjyzqqYU7TZ0SnErY35IGyPB7PKGt+oOCxisH3Fs33MObRNO1zMp
+         uM3AXe9lpuIIGdd64brDa5F4GTy/eqflnTC9ms+/ltn0BBR03IzsCOqXKvw66l+2JcFT
+         hUip1muaM+gq14hnT4c3ND8TURkizidwT7u/0AR0HcdLslwC8Mf+998I2tnoW5K3Gigr
+         3PsQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@eg.expedia.com header.s=12dkim1 header.b=CLxGZhP8;
+       dkim=pass header.i=@s12.y.mc.salesforce.com header.s=fbldkim12 header.b=Z0M50MVB;
+       spf=pass (google.com: domain of bounce-767biizs366etomquaihhdijhm.120044@bounce.eg.expedia.com designates 13.110.210.79 as permitted sender) smtp.mailfrom=bounce-767BIIZS366ETOMQUAIHHDIJHM.120044@bounce.eg.expedia.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=eg.expedia.com
+Return-Path: <bounce-767BIIZS366ETOMQUAIHHDIJHM.120044@bounce.eg.expedia.com>
+Received: from mta4.eg.expedia.com (mta4.eg.expedia.com. [13.110.210.79])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-43b518c84ccsi3667641f8f.436.2026.03.17.21.09.01
+        for <jasmind009@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 17 Mar 2026 21:09:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-767biizs366etomquaihhdijhm.120044@bounce.eg.expedia.com designates 13.110.210.79 as permitted sender) client-ip=13.110.210.79;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@eg.expedia.com header.s=12dkim1 header.b=CLxGZhP8;
+       dkim=pass header.i=@s12.y.mc.salesforce.com header.s=fbldkim12 header.b=Z0M50MVB;
+       spf=pass (google.com: domain of bounce-767biizs366etomquaihhdijhm.120044@bounce.eg.expedia.com designates 13.110.210.79 as permitted sender) smtp.mailfrom=bounce-767BIIZS366ETOMQUAIHHDIJHM.120044@bounce.eg.expedia.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=eg.expedia.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=12dkim1; d=eg.expedia.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=mail@eg.expedia.com;
+ bh=11NpJl5B7HIk+VnPnwdJugxQAVCBYetmYiISXQ9l1/c=;
+ b=CLxGZhP8ecxoexm7j7Zft1zZbrxdDFXw+sHJNPEysOU1EBsM6VLb1yQrb2IX38L8U+xE+/kGLr/v
+   burgMApl1Qz4nGEBGzMHIHkayvaJGpoQ4ivbTsdOn+38M1LHMdegkMg8c0gWhXODPR+PdeL36csA
+   3pV/adq54d6mNndTecAR+CEwt2fc7bDdfB5kFOOCAigNQ0qPgNyiRpoYpkejy2iM2EYz+tSxR+z2
+   YsYWKKW+jcE2orPj2SX3loKgdPm/eyxYVee2LvY3+kZH1qnR0iZzIj7fz5TRk6g7ALi6wnOlCtAp
+   wdE14SARvhjXXCu8xM9PXKVje/SajP2DlXrIfg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim12; d=s12.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=11NpJl5B7HIk+VnPnwdJugxQAVCBYetmYiISXQ9l1/c=;
+ b=Z0M50MVBgcmiq+a3BjaNf5hkpMzpRjrnoNXeo+7KEHLwZwkO7EB3zkELpUopcLnJnpb0GOs46mZ/
+   KNdRDa8OFJsMN+vJPe2Au1YPm42nWPP1Soi2gwR87DGb+IbBLNptHsFLEkXXPpEbM+Uyybv9vd0h
+   0fJPZSaa9v34cIg8Ps82Nm/0GHD5Op/xTh8k3xQStm59uXLmj2HpWLcmVmrdQrNBPb6CnosUzn1I
+   qCOD+0I7Wmez/Ec16vYBLfShgJ4y61MbzTLWcH3h2LqSvWkQWLxaD+18Fu9I3+zUDJ25WE3udRIp
+   fVQA/dionGjVzvPyelK314RvWZVjfaPnxyQEeA==
+Received: by mta4.eg.expedia.com id hn8ilq2fmd41 for <jasmind009@gmail.com>; Wed, 18 Mar 2026 04:08:50 +0000 (envelope-from <bounce-767BIIZS366ETOMQUAIHHDIJHM.120044@bounce.eg.expedia.com>)
+From: "Expedia.com" <mail@eg.expedia.com>
+To: <jasmind009@gmail.com>
+Subject: =?UTF-8?B?RmxpZ2h0cyB1bmRlciAkMjAwLiBMZXTigJlzIGdv?=
+Date: Tue, 17 Mar 2026 22:08:49 -0600
+List-Unsubscribe: <https://click.eg.expedia.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MjYwMDE3MzUiLCJzIjoiNDQxNTExNDA1IiwibGlkIjoiOCIsImoiOiIxNzQyODc2IiwiamIiOiI2MDI4OCIsImQiOiIxMjAwNDQifQ.tLlVkBeaZh7V4ns5NDb8E36tuCrjdStkW5lleG1LdWc>, <mailto:leave-4XCWY2G2752E7A5V7G5K6AM25Y.120044@leave.eg.expedia.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+X-SFMC-Stack: 12
+x-job: 526001735_1742876
+Reply-To: "No Reply" <reply-AOGD33WCJE6E7GYA67H4BJI3LY.120044@eg.expedia.com>
+Message-ID: <377a79ad-0f41-47a3-82dd-f1bf28f2951c@iad4s12mta368.xt.local>
+Feedback-ID: 526001735:1742876:13.110.210.79:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="ahPZw9cHsFwe=_?:"
+
+This is a multi-part message in MIME format.
+
+--ahPZw9cHsFwe=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+    
+
+
+
+
+
+
+  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  &zwnj; &zwnj;  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  
+https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjE0MDJhY2IzLWViYjAtNGUyMS04NjY1LTAzMzhlZTVkMjA0ZSIsImRla1ZlcnNpb24iOjEsIml2IjoiR1kyYWxXc3A3eXlsSThCa0lkYzEwUT09IiwiY2lwaGVyVGV4dCI6IkFiWUlJRHRDWTVLZjB2YWgzdUtxOWJLZFNqMVhxUmxMbm1CMjBFQ3hBWURYSHBOYTNQa2xvQmpIVEJBbGI0amlBVFhIZy8yV29LTWRyZHBId2d2OXh5cVdKaWt1VmFZTmJPTWZEUkhpR1kyYWxXc3A3eXlsSThCa0lkYzEwUT09IiwiYXV0aFRhZyI6Ii9jY3FsaVlwTGxXbURXempIdzBSNGc9PSJ9 
+
+  
+     
+   
+ 
+  
+ 
+   
+https://www.expedia.com/lp/b/greatvalueflights?locale=en_US&siteid=1&EMLCID=EXPEDIA-US.MKT.ACTV.DRMDRMZTI357.EML&EMLDTL=DATE20260317-LANGEN_US.TESTX.VERSX.CAT01G250.SEG_030205.JID1742876&cta=HeroImg 
+     
+https://www.expedia.com/lp/b/greatvalueflights?locale=en_US&siteid=1&EMLCID=EXPEDIA-US.MKT.ACTV.DRMDRMZTI357.EML&EMLDTL=DATE20260317-LANGEN_US.TESTX.VERSX.CAT01G250.SEG_030205.JID1742876&cta=HeroImg 
+    
+  
+  
+   Last-minute flights under $200     
+ 
+Pack a bag and grab a friend—our last-minute flight deals under $200 are here to take you on adventures to remember, or check out our weekend flight deals.¹ Plus, as a One Key member, you can earn OneKeyCash on top of your airline miles.²  
+     
+https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjIzODRkNjQ2LWFkMzItNDQ2Ni1hY2EyLWNkNDNmOTY3YWE3NSIsImRla1ZlcnNpb24iOjEsIml2IjoicWx3NTV0SDNLV1NmWEx4N1pTcGZ2dz09IiwiY2lwaGVyVGV4dCI6IjQyOUxWTmRrSFRLcmNqdndLSmlCeTlRSnJqc3hFV0pLU1lrRFVWckRpKzArN0RnSmlibWliS25WNFQ0SGlWNVlYRm4zYndOQzMwYkw5NS9idTlFZ1hLRVBUUjdLUzFpVC9Ca3JSbEpRcWx3NTV0SDNLV1NmWEx4N1pTcGZ2dz09IiwiYXV0aFRhZyI6IklGeWhEMDBleWt0WWsvd1pLMFpTVUE9PSJ9 
+ Shop flight deals 
+
+      &#8202;  
+  
+ 
+
+ 
+  
+ 
+
+    
+https://www.expedia.com/deals/last-minute-member-deals?locale=en_US&siteid=1&EMLCID=EXPEDIA-US.MKT.ACTV.DRMDRMZTI357.EML&EMLDTL=DATE20260317-LANGEN_US.TESTX.VERSX.CAT01G250.SEG_030205.JID1742876&cta=SbImg 
+     
+    
+   Last-minute member deals     
+ You don’t always need to plan ahead. Find great hotel deals when you're looking to get away ASAP.  
+      
+  
+https://www.expedia.com/deals/last-minute-member-deals?locale=en_US&siteid=1&EMLCID=EXPEDIA-US.MKT.ACTV.DRMDRMZTI357.EML&EMLDTL=DATE20260317-LANGEN_US.TESTX.VERSX.CAT01G250.SEG_030205.JID1742876&cta=SbCTA 
+ See all deals  
+      
+
+   &#8202;  
+
+ 
+  
+ 
+  
+ 
+  
+    
+ https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjYxY2RmZTM5LWYzYWQtNDUxZi04ZWU3LTVkOTEzYzlhZmNiZSIsImRla1ZlcnNpb24iOjEsIml2Ijoiejl3L3BST0lCN2ZocHdHcnByT21Sdz09IiwiY2lwaGVyVGV4dCI6IjJ5U1d2WGw0RVVKN1J4MU1UYnJpY2RwQ21ESnVPNW5ZaEIvRStiYUdHMXRkNDZ6Ty9EQTJQVFB1SUdpakozdnZZaW5OMnVDUjVWREhRdHNacDE1Nld6WlJJV09NZHBDTnFQRnc3OWpBejl3L3BST0lCN2ZocHdHcnByT21Sdz09IiwiYXV0aFRhZyI6ImVsczJVU0ZqakhhUWphanhjTy9Zd0E9PSJ9 
+   
+  
+  Download the https://click.eg.expedia.com/?qs=eyJkZWtJZCI6ImFiOWNkOTI2LTBmMGYtNDgyYS1hOTk3LTMyYmI3OGIxMDIwYyIsImRla1ZlcnNpb24iOjEsIml2IjoiRVFFQnNmQ01RZkxUMXBpcFNtQTBhdz09IiwiY2lwaGVyVGV4dCI6IkRtUlhYNkNVZG5iVzdyNkdpWjR0WXpReFc5QXhoTVNiYU00UVRxM3NWd3lkdFU5eis4TFVueE9oOE10T1RDcTVzQU1pMit4RE1CRGY5QVUrZnhyM21nSXJVemxIcStQYzFlakxERDJzRVFFQnNmQ01RZkxUMXBpcFNtQTBhdz09IiwiYXV0aFRhZyI6Ijk1b0NLMU01UjZ2ajNOWG95d3c5ckE9PSJ9 
+Expedia app   
+   
+
+  
+  
+https://click.eg.expedia.com/?qs=eyJkZWtJZCI6Ijk2MDYyYmU1LTU3NGUtNDg4Ny04NmM1LTZjMGJiN2MwZTFhYSIsImRla1ZlcnNpb24iOjEsIml2IjoiTmQwOFBWcmhOV3RxRDZTYVRFNlJVUT09IiwiY2lwaGVyVGV4dCI6ImUvRmJCOWNxMk5KZTNLVnFrWWx2RG9NZmJmNk90SzYxWWRSNFFYMzQ0WW9HTnBXNjJ2SGtnc0NuZTBjbnRYQTZPak5sVXJzcXJSWWxOTXNjb1V2cElaNzZZMUlNanp1LzFlRnBwQ0toTmQwOFBWcmhOV3RxRDZTYVRFNlJVUT09IiwiYXV0aFRhZyI6IjZTR2UrbU5TREk4N3Y5WGhhYVFpb1E9PSJ9 
+Unsubscribe from The Travel Edit      
+https://click.eg.expedia.com/?qs=eyJkZWtJZCI6Ijk1NzRhYzQ2LWMzNWItNGJmNS05Y2M1LWE2NjRhNzVhNzRiOSIsImRla1ZlcnNpb24iOjEsIml2Ijoia2RuVE1QQnlvbWdBODlJcFRyYytPQT09IiwiY2lwaGVyVGV4dCI6InBQdnRaTWd0S2VPSENjVzdUYWxDclVyRUk1cXVZNVgzQjVoNmV1VlZ4WDdGR3d1cFk4TFUrRC8ralRaZjhCbTZVZjVWdHd3L0VqZmh5TEROVkZUUERoNjZCWnNIM1ZVaG5wUGZyWWlFa2RuVE1QQnlvbWdBODlJcFRyYytPQT09IiwiYXV0aFRhZyI6Inp3NGV1Z1diQjkxVklaNlQzNjJJaEE9PSJ9 
+Privacy      
+https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjMwMzRlY2RkLTI4MjUtNDE4ZC04NjE1LTRkZjY5NTA3YjEzMSIsImRla1ZlcnNpb24iOjEsIml2Ijoieit2Z2h4b1J4K1hrSzlKTW0yaUFKUT09IiwiY2lwaGVyVGV4dCI6IjcxSU5YVzQxSWE5NCszUDREeGVrWXlBT3Rwdm16aER0TGtNYldPU1lYSzFWaTVVY2RRVDdCeEdsZEsyQ0kzZzdyZE5kWHI1S2RPYWg5UXpNQmdaVXUyTXd6dVRlbTljZHh1a1NpSURWeit2Z2h4b1J4K1hrSzlKTW0yaUFKUT09IiwiYXV0aFRhZyI6IlZMdGpNTTdrM3B2WEhjYnBFb2lBMVE9PSJ9 
+Help      
+https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjViMmJjOGUzLTExMGUtNGNhZS1hNzY2LTc0ZGI5YjdjOWE5ZCIsImRla1ZlcnNpb24iOjEsIml2IjoiSXBHL3B5WFpwTE1oMTdCdU5qaUYxZz09IiwiY2lwaGVyVGV4dCI6InRLR2twalZJa1NEN3VMVFl0ZVhrZzhvaSt3REFJY0JkNHUwcjdVTU9VbTF6RGhES3BZZmg1aTBIQzlQWFhZV2pKUUpUc1NYOW9HR2VsaDh3SDYvd2lJSkx3S01vaXZMeW4yNGlrYituSmRta3N5SFhzRzQyT0lYVyIsImF1dGhUYWciOiJIekFmci9DSWdrdkFveWlLOHZLZmJnPT0ifQ%3D%3D 
+View online   
+
+
+ 
+¹Prices are "from" prices based on the lowest available fare for one adult on select flights. "Weekend flight deals" are for travel Friday through Sunday. Fees may apply for checked baggage. There may be an additional fee based on your payment type and flight selected. Blackout dates and other restrictions may apply. Subject to availability. Terms and conditions apply.
+
+
+
+
+
+
+²Excludes taxes and fees. OneKeyCash is not redeemable for cash and can only be used on Expedia and other participating brands.
+
+
+
+
+ 
+    
+  This email and its links may contain your personal information; please only forward to people you trust. You are receiving this email because you are eligible to receive promotional emails from Expedia.com.  
+    
+  Expedia, Inc. 1111 Expedia Group Way West, Seattle WA 98119, USA.  
+    
+
+
+
+
+
+
+--ahPZw9cHsFwe=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+<!doctype html> <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="x-apple-disable-message-reformatting"> <meta name="color-scheme" content="light dark"> <meta name="supported-color-schemes" content="light dark"> <title></title>      <style> /* fallback font family */ div, p, h1, h2, h3, h4, span, a, li { font-family: Helvetica, Arial, sans-serif; } </style>  
+<style> @media screen { @font-face { font-display: swap; font-family: "Centra No2"; src: url("https://a.travel-assets.com/egds/fonts/CentraNo2/CentraNo2-Book.woff2") format("woff2"); font-weight: normal; font-style: normal; mso-font-alt: "Centra No2"; mso-generic-font-family: swiss; } @font-face { font-display: swap; font-family: "Centra No2"; src: url("https://a.travel-assets.com/egds/fonts/CentraNo2/CentraNo2-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; mso-font-alt: "Centra No2"; mso-generic-font-family: swiss; } @font-face { font-display: swap; font-family: "Centra No2"; src: url("https://a.travel-assets.com/egds/fonts/CentraNo2/CentraNo2-Bold.woff2") format("woff2"); font-weight: bold; font-style: normal; mso-font-alt: "Centra No2"; mso-generic-font-family: swiss; } @font-face { font-display: swap; font-family: "Reckless XPD"; src: url("https://a.travel-assets.com/egds/fonts/RecklessXPD/RecklessXPD-Regular.woff2") format("woff2");
+ font-weight: 500; font-style: normal; mso-font-alt: "Reckless XPD"; mso-generic-font-family: roman; } div, p, h1, h2, h3, h4, span, a, li { font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important; } } </style>   <style> @media screen { @font-face { font-display: swap; font-family: "Reckless XPD"; src: url("https://a.travel-assets.com/egds/fonts/RecklessXPD/RecklessXPD-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; mso-font-alt: "Reckless XPD"; mso-generic-font-family: roman; } .custom-heading-font, .custom-heading-font .link, .custom-heading-font span { font-family: 'Reckless XPD', Times, 'Times New Roman', serif !important; } } </style>    <!--[if !mso]><!--> 
+<style> #MessageViewBody, #mail-message-header {height:140px!important;} #MessageViewBody, #MessageWebViewDiv {width: 100% !important;} a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; } </style> <style> :root { color-scheme: light dark; supported-color-schemes: light dark; } </style> <style> .no-custom-font { font-family: Helvetica, Arial, sans-serif!important; } .border-radius {border-radius: 4px!important;} .border-radius-top-left { border-top-left-radius: 4px!important;} .border-radius-top-right{ border-top-right-radius: 4px!important;} .border-radius-bottom-left { border-bottom-left-radius: 4px!important;} .border-radius-bottom-right { border-bottom-right-radius: 4px!important;} .price-tag-badge-container { box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.20) !important; } </style> 
+<style type="text/css"> ReadMsgBody{ width: 100%;} body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;} </style> <!--<![endif]--> <!--[if mso]> <noscript> <xml> <o:OfficeDocumentSettings> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> <w:WordDocument> <w:DontUseAdvancedTypographyReadingMail/> </w:WordDocument> </xml> </noscript> <![endif]--> <!--[if true]> <style> body, table tr, table td, p, a, span {font-family: Arial, Helvetica, sans-serif !important;} h1, h2, h3, h4, h5, h6 {font-weight: bold !important;}  .custom-heading-font, .custom-heading-font .link, .custom-heading-font span { font-family: 'Reckless XPD', Times, 'Times New Roman', serif !important;}    </style> <![endif]--> <!--[if gte mso 9]> <style> sup { font-size: 90% !important; } ul { margin:0 !important; } li { margin-left:27px !important; } .outlookListAlign { margin-left: -20px !important; } </style> <![endif]--> 
+<style> @media screen and (min-width: 600px) { .w25pc {width:25%!important;} .w33pc {width:33.33%!important;} .w50pc {width:50%!important;} .w66pc {width:66.66%!important;} } </style> 
+<style> @media screen and (max-width: 600px) { .w100pc {width: 100%!important; height: auto!important;} .w100pc-only {width: 100%!important;} .w100pc-nomax {width: 100%!important; max-width:100%!important;} .w100pc-nomax-block {width: 100%!important; max-width:100%!important; display:block!important;} .hide {display: none!important;} .show {display: block!important;overflow: visible!important;float: none!important;width: 100%!important;height: auto!important;} .block {display: block!important;} .text-align-left {text-align: left!important;} .text-align-center {text-align: center!important;} .text-align-right {text-align: right!important;} .gutter-margin {margin-left: 32px!important; margin-right: 32px!important;} .gutter-padding {padding-left: 32px!important; padding-right:
+ 32px!important;} .m0 {margin: 0!important;} .mt-0 {margin-top: 0!important;} .mt-16 {margin-top: 16px!important;} .mt-24 {margin-top: 24px!important;} .mr-0 {margin-right: 0!important;} .ml-0 {margin-left: 0!important;} .ml-12 {margin-left:12px!important;} .ml-24 {margin-left:24px!important;} .mr-24 {margin-right:24px!important;} .mt-24 {margin-top:24px!important} .mb-0 {margin-bottom:0!important;} .mb-8 {margin-bottom:8px!important;} .mb-16 {margin-bottom:16px!important;} .mb-24 {margin-bottom:24px!important;} .p0 {padding: 0!important;} .p-24 {padding: 24px!important;} .pt-0 {padding-top: 0!important;} .pt-40 {padding-top: 40px!important;} .pr-0 {padding-right: 0!important;} .pr-32 {padding-right: 32px!important;} .pl-0 {padding-left: 0!important;} .pb-0 {padding-bottom:0!important;}
+ .pb-8 {padding-bottom:8px!important;} .pb-12 {padding-bottom:12px!important;} .pb-16 {padding-bottom:16px!important;} .pb-24 {padding-bottom:24px!important;} .pb-32 {padding-bottom:32px!important;} .plr-8 {padding-left: 8px !important; padding-right: 8px !important;} .clear-bg {background-image:none!important;} .max-width-none {max-width: none!important} .w50pc-mob {width:50%!important;} .w25pc-mob {width: 25%!important; height: auto!important;} .w33pc-mob {width: 33%!important; height: auto!important;} .table-cell {display: table-cell!important;} .border-right-none {border-right: none!important;} .border-top-left-none {border-top-left-radius: 0px!important;} .border-top-right-none {border-top-right-radius: 0px!important;} .border-bottom-right-none {border-bottom-right-radius:
+ 0px!important;} .border-bottom-left-none {border-bottom-left-radius: 0px!important;} .border-bottom-color-muted {border-bottom: 1px solid #DFE0E4!important;} .border-radius-none {border-radius: 0px!important;} } </style> <style> @media screen and (max-width: 480px) { .button-full-width {display: block!important; text-align: center!important;} } </style> 
+<style> @media (prefers-color-scheme: light) { /* light Icon Support */ .light-img { display: inline-block !important; overflow: visible !important; float: none !important; max-height: inherit !important; max-width: inherit !important; line-height: normal !important; margin-top: 0px !important; visibility: inherit !important; } .light-img-block { display: block !important; overflow: visible !important; float: none !important; max-height: inherit !important; max-width: inherit !important; line-height: normal !important; margin-top: 0px !important; visibility: inherit !important; } .dark-img, .dark-img-block, .fallback-img { display: none; display: none !important; } } </style> 
+<style> @media (prefers-color-scheme: dark ) { /* Darkmode Icon and Image Support */ .dark-img { display:inline-block!important; overflow: visible!important; float: none!important; max-height:inherit!important; max-width:inherit!important; line-height: normal!important; margin-top:0px!important; visibility:inherit!important; } .dark-img-block { display:block!important; overflow: visible!important; float: none!important; max-height:inherit!important; max-width:inherit!important; line-height: normal!important; margin-top:0px!important; visibility:inherit!important; } .light-img, .light-img-block, .fallback-img { display:none; display:none !important; } /* Typography Core */ .paragraph { color: #F3F3F5 !important; } .heading { color: #FFFFFF !important; } .link { color: #80B2F4 !important; } .inverse-link { color: #FFFFFF !important; } /* Typography Additional */ .list-icon { color: #F3F3F5 !important; } .text-default { color: #F3F3F5 !important; } .text-negative {
+ color: #F55669 !important; } .text-positive, .color-positive { color: #57CA61 !important; } /* Backgrounds & dividers */ .background-base, .section, .column, .column-no-stack, .one-col, .two-col-no-stack, .button__secondary__link, .card-secondary { background-color: #0C0E1C !important; } .background-contrast { background-color: #191E3B !important; } .border-muted { border-color: #4D5167 !important; } /* Standard Badges */ .badge-utility-standard { background-color: #676A7D !important; color: #FFFFFF !important; } .badge-utility-emphasis { background-color: #DFE0E4 !important; color: #0C0E1C !important; } .badge-brand { background-color: #FDDB32 !important; color: #0C0E1C !important; } .badge-warning { background-color: #F55669 !important; color: #0C0E1C !important; } .badge-positive { background-color: #57CA61 !important; color: #0C0E1C !important; } .badge-info { background-color: #7C6F9B !important; color: #FFFFFF !important; } .badge-featured {
+ background-color: #0C4C71 !important; color: #FFFFFF !important; } /* Loyalty Badges */ /* .badge-global-loyalty-extra-high-tier { background-color: #C3C3CF !important; color: #191E3B !important; } .badge-global-loyalty-high-tier { background-color: #FFB800 !important; color: #191E3B !important; } .badge-global-loyalty-middle-tier { background-color: #707480 !important; color: #FFFFFF !important; } .badge-global-loyalty-low-tier { background-color: #304CA2 !important; color: #FFFFFF !important; } */ /* Program Badges */ .badge-program-deal { background-color: #57CA61 !important; color: #0C0E1C !important; } .badge-program-member { background-color: #FDDB32 !important; color: #0C0E1C !important; } .badge-program-vip { background-color: #191E3B !important; color: #FFFFFF !important; } /* Banners */ .banner-critical { background-color: #CACCD2 !important; } .banner-error { background-color: #F55669 !important; } .banner-heading { color: #0C0E1C !important; }
+ .banner-text { color: #0C0E1C !important; } .banner-link { color: #0C0E1C !important; } /* Buttons */ .button-primary { background-color: #3D84F0 !important; color: #0C0E1C !important; } .button-secondary { background-color: #0C0E1C !important; color: #FFFFFF !important; border-color: #4D5167 !important; } .button-tertiary { color: #FFFFFF !important; } /* Cards */ .card { border-color: #4D5167 !important; } .card-primary { background-color: #0C0E1C !important; } .card-secondary { background-color: #191E3B !important; } .card-highlight, .color-accent-1-50 { background-color: #292929 !important; } /* Pill */ .pill { background-color: #0C0E1C !important; border-color: #676A7D !important; color: #F3F3F5 !important; } /* Progress Bar */ .progress-bar { background-color: #818494 !important; } .progress-bar-fill { background-color: #DFE0E4 !important; } .p-emlcid {color:#0C0E1C !important;}  /* dark_1 theme */ .dark-theme .paragraph {  color: #FFFFFF !important; }
+ .dark-theme .heading {  color: #FFFFFF !important; } .dark-theme .link {  color: #649DF2 !important; } .dark-theme .inverse-link {  color: #191E3B !important; } .dark-theme .button-primary {  background-color: #649DF2 !important; color: #191E3B !important; } .dark-theme .button-secondary {  background-color: #0C0E1C !important; color: #649DF2 !important; border-color: #999CA8 !important; } .dark-theme .button-tertiary {  color: #649DF2 !important; } .dark-theme .card-primary {  background-color: #0C0E1C !important; } .dark-theme .card-secondary {  background-color: #191E3B !important; } .dark-theme .card-highlight {  background-color: #292929 !important; } .dark-theme .card-bordered {  border-color: #676A7D !important; } .dark-theme .badge-utility-standard {  background-color: #31374F !important; color: #FFFFFF !important; } .dark-theme .badge-utility-emphasis {  background-color: #DFE0E4 !important; color: #191E3B !important; } .dark-theme .badge-warning { 
+ background-color: #F55669 !important; color: #191E3B !important; } .dark-theme .badge-positive {  background-color: #57CA61 !important; color: #191E3B !important; } .dark-theme .badge-info {  background-color: #7C6F9B !important; color: #FFFFFF !important; } .dark-theme .badge-featured {  background-color: #0C4C71 !important; color: #FFFFFF !important; } .dark-theme .divider {  background-color: #676A7D !important; } .dark_1__on_tertiary_container { color: #CACCD2 !important; } /* Off-white background */ .off-white-bg-color { background-color: #FFFFFE !important; }  } </style> 
+<style>
+h2.heading{letter-spacing:-0.5px;}
+</style>
+
+</head>
+
+
+
+
+
+<div itemscope itemtype="http://schema.org/Organization">
+  <meta itemprop="logo" content="https://image.eg.expedia.com/lib/fe3211727364047c721775/m/1/mark__app__expedia.png" />
+</div>
+<div itemscope itemtype="http://schema.org/EmailMessage">
+  <meta itemprop="subjectLine" content="" />
+</div>
+<div itemscope itemtype="http://schema.org/DiscountOffer">
+  <meta itemprop="description" content="Great value flights" />
+  <meta itemprop="discountCode" content="" />
+  <meta itemprop="availabilityStarts"     content="--T" />
+  <meta itemprop="availabilityEnds"     content="--T" />
+</div>
+<div itemscope itemtype="http://schema.org/PromotionCard">
+  <meta itemprop="image" content="https://a.travel-assets.com/travel-assets-manager/destu-41487/BEX-US-EMAIL-GMAIL-PROMO-536x138.jpg" />
+</div>
+
+
+<body id="body" class="body background-base" style="margin:0; padding: 0; background-color: #FFFFFF;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">The perfect excuse for a last-minute getaway</div>
+  <div style="font-size: 0; line-height: 0; overflow: hidden;">
+    <img src="https://click.eg.expedia.com/open.aspx?XRKNNZQLPJRUNP2JQJAWY2YIYM.120044&d=120044&bmt=0" width="1" height="1" alt="">
+    </custom>
+  </div>
+  <!-- Preheader --> <div style="visibility:hidden; color:transparent; display: none; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; width: 0px; opacity: 0; overflow: hidden;"></div> <!--[if !mso]><!--> 
+<div style="display: none; font-family: sans-serif; max-height: 0px; overflow:hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;
+ &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div> <!--<![endif]--><div role="article" aria-roledescription="email" style="font-family: Helvetica, Arial, sans-serif; padding: 0; margin: 0;" dir="LTR" class=""> 
+<table role="presentation" width="100%" class="background-base" border="0" cellpadding="0" cellspacing="0" style="width:100%; background-color: #FFFFFF;" dir="LTR"><tr><td class="background-base" width="100%" valign="top" align="center" style="background-color: #FFFFFF;"> <!--[if true]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="450pt" style="width:450pt"><tr><td valign="top" width="100%"><![endif]--> <table role="presentation" class="background-base" width="100%" border="0" cellpadding="0" cellspacing="0" style="max-width:600px"><tr><td class="background-base" width="100%" valign="top" style="background-color: #FFFFFF;"><!-- MODULE START: Header -->  <table role="presentation" class="background-base" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;"><tr><td width="100%" align="center"> 
+<table role="presentation" width="600" class="background-base w100pc" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF; width:100%; max-width:600px;"><tr><td align="center" style="width: 100%; text-align:center; padding: 23px 32px 23px 29px;"> <a style="display:block; line-height: 0; text-decoration: none;" href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6Ijc1NWY5ZmM1LTI3ZmYtNDIwMi1hZDc2LWU1OWE3YzkyNjBjMCIsImRla1ZlcnNpb24iOjEsIml2IjoiNUE4QlZULzJqSno3end4UDdaZkVrZz09IiwiY2lwaGVyVGV4dCI6IjVQa08xaU5pQ0VVZDVGbGowbG1scnZwQkFGdHBsaEc1ZHRTU3pMZ0FIUUNrMElQbzRsaS9DWGpkL0NFamJwamxiT3pZQXJxZHdnaUl5d3VrK1JBQmpGQUwveFo4cWk4WlFkWEpIZHp1NUE4QlZULzJqSno3end4UDdaZkVrZz09IiwiYXV0aFRhZyI6IkFZeFFDLzhXZktvdkdVSFZ5UjNjN2c9PSJ9"> 
+<img class="light-img" src="https://image.eg.expedia.com/lib/fe3211727364047c721775/m/1/expedia_white_bg.png" alt="Expedia logo" height="33" style="font-family: sans-serif; font-size: 16px; border: 0; height: 33px; width: auto; line-height: 100%; outline: none; text-decoration: none; display: inline-block;" border="0"> <!--[if !mso]><!--> <img class="dark-img" src="https://image.eg.expedia.com/lib/fe3211727364047c721775/m/1/Expedia_Logo_Dark.png" alt="Expedia logo" height="33" style="font-family: sans-serif; font-size: 16px; border: 0; height: 33px; width: auto; line-height: 100%; outline: none; text-decoration: none; display: none;" border="0"> <!--<![endif]--> </a> </td></tr></table> </td></tr><!--[if gt mso 15]><tr><td style="font-size:0;line-height:0.1pt;">&nbsp;</td></tr><![endif]--></table> <!-- divider -->  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"> <tr> 
+<td class="w100pc-only" width="100%" height="16" valign="top" style="height: 16px; line-height: 16px; border-top: 1px solid #DFE0E4; font-size: 16px;">&nbsp;</td> </tr> </table>   <!-- MODULE END: Header -->  
+ <!-- GLOBAL START: Generic 1 -->  <!-- GLOBAL END: Generic 1 -->
+  
+   
+  
+<!-- MODULE START: hero-member-image --> <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #FFFFFF" class="background-base" dir="LTR">  <tr> <td valign="top" align="left" width="100%" style="background-color: #FFFFFF; padding: 0;" class="background-base">   <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"> <tr> <td align="left" style="padding-top: 0; padding-bottom: 0px; padding-left: 0; padding-right: 0;  " class="">   <a href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6ImEwZTk1MGUzLTgwYzEtNGRjNS1hMmE3LWQ2YjU4NGY2ZGM2YSIsImRla1ZlcnNpb24iOjEsIml2Ijoib1BPKzllaUlRbzVRcWlLQ1AvdXpDZz09IiwiY2lwaGVyVGV4dCI6IlhmSXk1RUJKc2lkYXpGUHJIV24xMmt0ZER6bmMyVXRMdjgwQUlZeGJYVER4WnMzeGNvalAxVmVSZW91YmFnU0FDSXpZd1pXdktHTGNZdjNISzR6WWt1R0VJUEdlN05MS3Ava0ZVUlVxb1BPKzllaUlRbzVRcWlLQ1AvdXpDZz09IiwiYXV0aFRhZyI6IjJKTGhoQ0R4bnV6U3lxZjVCVkVWS2c9PSJ9" >   
+<img src="https://a.travel-assets.com/travel-assets-manager/destu-41487/BEX-US-EMAIL-D-HERO-600x389-2x.png" alt="Book a last-minute flight, for less" width="600" style=" display: block; padding: 0; margin: 0; line-height: 100%; text-align: center; border: 0; height: auto; width: 600px; max-width: 100%; " class="w100pc-nomax  hide"> </a>  <!--[if !mso]><!--> <div style="width: 0; overflow: hidden; float: left; display: none; height: 0; mso-hide: all;" class="show"> <p style="margin:0;" class="">   <a href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6ImM4ZGMzNGUzLWMzODItNDI3NC1hYzYzLWNjYTM0YzcxOWFkZiIsImRla1ZlcnNpb24iOjEsIml2IjoiQ1lTT1pvSVUzTTUyTjkyYWhQeE54Zz09IiwiY2lwaGVyVGV4dCI6Ikk4RlM5cm45bWkvdjJiZmRaRDFGQjQ4VUFYNmxGcmZIbkoxa2pTcXVjamtYTUlQRnpDY0s1Mm9qVjNGMW84dXJGVEJnTThtN3BDUW5vVVk2SitBNFh6ZlZjckFCQ05jSDhJZGZmdjBYQ1lTT1pvSVUzTTUyTjkyYWhQeE54Zz09IiwiYXV0aFRhZyI6Ik9GODMxWEt3QVFqWEIvQ0hYMzc5Rnc9PSJ9" >   
+<img height="auto" width="256" alt="Book a last-minute flight, for less" style="display: block; " src="https://a.travel-assets.com/travel-assets-manager/destu-41487/BEX-US-EMAIL-M-HERO-375x447-2x.png" class="w100pc ">  </a>  </p> </div> <!--<![endif]-->  </td> </tr> </table>  </td> </tr>  </table> <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #FFFFFF;" class="background-base"> <tr> <td valign="top" align="left" width="100%" style="background-color: #FFFFFF; padding: 32px 32px 0px 32px;" class="background-base">    <h2 class="heading" style="color:#191E3B;font-size:36px;line-height:112%;font-weight: 500;margin-top: 0;margin-bottom: 16px;margin-left:0;margin-right:0;text-align: left;"> Last-minute flights under $200  </h2>     <p class="paragraph" style="color:#191E3B;font-size:14px;line-height:144%;font-weight: 400;margin-top: 0;margin-bottom: 16px;margin-left:0;margin-right:0;text-align: left;"> 
+Pack a bag and grab a friend—our last-minute flight deals under $200 are here to take you on adventures to remember, or check out our weekend flight deals.¹ Plus, as a One Key member, you can earn OneKeyCash on top of your airline miles.²  </p>     <table role="presentation" border="0" cellspacing="0" cellpadding="0" class="w100pc" align="left" > <tr> <td valign="top" width="100%" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0;"> <table role="presentation" border="0" cellspacing="0" cellpadding="0" class="w100pc" width="100%" dir="LTR"> <tr> <td align="left" class="button-primary" style="border-radius:40000px;background-color:#1668E3;">  
+<a href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjcxNGNjNGU4LWEwNGYtNDczMy04MjA0LWZlZTk5MDkyOGY4MSIsImRla1ZlcnNpb24iOjEsIml2IjoiVldlUkZ5cFNHclgzRUxqc1pvQTFaQT09IiwiY2lwaGVyVGV4dCI6Iko4Q29JdHZienNBbldoN0xKSkZoV0srL0c1QjVFa1dxT3JXUHcvQVNidExnUUJlcUFnZU84UFExb0tWQ1Qzb21uc2ozQ3ZQdDlkODZub0NDQVVKWjhFL2M5TkM4Y2EzYmswaEljVGtjVldlUkZ5cFNHclgzRUxqc1pvQTFaQT09IiwiYXV0aFRhZyI6IldmQlAzUFRRdkhHdDI1TklTSEU1SEE9PSJ9" class="button-primary block" style="font-size: 16px;color: #FFFFFF;line-height: 126%;font-weight: 500;text-decoration: none; display: inline-block; text-align: center;border-radius:40000px;background-color:#1668E3;padding: 8px 16px;mso-padding-alt: 0; mso-border-alt: 8px solid #1668E3;" > Shop flight deals </a>  </td> </tr> </table> </td> </tr> </table>    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #FFFFFF;" class="background-base"> <tr> 
+<td width="100%" style="background-color: #FFFFFF; padding: 0;" class="background-base">   <div style="line-height:32px; height:32px; font-size:32px" aria-hidden="true">&#8202;</div>  </td> </tr> </table>  </td> </tr>  </table> <!-- MODULE END: hero-member-image --> 
+
+  
+   
+  
+
+ <!-- MODULE START: image-layout-single -->   <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #FFFFFF" class="background-base"> <tr> <td valign="top" align="left" width="100%" style="background-color: #FFFFFF; padding: 0 20px;" class="background-base"> <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="w100pc"> <tr> <td style="font-size:0; text-align:center; vertical-align:top"> <div style="width:100%; max-width:280px; display:inline-block; vertical-align:top" class="w100pc-nomax-block"> <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"> <tr>  <td style="padding: 0 12px 0 12px">    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"> <tr> <td align="left" style="padding-top: 0; padding-bottom: 16px; padding-left: 0; padding-right: 0;  " class="">   
+<a href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6IjFmOTRjYWQ5LTY2ZDctNDVhZS1iZThhLWJhN2YzZGQ4Nzc3ZSIsImRla1ZlcnNpb24iOjEsIml2IjoiMmpzbU9NbmQ5L0lpOFVITHFxTXpUQT09IiwiY2lwaGVyVGV4dCI6IkgwK3NhUS92SC9PY1JOZXlVMlRVS0JqcDhkL2V6RmFRcmlKZUM5Z1pJdjAyQzRlMjBZbFd3U3FXK2I1V2dqSkhKbldienpRQTloOEhrSk1xMzNidnRUNFd4K2JRWEtaeWJSQ2M4V0w0MmpzbU9NbmQ5L0lpOFVITHFxTXpUQT09IiwiYXV0aFRhZyI6Ijc3VStGc2ZtMEZ5bWNtMFFuUEZpK0E9PSJ9" >   <img src="https://dam-cdn.exp.orangelogic.com/AssetLink/f4l6m77auwbf4712s1xqdftv1d1jipm5/t/re_w_736,re_h_414,re_rm_stretch/c_w_622,c_h_414,c_x_0,c_y_0,c_whu_pixel/EP13QXCE.jpg" alt="Last-minute member deals" width="256" style=" border-radius:4px;  display: block; padding: 0; margin: 0; line-height: 100%; text-align: center; border: 0; height: auto; width: 256px; max-width: 100%; font-size:14px;" class="w100pc-nomax  "> </a>   </td> </tr> </table>    </td> </tr> </table> </div><!--[if true]></td><td valign="top" style="width:280"><![endif]--> 
+<div style="width:100%; max-width:280px; display:inline-block; vertical-align:top" class="w100pc-nomax-block"> <table role="presentation" cellpadding="0" cellspacing="0" border="0"> <tr> <td style="padding: 0 12px 0 12px">    <h2 class="heading" style="color:#191E3B;font-size:16px;line-height:126%;font-weight: 500;margin-top: 0;margin-bottom: 8px;margin-left:0;margin-right:0;text-align: left;"> Last-minute member deals  </h2>     <p class="paragraph" style="color:#191E3B;font-size:14px;line-height:144%;font-weight: 400;margin-top: 0;margin-bottom: 8px;margin-left:0;margin-right:0;text-align: left;"> You don’t always need to plan ahead. Find great hotel deals when you're looking to get away ASAP.  </p>      <p style="line-height: 130%; font-size: 14px; color: #1668E3; margin-top: 0;margin-bottom: 0px;margin-left:0;margin-right:0;text-align: left;font-weight: normal; " class="">  
+<a class="link " style="color: #1668E3;text-decoration: underline; " href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6Ijg1OGJjYjNlLThlZGQtNDZkNS05ZDM1LThjODc5NWIyYjY3ZSIsImRla1ZlcnNpb24iOjEsIml2IjoibzM3MVhyN1BHQm5wWE9yMkJJUW5pZz09IiwiY2lwaGVyVGV4dCI6IjlyK2ZQVCt0eUlNUmVQMzluRmZMOHZnZFBCbzNTcE9sR0NXM3dUKzd3YTdBWkNKNDg2SytFanRkL2R0NTNvQUtUSlRxOUZydnhNOGJSMThkRjI4akcwN25MdWhpRjl2Yk1tQ2drUFUybzM3MVhyN1BHQm5wWE9yMkJJUW5pZz09IiwiYXV0aFRhZyI6Ikl4dE81eTdvWWhmYjJ6SmdvSkQxTmc9PSJ9"  target="_blank"> See all deals  </a>  </p>      </td> </tr> </table> </div> </td> </tr> </table> </td> </tr> </table>   <div style="line-height:16px; height:16px; font-size:16px" aria-hidden="true">&#8202;</div>   <!-- MODULE END: image-layout-single --> 
+
+  
+   
+  
+   
+  
+   
+  <!-- GLOBAL START: Generic 2 -->  <!-- GLOBAL END: Generic 2 --><!-- MODULE START: Footer --> <!-- divider & spacer (full width) --> <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"> <tr> <td class="w100pc-only" width="100%" height="16" valign="top" style="height: 16px; line-height: 16px; mso-line-height-rule: exactly; border-top: 1px solid #DFE0E4;">&nbsp;</td> </tr> </table> <!-- app download -->  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"> <tr> <td width="100%" valign="top" align="center" style="padding-bottom: 12px;"> <table role="presentation" border="0" cellspacing="0" cellpadding="0" dir="LTR"> <tr> <!-- App Icon --> <td valign="middle" width="24"> <p style="margin-top: 0; margin-right: 12px; margin-bottom: 0; margin-left: 0;" class=""> 
+<a aria-hidden="true" tabindex="-1" href="https://click.eg.expedia.com/u/?qs=eyJkZWtJZCI6Ijk0ZjI0ZWM3LTg4NDItNDI3NS1hODVhLTVkZWNmNDdhM2RmMiIsImRla1ZlcnNpb24iOjEsIml2Ijoib3dlaXFYL2ZSLzY4MzJ4ZXB2dmZOUT09IiwiY2lwaGVyVGV4dCI6IkJwKzNUclNvaEVlcEFYK2lGQ1F1MlJmOEFoSzF2SEVjWGM0UXBzOXhydDdYeVZWYndPd2g0L1FzYXI3UlNpS1ZyOHNYdldBV2Zab045VVFoSVBhcURhSGF0L1VVZ0JZeXJteDY4c3N6b3dlaXFYL2ZSLzY4MzJ4ZXB2dmZOUT09IiwiYXV0aFRhZyI6InFnMmgycmYxRklBV01xNXNldkxMTXc9PSJ9"  target="_blank">  <img alt="Expedia logo" src="https://image.eg.expedia.com/lib/fe3211727364047c721775/m/1/mark__app__expedia.png" style="border: none; height: auto; line-height: 100%; outline: none; text-decoration: none; min-width: 24px; width: 24px; vertical-align: middle;" width="24" border="0" aria-hidden="true" tabindex="-1"> </a>  </p> </td> <!-- App Text/Link -->  <td valign="middle" align="left">  
+<p style="text-align: ; color: #191E3B; font-size: 14px; line-height: 18px; font-weight: normal; margin: 0 0 0px 0;" class="paragraph">  Download the <a class="link" href="https://click.eg.expedia.com/u/?qs=eyJkZWtJZCI6ImEyM2U5NWM2LWU0ZGEtNGNhMC1iNmIyLWMzY2UyZGYzMjNhYyIsImRla1ZlcnNpb24iOjEsIml2IjoiZ2JiV2ltMmZ3Ukp5c2tZbnM0a0FoUT09IiwiY2lwaGVyVGV4dCI6ImJORUwvVkNWYlRkM0REekUzVFMycmdxM1RpT0FSS0h6bkZSQjIrODFWRHJ0Vk54RmFuM3lpUUM5YnZacHV2eDJmWS9SMitJY01vSFBicVc0YWhkM1piRjJNQ0NzaFdybkQrWnN3RzJOZ2JiV2ltMmZ3Ukp5c2tZbnM0a0FoUT09IiwiYXV0aFRhZyI6ImQyV3hkakFncklWcTV3L21iTUJ0alE9PSJ9"  style="color: #1668E3;text-decoration: underline;" target="_blank">Expedia app</a>  </p>   </td>  </tr> </table> </td> </tr> </table>  <!-- footer nav --> <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="background-base"> <tr> <td valign="top" align="center" width="100%"> 
+<p role="list" style="color: #191E3B; font-size: 12px; line-height: 16px; font-weight: normal; margin: 0 32px 0px 32px;">  <a role="listitem" class="link pb" target="_blank" style="display: inline-block; color: #191E3B; font-size: 12px; line-height: 16px; font-weight: normal; color: #1668E3; text-decoration: underline; margin: 0; mso-line-height-rule:exactly;"  href="https://click.eg.expedia.com/u/?qs=eyJkZWtJZCI6IjdmNTE2ZDgyLTZhNTItNDViYy1iNWYyLTdkNjFkNTZiN2UwNiIsImRla1ZlcnNpb24iOjEsIml2IjoiVTl2STV3MnhMM1NvNzdIdXEwOTYydz09IiwiY2lwaGVyVGV4dCI6ImhpQ0crNkI5OHJHWDRwMzk1UUpQYjVGQXpqQjE2R1lWb0Jha3pRbXNzRnFJeGFaeG8vZ1RMOXZhWnl4UmtRVXZNSitjaU43RTg5OU5pdS9zakdsalprZmtDeDMyVWtTRkd4YldqbTVsVTl2STV3MnhMM1NvNzdIdXEwOTYydz09IiwiYXV0aFRhZyI6IlkyWkg1QXNkOWxKRWhSc1cxbzV1WlE9PSJ9">Unsubscribe from The Travel Edit</a> &nbsp;&nbsp;  
+<a role="listitem" class="link" target="_blank" style="display: inline-block; color: #191E3B; font-size: 12px; line-height: 16px; font-weight: normal; color: #1668E3; text-decoration: underline; margin: 0; mso-line-height-rule:exactly;"  href="https://click.eg.expedia.com/u/?qs=eyJkZWtJZCI6Ijc3OGMzYzIwLTgyYWEtNDVhOC1hMTFkLWU4MzYyZjE1NDExMSIsImRla1ZlcnNpb24iOjEsIml2IjoiMGVuMWVBQ2dTRjhuWjVYNnNUMDBJUT09IiwiY2lwaGVyVGV4dCI6InNXR0ltYXVUKzZtRXJDSVQyWTBTMENaWHVabmUwNnNZT0V6cm5VbmFqOE85cURidGlleHBweURMVmdLaEZQTnhhc2ZlaFo4YmdIQUFyRGpxMitRZXc1S3RvNnRYVWpObVlocWYzdWtpMGVuMWVBQ2dTRjhuWjVYNnNUMDBJUT09IiwiYXV0aFRhZyI6IkhzT1NyYU9yVjFJelptSWFuOTdwSWc9PSJ9">Privacy</a> &nbsp;&nbsp;  
+<a role="listitem" class="link" target="_blank" style="display: inline-block; color: #191E3B; font-size: 12px; line-height: 16px; font-weight: normal; color: #1668E3; text-decoration: underline; margin: 0; mso-line-height-rule:exactly;"  href="https://click.eg.expedia.com/u/?qs=eyJkZWtJZCI6IjFjMGE5MWJmLTI3NWQtNDhmNC1iMGIwLWM2MzFhZDcxODdmNSIsImRla1ZlcnNpb24iOjEsIml2IjoiNEl0eG9XQ2ZVbDUyb1MxclpCRi9EZz09IiwiY2lwaGVyVGV4dCI6IlZqNWh3a3ExUmdFOHkzYTJoTnFkYjlwMXRwTXpYbHBSdkNJSHpFNUJSR0JDVy9lb0lrWGJXZHZ0eC9lWUVDcjF3eTExV1ZGMERIeERPQkRYUHZDR0oxZkIwbGhGTHFRdVVqNjlGcGM3NEl0eG9XQ2ZVbDUyb1MxclpCRi9EZz09IiwiYXV0aFRhZyI6ImhpZFh3ZEpZUlM2a0xsSSt2UmFYT3c9PSJ9">Help</a> &nbsp;&nbsp;  
+<a role="listitem" class="link" href="https://click.eg.expedia.com/?qs=eyJkZWtJZCI6ImEyYTdkNzZmLWI0ZDAtNDdhMC1hMDdkLThjYTMxODg4ZDFmZiIsImRla1ZlcnNpb24iOjEsIml2IjoiWkVtVUNkend1UXByMXRxeTZ5a21VQT09IiwiY2lwaGVyVGV4dCI6InljS0dDZktPNXVSWk1reVk1UG4vMjk2YldZOXVCWmNqWWo5bGRiREJEREJFbm9vOGpXMks1SzhzbnNaSnpFQlNEY2hFYW9sMktMQlppUDdiOXRWdDZLelh5M0txdytJQ3dCNWtTWlFKM1BDNUNtdlcyckxyS1NaUSIsImF1dGhUYWciOiIvdHYyMVczb3JOZkxjcXJENGdMQUhnPT0ifQ%3D%3D" style="color: #191E3B; font-size: 12px; line-height: 16px; font-weight: normal; color: #1668E3; text-decoration: underline; margin: 0; mso-line-height-rule:exactly;">View online</a>  </p> </td> </tr> </table> <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"> <tr> <td valign="top" style="padding: 16px 32px 0px 32px; text-align: left; color: #191E3B; font-size: 12px; line-height: 134%; font-weight: normal;" class="custom-font"> <!-- divider & spacer (full width) --> 
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"> <tr> <td class="w100pc-only" width="100%" height="16" valign="top" style="height: 16px; line-height: 16px; mso-line-height-rule: exactly; border-top: 1px solid #DFE0E4;">&nbsp;</td> </tr> </table>
+  
+<p style="text-align: ; color: #191E3B; font-size: 12px; line-height: 134%; font-weight: normal; margin: 0 0 16px 0;" class="paragraph" dir="">
+  ¹Prices are "from" prices based on the lowest available fare for one adult on select flights. "Weekend flight deals" are for travel Friday through Sunday. Fees may apply for checked baggage. There may be an additional fee based on your payment type and flight selected. Blackout dates and other restrictions may apply. Subject to availability. Terms and conditions apply.
+</p>
+
+
+
+
+<p style="text-align: ; color: #191E3B; font-size: 12px; line-height: 134%; font-weight: normal; margin: 0 0 16px 0;" class="paragraph" dir="">
+  ²Excludes taxes and fees. OneKeyCash is not redeemable for cash and can only be used on Expedia and other participating brands.
+</p>
+
+
+  
+     <p style="text-align: ; color: #191E3B; font-size: 12px; line-height: 18px; font-weight: normal; margin: 0 0 16px 0;" class="paragraph">  This email and its links may contain your personal information; please only forward to people you trust. You are receiving this email because you are eligible to receive promotional emails from Expedia.com.  </p>    <!-- address -->  <p style="text-align: ; color: #191E3B; font-size: 12px; line-height: 18px; font-weight: normal; margin: 0 0 16px 0;" class="paragraph">  Expedia, Inc. 1111 Expedia Group Way West, Seattle WA 98119, USA.  </p>    <!-- emlcid: EMLCID=EXPEDIA-US.MKT.ACTV.DRMDRMZTI357.EML&EMLDTL=DATE20260317-LANGEN_US.TESTX.VERSX.CAT01G250.SEG_030205.JID1742876 -->  </td> </tr> </table> <!-- MODULE END: Footer --></td></tr></table> <!--[if true]></td></tr></table><![endif]--> </td></tr></table> </div>
+</body>
+</html>
+
+
+
+--ahPZw9cHsFwe=_?:--
+

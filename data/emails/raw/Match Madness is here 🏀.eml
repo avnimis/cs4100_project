@@ -1,0 +1,1932 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:adf:f047:0:b0:43b:44c0:9cea with SMTP id t7csp354371wro;
+        Mon, 16 Mar 2026 06:13:35 -0700 (PDT)
+X-Received: by 2002:ad4:5766:0:b0:89c:4fe3:85bd with SMTP id 6a1803df08f44-89c4fe387fcmr52780256d6.48.1773666814822;
+        Mon, 16 Mar 2026 06:13:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773666814; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VEC72B9zo6ZvkXsqnWSZSQucQlPYyPV0/n6QXBCW99N9hqZfv0Ue+GF/V3tuBPho2+
+         pB+ke2fyciJ/BVCSrM+H3j9cgpy0NKNfvin/zamK4zPUAO/41bdvsn/jmHmiJA/q6hBW
+         Zbb8L/1GcziwsTzKY+WRhhDID3rNNbVisBjdZAnQ9dixrdgS0MjUNI3v9QKV1fTo9l9K
+         AWM7inrjCbNzZbFoFA8l9b+ifBgvxDfFn3ATzpcgopoQJzIRX4Q6UjmcOSLoWmrXXscN
+         OZhWobKe4gDr6OIY7Cvs5jtmZ5FMa1MufZzC3ccP6PTzAQS1jCGIm84TMctKOvgHiHKJ
+         zoAQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:reply-to:subject
+         :message-id:mime-version:from:date:dkim-signature:dkim-signature;
+        bh=Neyb1BRM5QVnxEDq1Y12CRSdzUdgu6zzsk+Gz5SQOGw=;
+        fh=gYIh15b8nGBadAT/ysZc0l9lwLnBlxCACkFrvbnfWaw=;
+        b=M5PGto6DLz8Ng3PK3Y6n8AxH11OSgRPZQh9e3+oi3n8Vw0xtgvW14fTLvF6hKS/0/l
+         pZpcohWeUPQKPLd2P5DljOtEBOjzuO2kxb97eRbYjKhvLXUXFZCc2VhicjnRNyJaXynU
+         8KLoKpyJWXSOsjnrCPhowVsg7jsoeaCLjgFsEwrgpDJwwpAUr68HbF8emXMi3xeE1QOD
+         RYOMe6Y57g5pTlSCOhnpO71LCiebqvyHAiiROH2sDp6PxjQ1HfdbktIiCShvHDaXrHXx
+         Qp2taS5ndfFRZ3UqiyDiShcGJ08dTYgtLXpPlZE76l4/WqExFcL5u4LE+TdRLDXzRzgj
+         ioTA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@newsletter.quizlet.com header.s=s1 header.b=aQFB6vEZ;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=gBbTX0F1;
+       spf=pass (google.com: domain of bounces+14493168-7d7b-jasmind009=gmail.com@abmail.newsletter.quizlet.com designates 149.72.138.125 as permitted sender) smtp.mailfrom="bounces+14493168-7d7b-jasmind009=gmail.com@abmail.newsletter.quizlet.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quizlet.com
+Return-Path: <bounces+14493168-7d7b-jasmind009=gmail.com@abmail.newsletter.quizlet.com>
+Received: from o2672.abmail.newsletter.quizlet.com (o2672.abmail.newsletter.quizlet.com. [149.72.138.125])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89a65db112asi171688576d6.657.2026.03.16.06.13.34
+        for <jasmind009@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 16 Mar 2026 06:13:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+14493168-7d7b-jasmind009=gmail.com@abmail.newsletter.quizlet.com designates 149.72.138.125 as permitted sender) client-ip=149.72.138.125;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@newsletter.quizlet.com header.s=s1 header.b=aQFB6vEZ;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=gBbTX0F1;
+       spf=pass (google.com: domain of bounces+14493168-7d7b-jasmind009=gmail.com@abmail.newsletter.quizlet.com designates 149.72.138.125 as permitted sender) smtp.mailfrom="bounces+14493168-7d7b-jasmind009=gmail.com@abmail.newsletter.quizlet.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quizlet.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=newsletter.quizlet.com;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:subject:to;
+	s=s1; t=1773666805; bh=Neyb1BRM5QVnxEDq1Y12CRSdzUdgu6zzsk+Gz5SQOGw=;
+	b=aQFB6vEZZ2ilgtdYZ6R+PhhBigTH7u5gUhKdRQJyqKsJG8gHRvry+bmFAOV/aXkOGOA8
+	NRV0WQogjpuiw+cYFE1ym2ptcIftJhrfd2KurUWNz2UvjEJr1YOU/tzpVPS7ZiaUA9gQvY
+	hLU54mMafx9ZIbGU3m5HEKRi9teXK5gS6dayXKlBhhHOkrXAZ6hmqqPo8VHtX3A4GeBUq1
+	JYYWro0JW0EOP2kCKpucu32f+4Ze8JicAfqasdsghy4xXyFA9IKFc/fPdoGMxbesFM+JI8
+	CMeLiixch6SX/45hkiSFwBpgrEJZSOGw7SFsm7YXWFHwMhQfXg4da/0LNanHFwBg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:subject:to;
+	s=smtpapi; t=1773666805; bh=Neyb1BRM5QVnxEDq1Y12CRSdzUdgu6zzsk+Gz5SQOGw=;
+	b=gBbTX0F1vLcH0n7hmOgTaAQao+kzPAjE9WaZkF+f7jojQgETT+6p3T9AYDK5B6/wJv+3
+	oZ2LsEFrFs5cgo/iP3jh2Iw9Hw2V7vTA1UgPypMoiXVH0O/Fp5pxWwcpfcY29EGaVlxlXn
+	y+YAPHWaxA5gC1yWSgxyb5gMIloTHrP4s=
+Received: by recvd-6c8dd88c66-qltmw with SMTP id recvd-6c8dd88c66-qltmw-1-69B801F5-7D
+	2026-03-16 13:13:25.722523224 +0000 UTC m=+583067.909974488
+Received: from MTQ0OTMxNjg (unknown)
+	by geopod-ismtpd-54 (SG) with HTTP
+	id VBW88C6MS0CLVlF8_-BPbA
+	Mon, 16 Mar 2026 13:13:25.714 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=4aeb4c6c9cecac7d0413183c8ea42a354835b5c2d7be5c65117cb3b9b585
+Date: Mon, 16 Mar 2026 13:13:25 +0000 (UTC)
+From: Quizlet <newsletter@newsletter.quizlet.com>
+Mime-Version: 1.0
+Message-ID: <VBW88C6MS0CLVlF8_-BPbA@geopod-ismtpd-54>
+Subject: Match Madness is here =?UTF-8?B?8J+PgA==?=
+Reply-To: no-reply@quizlet.com
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2F03=2Eemailinboundprocessing=2Ecom=2Fenc=5Fuser=2Flist=5Funsubscri?=
+ =?us-ascii?Q?be=3Fd=3D%241%24Dqkx2DWNX3Rw4Z8%2FWSCLFg%3D?=
+ =?us-ascii?Q?%3D%24kqgcSdETB6B2%2BQyXCiBUEbX7as3RBQt?=
+ =?us-ascii?Q?vCREqg0BSFZK2hebaiuf4D6jutMGS%0AaOq3Uw9?=
+ =?us-ascii?Q?mAfgRcxNjXGJiibbz53YKtu%2Fcas7cJGo5Ob3h?=
+ =?us-ascii?Q?HYLIUUkie4F1KWTD%0ASpUeaQKCg6Xr61r3eeiY?=
+ =?us-ascii?Q?%2BDLymWB94LiFKS42CT14UCBbeXZ97NNZljElu?=
+ =?us-ascii?Q?BPd%0AlYptl%2FLxtMBe7orUxPWZU7t1Zce7i2R?=
+ =?us-ascii?Q?YJ%2F4NZP%2FInuXpS4KemOoJekGttjMi%0AhNs?=
+ =?us-ascii?Q?KC4JjuaryQanCJkJbBWZdFQakKcTOnCh2p%2Byu?=
+ =?us-ascii?Q?OXNTf1wmQZ1yX6EVcr7K%0ACjCviRWXjl8gfNGn?=
+ =?us-ascii?Q?K4mm&1=3D1=3E=2C=3Cmailto=3A4=5Fnfcje08cl9ok51flmnv?=
+ =?us-ascii?Q?vk8jgtjreho4ttg9rvw5b5jx7vincbap6z8=40uns?=
+ =?us-ascii?Q?ubscribe-03=2Eemailinboundprocessing=2Ecom=3F?=
+ =?us-ascii?Q?subject=3DUnsubscribe%20pnrcgsqcfcodycjq4?=
+ =?us-ascii?Q?h4tfq3tkss1l75jqnnpf1nwovcfd&body=3DDO=5FNO?=
+ =?us-ascii?Q?T=5FDELETE-b7oonkw1092t8wuqgjf5yarlr61unu?=
+ =?us-ascii?Q?rml7tpvddtzdppgslsi94bxcjfgcmqvdur6rir4?=
+ =?us-ascii?Q?0415156khwube44t-DO=5FNOT=5FDELETE=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EkyGRSbe6JK5ppRoYxOT7=2FK25J=2FPn+JulLkz1CpZgjisg7LOlbWl4RIv6r?=
+ =?us-ascii?Q?ODWQDSx1uyPAGD6Rtmv32UZznwUm7=2FpcPwmJjlS?=
+ =?us-ascii?Q?SlABnM0HjKFccgWu6AKeynm1p+JUxPF7U=2F76=2FCt?=
+ =?us-ascii?Q?x3J6G3Z+aD3a94dT5oBYwuhx6wVuxSbPkcgHhgl?=
+ =?us-ascii?Q?eDEK+vhiMpdyaIzBb6nZIAP61juk3YGVUNYIpjD?=
+ =?us-ascii?Q?oibTtADitMjA2NCHqrGpw+I8nCs6dhbifzss1bL?= =?us-ascii?Q?lH2M?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDrjDW6011yC6XOo?=
+ =?us-ascii?Q?3uya5MXffzNltTX1dpEPHSeGPSLqTXpxdSAyEau?=
+ =?us-ascii?Q?73MRZ+AvTXLRiiBscl3MHi5d7R01biPXt=2FQIku5?=
+ =?us-ascii?Q?XAXG+KjZuP7cJR79zFeUuGreT2rMADN9LH+0SaY?=
+ =?us-ascii?Q?4uYeLdUKwBqrV58NENSD4UrUc3NAJ2+=2FxrXsrMn?=
+ =?us-ascii?Q?YODbGhjcCpS0QpWz45XmzSqTnVS1XF4XcivTMma?=
+ =?us-ascii?Q?qZwBzqTnSSnG5RoSaeYzwC9A=2Fgmpklk9pzZZO5V?=
+ =?us-ascii?Q?mMcMQ+GnCp+YdlfMtgLlFAR0LHXEVZm00cXAtkj?=
+ =?us-ascii?Q?1TwqXAaoZHG3=2F4IGxw0A6aGi70ZG6TpfJC16SCo?=
+ =?us-ascii?Q?Nr5gJbyiCn4DqWjYdTXXuy3+F8CugOvllDblOfq?=
+ =?us-ascii?Q?gAS0zu0lkgkD0gDimvAROunmT+KanmaP8=2FrfMFd?=
+ =?us-ascii?Q?XwvCAV3L6jNnbpMOgRjzPez2rWXCyURAECW2F4o?=
+ =?us-ascii?Q?zS1hWRFMwktLOVx2yff7buAeMHnMi4dZ=2FaPd4vH?=
+ =?us-ascii?Q?EJH0FWd7g=3D=3D?=
+To: jasmind009@gmail.com
+X-Entity-ID: u001.pKUgj7pMER6ep9AFTDDXyw==
+
+--4aeb4c6c9cecac7d0413183c8ea42a354835b5c2d7be5c65117cb3b9b585
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Think you can make the bracket?
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C
+Quizlet=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3Dk1fQ_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQKjSMQHBN=
+ds0RBVHNrlXS90XbAqEqE0c-2FrIE3hyxg-2BxsgVf9kOqowML-2Fsm1oWEZ7aMuYMnE3DsWiVp=
+JEu7ka0j9U8OqDGurbN25RDd5WpUd-2B2cgjp2ieEKUHE0XG7gv-2BVd8z9uOAUAR07ZZ5jP-2F=
+VdVR )
+        Try
+Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzZEs0zTiqBjxb5V8EqMbCANVt-2BDqawgFtPrtdNaOfIFesuaFPka7JPmBJ0TD3H5OKG=
+mf2wu1rLKWbSBBDa-2Bxtd896BpfNTpxVpDkIfbpiQiACE5JQAz0sUpbNe1rIlA6Bw-3D-3DWU9=
+S_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqLELLNih=
+7j4-2BhvdLWUVz3pq1HSo1EG72kDX00xFV-2FSUMT1KotiCqPQWJOA-2FN2lwE-2FmRF-2FCHTV=
+mFpNrjRqd8y6XLuNSf1Qcr15yE-2BDvDLhLREc2vM1M6xTegf0zw58qtdm7W0YxM9ufEDtoCl )
+=20
+Try
+Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzZEs0zTiqBjxb5V8EqMbCANVt-2BDqawgFtPrtdNaOfIFesuaFPka7JPmBJ0TD3H5OKG=
+mf2wu1rLKWbSBBDa-2Bxtd896BpfNTpxVpDkIfbpiQiACE5JQAz0sUpbNe1rIlA6Bw-3D-3D91O=
+T_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK97t4dCr=
+wV0T-2FoLhUR-2Btj9DumdFeusrzUtm0e6XTMFkGoPoZvXMNe-2Be859p25kaM2jkTBeoEEbTLD=
+78x8q8ngxtSLZFdKM5R2hiRmABS2BqHGR2-2BYF1Wy6ZucDQRSlcxM7SnIrZ4b9hc7WxP )
+=20
+Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3Dw45C_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YK=
+Xsyh0bNpIDeXjvI9nVU85JPdS5qJ8T4Bf4k3fyFt1Pfcx04L-2BV-2FTFIKvf4LB6SoRrFjvW-2=
+BIoXIT6yhDPsmKqe4gT58yU51gwMxru5HTbn42OoiZOIOcKbqlthTZBGB3-2FhC7oYcOGeWnp8t=
+ )
+ Search=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzVBSArAVqAOTuWWGZAL-2FV8pjUQYCLlTffoZ2HbV55rkVJra6OWmn25t3OuUB8j5Fsx=
+L034FMI301qONXpAFGwU-2BnQDF2HkqKFFAPp6Hj19o03EfIHRzK12kOQJs0sobxaQ-3D-3D62v=
+h_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIBgVDsqstpcEIe=
+SOOnBUpm3RXjUnkFit06g-2Fw4tXbqcdqEwLDkE3yg-2Fm328aaIjp6eXNpIlms5xsugK781uXw=
+8N0Lw2St8ttwKHYWAJBdOB-2BYxIv0mgZ14NNqYgqCWxYsacREsDNd0EsVYtwnVtsdh )
+   Search=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzVBSArAVqAOTuWWGZAL-2FV8pjUQYCLlTffoZ2HbV55rkVJra6OWmn25t3OuUB8j5Fsx=
+L034FMI301qONXpAFGwU-2BnQDF2HkqKFFAPp6Hj19o03EfIHRzK12kOQJs0sobxaQ-3D-3DpcD=
+U_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLdCrVMImYM9Ys7=
+1cJPn-2F-2FnS8ICFPRNl-2Bhn-2FTOpiyVnjlOu1Ndawqad32izfquTNcZeCJn6w4OfSLLFTsS=
+oJnjJm4dAVsrSN1QIP-2BXY9y6Qy1Zhitf7dO8tM1t0xRT74uSZCx71ChIjhPvt5EdfZMiN )
+ =20
+Quizlet=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3DbzC4_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLSfplYxl=
+QqGlK-2FOW5j1mEoFVYY2mZROQMh2OgnSK-2BHZ2YBqFuP9AvzCGzbbx-2B8alO-2BTxbCgDVI5=
+GsO8onVdoJUTTDgDueUL5vB-2BSqtRBJ4qMSQLT14wVGebaEL-2BZq6cEYzntbh8rxKc4md3J4o=
+HpD4 )
+       Try
+Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzZEs0zTiqBjxb5V8EqMbCAMjfGMrn6Bo40OFWR3iyIv2EXfWn9xR6DbrfMmiSRcLcx5J=
+S9WqflKN6FxeyCruf7xmGbJBGEnY4UXAZCUs7r0CpeqUl7oxJIehz5nMSy4x-2Bi62iJSWTmSt8=
+izslRXhTP0-3DZP7V_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I=
+9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7L=
+WIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2F=
+jYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhV=
+TGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgj=
+f31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fV=
+Xm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSl=
+RI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjF=
+UQLJTeWlSeeBmwt86bigE1NFGmP7YpceKvwIqOpzox-2B8LV7QLqF0Pl2G3jiqA-2F853EAhqoT=
+zwECCpjHjVHOswaUzSCw5cyQLe9AC-2BnmKHRTUekW1WvGS-2B-2BJEqpKWXTodId7VPXDYGEzm=
+hwFYnda24ZF8 )
+                            Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3Dnrgs_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIdMmfjZb=
+EPu9X-2BBV6wcUjqe-2FLEr7ICWXMcR8lCSkerY8seR3v21n0jpRaesFUkQtgO8cJQXFI7w9rIT=
+5qt1ay7jhTXI7oflJ4NR4qu4pkiTQqmOV9P93dbDqDfCS6jAXSEW5PdGhxpuyAEaSj-2F8vZk )
+ Search=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzVBSArAVqAOTuWWGZAL-2FV8pjUQYCLlTffoZ2HbV55rkVJra6OWmn25t3OuUB8j5Fsx=
+L034FMI301qONXpAFGwU-2BnQDF2HkqKFFAPp6Hj19o03EfIHRzK12kOQJs0sobxaQ-3D-3D7eq=
+Y_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQKNVfeYe-2FJxaN=
+auEPxDaSSnoCGiyJCI9OS0KpLn-2FOaESo1d56xp0UlZo532RQFaBqxfbzzWDQ2JnttGH6uhAci=
+1IxoA8LxahkHifNCIEOUT-2FwCg9QtNTFAz6M7u2P4vMKMQNrHlCspQqHUPkIKTNC-2F8 )
+                  Quizlet=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3DpZC8_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqL=
+ELLNih7j4-2BhvdLgTgwwYpKhZeVSVTpuvD-2BGqUGX-2FmbdYNt8BzP5GwfzWrJfmc3aeQVg8Q=
+iMqGx4wyWw7CsDS1uurzi6ZYmYcR5RsfLRpfOYsV8pmoEFVv7TpZNliskZOq9PxcNIYZ7C0wY )
+                      Quizlet=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3DgXpg_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqL=
+ELLNih7j4-2BhvdL6SbyPB39JhpBTQ-2FOv7XxHJYZaXvS34cHhfBi9ErEFJaSZBpXsFpesgda4=
+r45Bk9V3-2BcP25Uc34PRiZaOXRF0QRQw3kgvu2VrHSkXCF5FAexpxmFwqkuCv9hWHH6mkK4-2B=
+ )
+
+
+
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzZEs0zTiqBjxb5V8EqMbCANVt-2BDqawgFtPrtdNaOfIFesuaFPka7JPmBJ0TD3H5OKG=
+mf2wu1rLKWbSBBDa-2Bxtd896BpfNTpxVpDkIfbpiQiACE5JQAz0sUpbNe1rIlA6Bw-3D-3Db12=
+6_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqLELLNih=
+7j4-2BhvdLENYhC2GDnRGJe1gCMBoI83F-2Fc15ScCfLMIZE27-2F-2FoWlYGrh9AF6k9cPK-2F=
+MS2jc-2BWFK1P5Tgyo5JH1kJHnT-2Fc49bKxau7U5ue1ux9gcJ6Sk8TwNg-2F42IiaZwFN9Y6q0=
+n1 )
+ =20
+
+
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzZEs0zTiqBjxb5V8EqMbCANVt-2BDqawgFtPrtdNaOfIFesuaFPka7JPmBJ0TD3H5OKG=
+mf2wu1rLKWbSBBDa-2Bxtd896BpfNTpxVpDkIfbpiQiACE5JQAz0sUpbNe1rIlA6Bw-3D-3DdKd=
+u_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqLELLNih=
+7j4-2BhvdL3WM5-2BFfdKwQNSgJ2NIyhLuL569d5eOwB9bR6lO8muh-2BW-2Brkg9JjDtEpfcDk=
+qu71wYgXnlP-2Bk31gOhoCBNCM2VRik4HQ6RsBJBJDYTF63PdEoXBENRIdIysx2WF7TxCs6 )
+=20
+Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3DIEOJ_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqL=
+ELLNih7j4-2BhvdL8OzJYakQu9hcFk91X-2BoY5TbcYIU3NmnyZgazQFcm4ISjh-2FQbvJtness=
+-2BI2-2BpxVEypp37APdupPMASsEnU3HxVo6zH-2BrIPElACZgiKvVlCyWWfCLhvZfXrz1u5C77=
+Ctd3 )
+ =20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzVBSArAVqAOTuWWGZAL-2FV8pjUQYCLlTffoZ2HbV55rkVJra6OWmn25t3OuUB8j5Fsx=
+L034FMI301qONXpAFGwU-2BnQDF2HkqKFFAPp6Hj19o03EfIHRzK12kOQJs0sobxaQ-3D-3DoQY=
+B_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqLELLNih=
+7j4-2BhvdLWqWusWVtiH8eERc7bgT6a8YUVbk-2F3ig3Q2TGL3ejc2tFLXetsAI8zGXnh8BkJqO=
+DcCy17dNRFfnZkXs4QI8msQPlHE1lZYqYxkcY5q-2B-2BIdZoBCCxvILWBCAJ3dOw7b-2BZ )
+=20
+=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzVBSArAVqAOTuWWGZAL-2FV8pjUQYCLlTffoZ2HbV55rkVJra6OWmn25t3OuUB8j5Fsx=
+L034FMI301qONXpAFGwU-2BnQDF2HkqKFFAPp6Hj19o03EfIHRzK12kOQJs0sobxaQ-3D-3DqCk=
+6_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqLELLNih=
+7j4-2BhvdLpw3-2Bb2NLRFQiSd1ZTNjMHKdbN0YT-2FXQMVfUGAzyNwDEVKxEqIm4ycKDDLDugM=
+VVl6zbmMpnHmaF7NKT3wURO7pDlh2HFJyYSoKPSVsGRwYIbvTAGnEylUL0j-2BIGFs9uu )
+ =20
+Quizlet=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3DLWbl_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqL=
+ELLNih7j4-2BhvdLuX-2FOjnmMaz4nyUF4CGyu2dDPV1uDOEhCd4XYcSxT4TTbt-2ByeYAmdlKm=
+V3WCoeyk-2Fd0HhrntRhBNmkFnteRTlqCs36DghYBTTPNBG6UMkc83H9QcVuPK1RS1CoVca4AE2=
+ )
+
+
+
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzZEs0zTiqBjxb5V8EqMbCAMjfGMrn6Bo40OFWR3iyIv2EXfWn9xR6DbrfMmiSRcLcx5J=
+S9WqflKN6FxeyCruf7xmGbJBGEnY4UXAZCUs7r0CpeqUl7oxJIehz5nMSy4x-2Bi62iJSWTmSt8=
+izslRXhTP0-3DuElA_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I=
+9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7L=
+WIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2F=
+jYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhV=
+TGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgj=
+f31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fV=
+Xm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSl=
+RI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjF=
+UQLoMx6uqLELLNih7j4-2BhvdLHWamSh0MVZGMyFTxO0HpOiY2-2B-2FpDM-2Fu64JuuIt58xN7=
+uwp1yit0an9JEuOEIoTH7Qm00lWNVNYtUAqS6bSEVDvo8IT6sDasAc1DiFOQjrDUIRGNBLnj9dY=
+UU0i04T9VX )
+                            Quizlet Plus=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3D2yMh_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLoMx6uqL=
+ELLNih7j4-2BhvdLihnQwlLEoJtI2dLjYeXCmgcWPp53LuYFz5pDAnE-2FKaDRMBsM7us3mgRD5=
+LmtwxnGt3-2BgxfAQrjyGLA3SrDfR9aLA5YqyxTZCt9VPplGWOJtINIQniIWKsaRkaGtp6N1s )
+ =20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzVBSArAVqAOTuWWGZAL-2FV8pjUQYCLlTffoZ2HbV55rkVJra6OWmn25t3OuUB8j5Fsx=
+L034FMI301qONXpAFGwU-2BnQDF2HkqKFFAPp6Hj19o03EfIHRzK12kOQJs0sobxaQ-3D-3D93D=
+J_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTk=
+k-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUs=
+UWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-=
+2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJx=
+nLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwn=
+naOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR=
+4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9q=
+is9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK97t4dCr=
+wV0T-2FoLhVzgKmLzJTCJpRTc1MUj6TmDJmsTBZJdUZ8EiXPrXlVNRjCU7QmWmIScWrC7-2FJD4=
+vgz4zhOTXG3WOa2cRX8rYzPsSDNBkkEY8Yb3W-2FKIi0wxHoFXWBSBClnacFVJA9XS9 )
+                   Quizlet=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWfRQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QY=
+ZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJXWkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D=
+-3DgdJq_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQ=
+AVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2=
+FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snY=
+m9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQs=
+F3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83=
+QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSR=
+RUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb=
+9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK9=
+7t4dCrwV0T-2FoLhhgb9DmUVscpF2glDsnYV8p62kPaW4RB8fxRJ5vifAlniPmGscFSji3L-2B7=
+NZCfAqV7L2CAffBoJMSWx90r4TjMJKxR0WA9-2FkioZ0mXB-2F4fYgY483ZjDpwTq382FaJLNh5=
+ )
+
+
+***************************************
+March Madness isn=E2=80=99t just for basketball
+***************************************
+
+This Match Madness, see if you can match each British English
+term with the American English version. Can you make the
+leaderboard?
+
+What is the British word for "eggplant"?
+----------------------------------------
+
+Garden aubrette=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N7r5KgPmKQkkJDIfaW4WjwOg=
+-3D-3D9guH_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7z=
+lEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo=
+1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1=
+snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2h=
+HQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2=
+F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8C=
+JSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2Bo=
+Vtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQS=
+KK97t4dCrwV0T-2FoLhAFCuNCFFOBfMBze9BFGpcP4I0mcyKbLjR8ooSF26MYYclrPN6robMuRS=
+LYirESguiWLC7MdTUQMf2zsTY-2B4-2BNarpXQ6RVXmI-2FQMrM2ebBt4tjdnubnxqVciDXANrt=
+gO3 )
+Oxford squash=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N70CzIUkbKn9sOHxyJE45a3Q=
+-3D-3Db3NV_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7z=
+lEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo=
+1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1=
+snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2h=
+HQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2=
+F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8C=
+JSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2Bo=
+Vtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQS=
+KK97t4dCrwV0T-2FoLhBShr9VnKHgO2kNZTjM-2FdAuDk-2BTY6zhK98fwvjgGlb1S2v5CAdgo2=
+8Y7ol9ry-2BGbHh-2FW3clYy4YfL8-2FWIE6aS73qR1RcKyxKL8wwH8HY9y1v7tO95AUCYoWHgh=
+XsIl2hO )
+Aubergine ( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6r=
+JT-2B6UcdyLy19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N7Fcbirq3Hp3gY=
+AhWtsk0Ung-3D-3D3rse_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1=
+i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIez=
+F7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP=
+-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvB=
+HhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9=
+Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf=
+1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIU=
+eSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiV=
+IjFUQJUHQSKK97t4dCrwV0T-2FoLhMur307FLHd4Qr-2Fjh2k3HnY7gQBeriPnPsUTaYbw4M5tJ=
+G-2FP5CDbk-2BTPufMrldPnh-2FroZp8S48yS5Wb7CMFBUllNLy5FvG0o-2FmIylkMGpQSw0Oq6=
+Ut48HaNj0aAtEKKNl )            King=E2=80=99s marrow=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N71tltOWIBT2H-2FxpepNRri=
+OQ-3D-3Dyh8f_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI=
+7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2=
+Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQ=
+v1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG=
+2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4=
+-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B=
+8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2=
+BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUH=
+QSKK97t4dCrwV0T-2FoLhnX9czoVB8aPEEc77K0veMHlZUXncLhOJsM-2F1KEA-2Bcy-2B6n-2B=
+POA0FBri1GVzMqgeI9PQAVncSXv7j8XVIKRf7ZllYq2u-2BhRC1XqAkqJLX1umr5OlBnYgAgpFT=
+h6z5ZW9Wq )
+
+--------------------------------
+Level up your March Madness game
+--------------------------------
+
+Master the madness in minutes with Quizlet=E2=80=99s Bracket IQ Toolkit
+created with sports content creator Sam Holtz.
+
+Learn now =E2=86=92 =20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzWBFEepTazk3JKHPPW-2BxGTZ7O-2B5xgYXhAbW9oSJqiJm5Xlyi8umH3q-2Bw-2Bwpa=
+togDpTNrgarQDqOMy-2BcmjdMCOCoqWSkIRfWODGXqrSJ90ZVQtyibJFVe166POI-2BGlJ2ZiY6=
+wIRSd1prPs3sRBuPRp3laCLW4vAlDfHle-2BFmddEarWF8i_IaEOxqgZXlhF-2FWeAthks66UjC=
+OPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fW=
+HheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWt=
+iwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpO=
+aMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoIm=
+dbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzd=
+JtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoe=
+Izs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhC=
+YBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK97t4dCrwV0T-2FoLhegQ5Z869o-2BHihfpor=
+T1Py2B04oKy-2B3IGd0fgwX1yrh4SEAUCbFQIjAfeApqkwPLzQB6Q7boF1wbdkBdLloab1cf9l5=
+VTVfyX-2BH6iklNOSuNO8misoTnQ0Oxk6sTwQuUq )
+ tiktok=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzS-2Fml5o-2BiucjNY90OstKo3Hp8u5CiDBF8hFDjdzxmS-2F4aYOW_IaEOxqgZXlhF-=
+2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAG=
+P9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa=
+8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuz=
+Q9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvX=
+QbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966=
+bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCB=
+UHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2F=
+bh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK97t4dCrwV0T-2FoLhx8MRC=
+D0yKSgcd55g8g-2FCSf94BlJXv89RDNAGBf47MpR-2BAMAchQltQtx2ujVfyLG-2Btd6rAD-2Fw=
+QBzJGwbxab2AHg4ALfybpz-2BPb-2Fc5VwWEG7WJ2-2F7A3Nk0yDs-2BkaH2Zxr0 )
+ fb=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzTTmVnTvlSvcVj0M3az3plFUi5YAs3EcsV1vFGYafg7fslpp_IaEOxqgZXlhF-2FWeAt=
+hks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA=
+3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpg=
+kY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuD=
+GGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPL=
+SMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9=
+yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKk=
+wvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf=
+2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK97t4dCrwV0T-2FoLhcUVeSIpC2tD=
+tUXL6RhYFDaMELp9hKy4a7A1kwMFffSUagdBC6wsgX9wvfMJElvviP7HpTZ-2BIxu3P6h6XdCuf=
+9Y-2FPaMOuWGHkY8oYyKVD8aP3m-2B3kRkNXoKkhOwcSu2zM )
+ insta=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzTMf0WFVTNVwhw3dQImUSFNTrao2uJKOtW-2B5yvegOfRO7ZO__IaEOxqgZXlhF-2FWe=
+Athks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tz=
+rA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXd=
+pgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9uc=
+uDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJ=
+PLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJt=
+I9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHam=
+KkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95=
+nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQJUHQSKK97t4dCrwV0T-2FoLhP5dPHjefG=
+BruTgaWEfzw85ylfynGejZVQEuv5JDYLoIm70cBSgxhy-2FUsfFtTcfnbHd4s3U0L4VVls1gj99=
+Nb-2B88e-2F0oRHkxWUYXxYu-2BKubgazj5ogB6NRvKYCkcLEBic )
+ youtube=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzSegiam2eJ2JhKYNKiwEbdjwKiJvNQENO6VwIlkvw8ThIQgxX7b6iU7qezeUFVtjSA-3=
+D-3D_F4k_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlE=
+QAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-=
+2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1sn=
+Ym9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQ=
+sF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F8=
+3QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJS=
+RRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVt=
+b9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4Y=
+KXsyh0bNpIDeXjvX5H-2BEE0r0j7Nk-2B48QK25oHklNYvpUcx-2BpJjy2oGByZtoltuzVHm1nn=
+7Ia0yKj6j-2BXkz-2FOZKPUWGcfWmEp-2Fi2xWNUaBkHOYIL0LmtCRUxPX9K1bFCopZb-2BjSCF=
+5zSYqNf )
+ x ( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6U=
+cdyLy19QBnzXkxNG6nupIJTmYwenIXfw1fQtt8S2q8wxrBXPNCDaH5B9Gj_IaEOxqgZXlhF-2FW=
+eAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9t=
+zrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wX=
+dpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9u=
+cuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbY=
+JPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJ=
+tI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHa=
+mKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh9=
+5nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YKXsyh0bNpIDeXjvrZvUekdQ2y=
+rqroxhPkD-2FfmQLhtfdJliI-2BrkT-2BFHZYcDRC59g7gpzyZAAKll451HIIRvdcXgIT09hkAo=
+GzU66iWMJufK3BaF-2BA0TrJzdfI8xn3iAf-2Fe-2FuwU4mc2BbEyLI ) linkedin=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzRWufF8Sj7Lh42RcHWoiKpxmCk4KoY3KNfcM9Ol4DFboqQlK7BYFN0-2FTPY7y10hbMw=
+-3D-3DrbRH_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7z=
+lEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo=
+1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1=
+snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2h=
+HQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2=
+F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8C=
+JSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2Bo=
+Vtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG=
+4YKXsyh0bNpIDeXjvL517yH-2Fe3mmC-2FhUw7myHEPaMvLU3cycxbbcLC-2BAnbfub1eWzxRlw=
+FqhRBnMqXq06ga-2FLtFLL-2BmuiKqkgNNDU2YP2FUYfs4T0fy1EOn-2BS7pOxTEeVj8ZTFvWbe=
+jkdmFcA ) Download on
+the App Store=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzaWV-2FrnRrTfHxdSEgKhTNu1NmlIOUYOjL0orpej-2BuUJDM3U-2F3OitexCdhp23mE=
+kmEgjhL94rU5GC-2FPkHAvXFFVGdFDiTM5ZB7asGP21-2BELlXkkWSkgHCEZtviu81fjzCn02V8=
+iQ3jaL17QwkBtKYvpiq59y8zARn1zjXZd-2B0nBTN3zEEPBS9kjoS2RKA5TZCHw-3D-3DeO7A_I=
+aEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2=
+BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx=
+3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9=
+jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLD=
+RrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaO=
+E7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hL=
+Z5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9=
+KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YKXsyh0bNpI=
+DeXjvq3baPnUAvpe9qNBrBy22LGGae9R1nUBMkHuzMe6rqhBFAci7VHIpvwarThs7ZHJNtc7xxo=
+7F0QBTjd2ICOqSL-2FG-2B9uS-2Ba8b2YakdTzini4pmMG7O4Yy5vyeiuBqW-2B6ma )
+ GET IT ON Google Play=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzfKtGYeve1eRObic-2FWZbMw9tOqpQ9vJU9QEdGXx1PIVylv5j-2BoGwdRsDKLYEC0sk=
+SW1XozKoc9vIZzKVfX-2BHsxOnzph3qTBSMrZS963X4hBRIvqqLk9QYqn9kIOT088gjr-2BRC-2=
+FjvOZ6MHtKWTbJSAiR72RGkRoPGmha1nyvSPgMDtS5QF0R1prEGZXdQxezvBg-3D-3DDam-_IaE=
+OxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BP=
+xNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3w=
+ALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZ=
+J1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRr=
+zNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7=
+Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5=
+yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9Kz=
+GGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YKXsyh0bNpIDe=
+XjvKzfN1HhS3n9LM2blxUBXrWe6W4eWxAekhFo6Gnpkr7Yr1eJ0-2Bdzo-2F5cS59YxA5r2qwSq=
+xapH3Ed-2BkauJ-2BSAFlagOApxyOVE1bhJn9zUWdy4LhyfknGqjk4nXmY-2BJL2x3 )
+ Quizlet, Inc.
+1=E2=80=8C2=E2=80=8C3 T=E2=80=8Co=E2=80=8Cw=E2=80=8Cn=E2=80=8Cs=E2=80=8Ce=
+=E2=80=8Cn=E2=80=8Cd S=E2=80=8Ct=E2=80=8Cr=E2=80=8Ce=E2=80=8Ce=E2=80=8Ct, S=
+=E2=80=8Cu=E2=80=8Ci=E2=80=8Ct=E2=80=8Ce 6=E2=80=8C0=E2=80=8C0
+S=E2=80=8Ca=E2=80=8Cn F=E2=80=8Cr=E2=80=8Ca=E2=80=8Cn=E2=80=8Cc=E2=80=8Ci=
+=E2=80=8Cs=E2=80=8Cc=E2=80=8Co, C=E2=80=8CA 9=E2=80=8C4=E2=80=8C1=E2=80=8C0=
+=E2=80=8C7 U=E2=80=8CS=E2=80=8CA
+
+
+jasmind009@gmail.com
+=20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzWmr-2BdS5XEmP6ZchAvhDy-2FA4kvk53cK3s-2BBqDwgPO1k-2F2E0M1UhPweY-2BFt=
+sYW6kIBq6o7gq1e951GtOuzRqyHpebtgF5cBm6wzSheGDWB-2Bj6G6O1WpWxkWJJnUlo1X-2Bjl=
+Q-3D-3DvMTK_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7=
+zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2F=
+o1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv=
+1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2=
+hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-=
+2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8=
+CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2B=
+oVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxpl=
+G4YKXsyh0bNpIDeXjvSf923OTiJX-2B1wwWjLiWNERWo4QargGB4kehmTnGQxyJJCPUd5iZIeTO=
+BpNm4sMQ5bpEIYnvMeDZmPJEVGiMudobkxHStz-2FwLnqV2pmq3q-2F0d-2Bov56jsYtEVORQoS=
+HKnG )
+ | =20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzWUQTRKYo0hOnxocQgf3WrlewjIeoz-2BI5qP-2FtN5pBAv7cnEKRfdNXZcvE5p-2BxI=
+9E38El5Gpm7WypPtVdVnBeNnImqSqqnH6mXnbj6qUczt4WWCah4wL9aEc5w5B3SASEPh-2B2O2x=
+U5SRB2tDaT-2FsmhNDM89BnZFChwE-2FAY7jSCARjpo1L_IaEOxqgZXlhF-2FWeAthks66UjCOP=
+f-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHh=
+eMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiw=
+FP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaM=
+fG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdb=
+yWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJt=
+CEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIz=
+s0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYB=
+KhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YKXsyh0bNpIDeXjvvxwSAmGY8nSqRY-2B3xk5A2=
+0GnBfj6b-2FouJZWUSZxNVCuzyIBjiGfuKKGiXPXFYirndlqxnHGtooqZiWQ8akWT4DSrMJ3dQz=
+uc1RPRuI3um5luJhDR-2FXLc5fecJ4hAUcdY )
+     =20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzTyZVllmxTk6zm-2FVh0jbL-2BGbAzY68KaGjapCPbYvzKLNW1hS_IaEOxqgZXlhF-2F=
+WeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9=
+tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8w=
+XdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9=
+ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQb=
+YJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bp=
+JtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUH=
+amKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh=
+95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YKXsyh0bNpIDeXjvrj66HuP0m=
+6nEPLOW8bQX5WbR3qtP8puq2fqqKAiBj-2FEQ7GeiReaqUTL5kU265XS5AbjJUJudeDeEvm46rI=
+qhUgQPNKhmjoeulKZFwENYLBeDIEkacaBtLGgUMMi7p2f-2F )
+ | =20
+( https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6Ucdy=
+Ly19QBnzSCR3aVgjFN48UnzqzsqiOBY7vk5SpV7wzNYXfqY3eipBGts_IaEOxqgZXlhF-2FWeAt=
+hks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA=
+3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpg=
+kY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuD=
+GGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPL=
+SMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9=
+yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKk=
+wvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf=
+2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQIxplG4YKXsyh0bNpIDeXjv5XrbmjVosA6Ix=
+Plsw-2BcN-2B0tP99XN6nZeWeJXmlpXfqdTgVfpO41zPGNrO1mlp9d-2FGdNMBD7bp-2Fqeq1L-=
+2Fem9uMwMV1IVQKR5RtubdQbsXqPzebwOxK7fJevPzzwbj1-2BLF )
+--4aeb4c6c9cecac7d0413183c8ea42a354835b5c2d7be5c65117cb3b9b585
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 2021 BASE TEMPLATE --><html xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office" xml:lang=3D"en" lang=3D"en" style=3D"background-color: #f0f=
+0f0; height: 100% !important; width: 100% !important; -ms-text-size-adjust:=
+ 100%; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased =
+!important; margin: 0; padding: 0;">
+<!-- Update language code for foreign language emails -->
+<head>
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+<title>Quizlet</title>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0 ">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+=20
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+<style type=3D"copy/css">
+body, td { font-family:Arial, Helvetica, sans-serif !important }
+table { border-collapse:collapse !important }
+sup { font-size:100% !important; }
+</style>
+<![endif]-->=20
+
+<style>body {
+background-color: #f0f0f0; margin: 0 !important; padding: 0 !important; hei=
+ght: 100% !important; width: 100% !important; -ms-text-size-adjust: 100%; -=
+webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased !importa=
+nt;
+}
+body {
+font-size: 16px; line-height: 1.4em; color: #455357;
+}
+.ExternalClass {
+width: 100%;
+}
+img {
+outline: none !important; border: 0 !important; -ms-interpolation-mode: bic=
+ubic;
+}
+a:hover {
+color: #3CCFCF;
+}
+a.arrow:hover {
+color: #51cfff !important; text-decoration: underline !important;
+}
+a.arrow:active {
+color: #51cfff !important; text-decoration: underline !important;
+}
+.cta:hover {
+background-color: #051efa !important;
+}
+.cta:active {
+background-color: #051efa !important;
+}
+.cta:hover a {
+color: #ffffff !important;
+}
+.hoverBox:hover {
+background-color: #ebff03 !important; box-shadow: 0px 1px 3px 2px rgba(69,8=
+3,87, 0.1) !important;
+}
+body {
+font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;
+}
+@media only screen and (max-width:600px) {
+  .hauto {
+    height: auto !important;
+  }
+  .outer {
+    width: 100% !important; max-width: 100% !important;
+  }
+  .em_full_wrap {
+    width: 100% !important; max-width: 100% !important;
+  }
+  .em_main_table {
+    width: 100% !important; max-width: 100% !important;
+  }
+  .inner {
+    width: 85% !important;
+  }
+  .heroBg {
+    background-size: 110% !important; background-position: center !importan=
+t;
+  }
+  .padTop {
+    padding-top: 36px !important;
+  }
+  .padBottom {
+    padding-bottom: 36px !important;
+  }
+  .padLeft {
+    padding-left: 30px !important;
+  }
+  .padRight {
+    padding-right: 30px !important;
+  }
+  .padZero {
+    padding: 0 !important;
+  }
+  .padBoth {
+    padding: 36px 0 !important;
+  }
+  .logoPad {
+    padding: 0 0 24px !important;
+  }
+  .hide {
+    display: none !important;
+  }
+  .em_hide {
+    display: none !important;
+  }
+  .show {
+    display: block !important; max-width: 100% !important;
+  }
+  h1 {
+    line-height: 1.25em !important;
+  }
+  h2 {
+    line-height: 1.25em !important;
+  }
+  h3 {
+    line-height: 1.25em !important;
+  }
+  h4 {
+    line-height: 1.25em !important;
+  }
+  .h1 {
+    line-height: 1.25em !important;
+  }
+  .h2 {
+    line-height: 1.25em !important;
+  }
+  .h3 {
+    line-height: 1.25em !important;
+  }
+  .h4 {
+    line-height: 1.25em !important;
+  }
+  h1 {
+    font-size: 27px !important;
+  }
+  .h1 {
+    font-size: 27px !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  .h2 {
+    font-size: 24px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  .h3 {
+    font-size: 20px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  .h4 {
+    font-size: 18px !important;
+  }
+  .copy {
+    line-height: 1.5em !important;
+  }
+  .small {
+    line-height: 1.5em !important;
+  }
+  .smaller {
+    line-height: 1.5em !important;
+  }
+  .copy {
+    font-size: 16px !important;
+  }
+  .small {
+    font-size: 14px !important;
+  }
+  .smaller {
+    font-size: 12px !important;
+  }
+  .center {
+    text-align: center !important;
+  }
+  .left {
+    text-align: left !important;
+  }
+}
+@media screen and (max-width:480px) {
+  .cta {
+    width: 75% !important;
+  }
+  .search {
+    font-size: 13px !important;
+  }
+}
+</style>
+</head>
+<body bgcolor=3D"#f0f0f0" style=3D"color: #455357; width: 100% !important; =
+height: 100% !important; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; -webkit-font-smoothing: antialiased !important; font-size: 16px; =
+line-height: 1.4em; font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', =
+Arial, sans-serif; margin: 0; padding: 0;" yahoo=3D"yahoo">
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">Think you can make the bracket?</div>
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF </div>
+<div class=3D"litmus-builder-preview-text" style=3D"display: none; font-siz=
+e: 1px; color: #333333; line-height: 1px; max-height: 0px; max-width: 0px; =
+opacity: 0; overflow: hidden;">&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C</div>
+ =20
+<!--WRAPPER TABLE-->
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" style=3D"color: #455357; font-family: 'H=
+urme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif; min-width: 100%;=
+" bgcolor=3D"#f0f0f0"><tr><td align=3D"center" style=3D"font-family: 'Hurme=
+ Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">
+
+  <!--
+
+
+
+
+
+
+-->
+<!---->
+
+<!-- -->
+<!-- =3D=3D=3D=3D NAV_PLUS_CTA_SECONDARY =3D=3D=3D=3D -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap" bgcolor=3D"#F0F0F0" style=3D"table-layout: fixed;">
+  <tr>
+    <td style=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Ari=
+al, sans-serif;">
+<table class=3D"outer" width=3D"600" align=3D"center" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" style=3D"" role=3D"presentation" bgcolor=3D"#42=
+55ff">
+    <tr>
+      <td align=3D"center" style=3D"font-family: 'Hurme Geometric Sans 2', =
+'Trebuchet MS', Arial, sans-serif; padding: 18px 24px;">
+        <table width=3D"100%" align=3D"center" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" role=3D"presentation">
+          <tr>
+            <td align=3D"center" style=3D"font-family: 'Hurme Geometric San=
+s 2', 'Trebuchet MS', Arial, sans-serif;">
+              <table width=3D"100%" align=3D"center" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" role=3D"presentation">
+                <tr>
+                  <td width=3D"50%" align=3D"left" valign=3D"middle" style=
+=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-seri=
+f;">
+                    <a href=3D"https://ablink.newsletter.quizlet.com/uni/ls=
+/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzRV7Q1LAnFgyBgUIT3GBKlq-2BLnn67iZWf=
+RQFbH-2FJ79kFaxVNfGTk6zuTxsI3p5QYZPhCDTifaXY6LN26lC8qHdKyjubyeJacvy1-2B3ZJX=
+Wkh-2Fi-2FfYj4XVmh37FL8UCA3q9w-3D-3DKwxN_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1=
+c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnS=
+jiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9Ju=
+FYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-=
+2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBf=
+iM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0=
+A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwr=
+O9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSw=
+Q6L96-2Blq9unuVZviiVIjFUQI6fDWuvcAQ6QnIksWKmuP2PtqJpklrq1CDpnpKh5vDwtPVj3q4=
+uV0SrWKOofGCiTJ2t7MiYbir9S0oRaNg-2FkbIJGRIxnzQZ2lcQZ9g82IgBeZw3MGBITvJBh8jT=
+YlVAxAVVP9ggyC4yaz7wDZCyscg" universal=3D"true" target=3D"_blank" style=3D"=
+text-decoration: none; color: inherit;"><img src=3D"https://appboy-images.c=
+om/appboy/communication/assets/image_assets/images/61030d641f8a53665d8d2d2d=
+/original.png?1627589988" width=3D"112" alt=3D"Quizlet" style=3D"display: b=
+lock; max-width: 85%; outline: none !important; -ms-interpolation-mode: bic=
+ubic; margin: 0; border-width: 0;"></a>
+                  </td>
+                  <td width=3D"50%" align=3D"right" valign=3D"middle" style=
+=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-seri=
+f;">
+                    <!-- CTA -->
+                    <table class=3D"cta" align=3D"right" bgcolor=3D"#4255ff=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse=
+: separate; mso-table-lspace: 0px; mso-table-rspace: 0px; border-radius: 99=
+9px; max-width: 95%; border: 2px solid #ffffff;" width=3D"155">
+                      <tr>
+                        <td align=3D"center" height=3D"40" style=3D"border-=
+collapse: collapse; mso-line-height-rule: exactly; height: 44px; color: #ff=
+ffff; font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-se=
+rif; font-size: 16px; font-weight: bold;" valign=3D"middle">
+                          <!-- DESKTOP -->
+                          <a href=3D"https://ablink.newsletter.quizlet.com/=
+uni/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzZEs0zTiqBjxb5V8EqMbCANVt-2BD=
+qawgFtPrtdNaOfIFesuaFPka7JPmBJ0TD3H5OKGmf2wu1rLKWbSBBDa-2Bxtd896BpfNTpxVpDk=
+IfbpiQiACE5JQAz0sUpbNe1rIlA6Bw-3D-3DgT11_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1=
+c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnS=
+jiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9Ju=
+FYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-=
+2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBf=
+iM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0=
+A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwr=
+O9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSw=
+Q6L96-2Blq9unuVZviiVIjFUQL6uIGBWl7uI-2BUM-2BNlF0jMe0VlShBal9pnmQ-2Bo7cy6Ccs=
+V-2FclZZ3-2BIG-2BUtJCu7eVXXcPtQkYTFQZmDlz28JJdqJ09poBxyl46twiNHlvHGjDo-2Bck=
+eNfxmHyGU5sU8ZO8FvhzKhNh2XFUY7N8d6U-2B6Jk" universal=3D"true" class=3D"smal=
+l hide" style=3D"border-collapse: collapse; mso-line-height-rule: exactly; =
+color: #ffffff; text-decoration: none; line-height: 44px; display: block;" =
+target=3D"_blank">Try Quizlet&nbsp;Plus</a>
+
+
+                          <a href=3D"https://ablink.newsletter.quizlet.com/=
+ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzZEs0zTiqBjxb5V8EqMbCANVt-2BDqawg=
+FtPrtdNaOfIFesuaFPka7JPmBJ0TD3H5OKGmf2wu1rLKWbSBBDa-2Bxtd896BpfNTpxVpDkIfbp=
+iQiACE5JQAz0sUpbNe1rIlA6Bw-3D-3DGyf4_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5ge=
+l7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMp=
+EA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6=
+b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJ=
+RhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2i=
+sW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9ed=
+OwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9Gu=
+BlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L9=
+6-2Blq9unuVZviiVIjFUQL6uIGBWl7uI-2BUM-2BNlF0jMeBMEsC-2BGnhESGFWpL00q-2BwRss=
+jtvfptRpq1DA0BeakJYg-2FGzFK0P9nqvWIE9IJQYl3NK-2F7welqJ2yOpw2d6h1mLgxHRORpbG=
+wAjI1CzE4i-2FPuAloSlf-2FaUig1RN90OYj-2F" class=3D"small show" style=3D"bord=
+er-collapse: collapse; mso-line-height-rule: exactly; color: #ffffff; text-=
+decoration: none; line-height: 44px; display: none; mso-hide: all;" target=
+=3D"_blank">Try Quizlet&nbsp;Plus</a>
+
+                =20
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+    </td>
+  </tr>
+</table>
+<!-- =3D=3D=3D=3D // NAV_PLUS_CTA_SECONDARY =3D=3D=3D=3D -->
+<!--
+<!---->
+ =20
+<!-- =3D=3D=3D=3D BEGIN MODULES =3D=3D=3D=3D -->
+    <!-- =3D=3D=3D=3D HERO_WIDE_IMG =3D=3D=3D=3D -->
+    <table class=3D"outer" width=3D"600" align=3D"center" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" style=3D"" role=3D"presentation" bgcolor=3D=
+"#ECE381">
+        <tr>
+            <td class=3D"h1" style=3D"font-family: 'Hurme Geometric Sans 2'=
+, 'Trebuchet MS', Arial, sans-serif; font-size: 30px; line-height: 36px; co=
+lor: #ffffff; font-weight: bold;" align=3D"center">
+            </td>
+        </tr>
+        <tr>
+            <td align=3D"center" style=3D"font-family: 'Hurme Geometric San=
+s 2', 'Trebuchet MS', Arial, sans-serif;">
+                <table class=3D"inner" width=3D"400" align=3D"center" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation">
+                    <tr>
+                        <td class=3D"copy" style=3D"font-family: 'Hurme Geo=
+metric Sans 2', 'Trebuchet MS', Arial, sans-serif; font-size: 20px; line-he=
+ight: 28px; color: #1A1D28; font-weight: inherit; padding: 50px 0 0;" align=
+=3D"center">
+                            <!-- Headline -->
+                            <h1 style=3D"font-size: 32px; line-height: 1.25=
+em !important; font-weight: bold; margin: 0 0 16px; padding: 0;">March Madn=
+ess isn=E2=80=99t just for basketball</h1>
+                            <!-- Copy -->
+                            <p style=3D"margin: 0 0 24px; padding: 0;">This=
+ Match Madness, see if you can match each British English term with the Ame=
+rican English version. Can you make the leaderboard?</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!-- =3D=3D=3D=3D // HERO_WIDE_IMG =3D=3D=3D=3D -->
+<!-- =3D=3D=3D=3D SURVEY BUTTONS WITH BACKGROUND IMAGE  =3D=3D=3D=3D -->
+    <table class=3D"outer" width=3D"600" align=3D"center" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" style=3D"" bgcolor=3D"#ECE381">
+        <tr>
+            <td bgcolor=3D"#ECE381" background=3D"https://braze-images.com/=
+appboy/communication/assets/image_assets/images/69a8ae220372b900639bc2e2/or=
+iginal.png?1772662306" style=3D"font-family: 'Hurme Geometric Sans 2', 'Tre=
+buchet MS', Arial, sans-serif; background: url(https://braze-images.com/app=
+boy/communication/assets/image_assets/images/69a8ae220372b900639bc2e2/origi=
+nal.png?1772662306) no-repeat center bottom / 100%; padding: 0 0 56px;">
+                <!--[if gte mso 9]>
+<v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D"f=
+alse" style=3D"width:600px">
+<v:fill type=3D"frame" src=3D"https://braze-images.com/appboy/communication=
+/assets/image_assets/images/69a8ae220372b900639bc2e2/original.png?177266230=
+6" color=3D"#ECE381" />
+<v:textbox style=3D"mso-fit-shape-to-text:true" inset=3D"0,0,0,0">
+<![endif]-->
+                <table class=3D"inner" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"400">
+                    <!-- Start shadow box row -->
+                    <tr>
+                        <td class=3D"padding" style=3D"font-family: 'Hurme =
+Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif; padding: 0;">
+                            <table class=3D"outer" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+ox-shadow: 0px 4px 16px rgba(48,53,69,0.08);" width=3D"400">
+                                <tr>
+                                    <td style=3D"border-radius: 4px; font-f=
+amily: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif; padding=
+: 36px 0;" bgcolor=3D"#ffffff">
+                                        <table align=3D"center" width=3D"31=
+0" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D=
+"presentation">
+                                            <tr>
+                                                <td class=3D"copy" style=3D=
+"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif; =
+font-size: 16px; line-height: 1.4em; color: #1A1D28; font-weight: 600;" ali=
+gn=3D"center">
+                                                    <!-- Headline -->
+                                                    <h3 style=3D"color: #45=
+5357; font-size: 24px; line-height: 1.25em !important; font-weight: 700; ma=
+rgin: 0 0 12px; padding: 0;">What is the British word for "eggplant"?</h3>
+<!-- Copy -->
+                                                </td>
+                                            </tr>
+                                            <!-- Options -->
+                                            <tr>
+                                                <td style=3D"font-family: '=
+Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">
+                                                    <table class=3D"inner" =
+width=3D"272" align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation">
+                                                        <!-- Button option =
+row -->
+                                                        <tr><td align=3D"ce=
+nter" style=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial=
+, sans-serif; padding: 16px 0 0;">
+                                                            <table class=3D=
+"cta" align=3D"center" bgcolor=3D"#4255FF" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: 0px;=
+ mso-table-rspace: 0px; border-radius: 26px; width: 272px;" width=3D"272">
+                                                                <tr>
+                                                                    <td ali=
+gn=3D"center" height=3D"55" style=3D"border-collapse: collapse; mso-line-he=
+ight-rule: exactly; height: 55px; c olor: #ffffff; font-family: 'Hurme Geom=
+etric Sans 2', 'Trebuchet MS', Arial, sans-serif; font-size: 16px; font-wei=
+ght: 600;" valign=3D"middle">
+                                                                        <a =
+href=3D"https://ablink.newsletter.quizlet.com/uni/ls/click?upn=3Du001.T6f6r=
+JT-2B6UcdyLy19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N7bF8IQu7S5rjg=
+9wnzG1YD-2FkDJgnANFHaVxl1Q95daLmMak9AhraYIapgSTQ1gMApb5CB-2BaDxxGP9UndEw3m5=
+9Cw-3D-3Duazo_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZ=
+I7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-=
+2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYml=
+Qv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnh=
+G2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T=
+4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2=
+B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-=
+2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQL6=
+uIGBWl7uI-2BUM-2BNlF0jMe74Zk0YKBqpcD-2Bbh8gO70QKykKRWZQfilt5-2FAXqB7GXq-2BO=
+JrPSpWXnEnk7YDJShXl-2B6-2FjBfSrUsf2jqV1LVyy6rbVgmMyhh1HoomxAlPu9kUSkioOUzeb=
+9hZmCBJ3DIG2" universal=3D"true" style=3D"border-collapse: collapse; mso-li=
+ne-height-rule: exactly; color: #ffffff; text-decoration: none; line-height=
+: 55px; display: block;" target=3D"_blank">Garden aubrette</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </td></tr>
+<!-- End button option row -->
+                                                        <!-- Button option =
+row -->
+                                                        <tr><td align=3D"ce=
+nter" style=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial=
+, sans-serif; padding: 16px 0 0;">
+                                                            <table class=3D=
+"cta" align=3D"center" bgcolor=3D"#4255FF" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: 0px;=
+ mso-table-rspace: 0px; border-radius: 26px; width: 272px;" width=3D"272">
+                                                                <tr>
+                                                                    <td ali=
+gn=3D"center" height=3D"55" style=3D"border-collapse: collapse; mso-line-he=
+ight-rule: exactly; height: 55px; c olor: #ffffff; font-family: 'Hurme Geom=
+etric Sans 2', 'Trebuchet MS', Arial, sans-serif; font-size: 16px; font-wei=
+ght: 600;" valign=3D"middle">
+                                                                        <a =
+href=3D"https://ablink.newsletter.quizlet.com/uni/ls/click?upn=3Du001.T6f6r=
+JT-2B6UcdyLy19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N77taGqlOcT5Oh=
+2Cm8tt2UVIZfQJG0Y2gSJZklkCOVUY-2BuFgvImBgtvYpCFB-2BufIzzUs-2Fp3xqoqYNgof8-2=
+BcXhzjg-3D-3Du8QN_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I=
+9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7L=
+WIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2F=
+jYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhV=
+TGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgj=
+f31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fV=
+Xm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSl=
+RI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjF=
+UQL6uIGBWl7uI-2BUM-2BNlF0jMeHLlbTUKCCYEldRFXalD09InLVUSmn7BSaLSwiYQI2My72ez=
+EQHdiHX0hd2zZV2E-2BSGCJSLM4Y-2FXj83yQILkt7JOVNJaa3BIlfO7C-2FBPn3fiynvza6Gs0=
+IpLi9gENMYZh" universal=3D"true" style=3D"border-collapse: collapse; mso-li=
+ne-height-rule: exactly; color: #ffffff; text-decoration: none; line-height=
+: 55px; display: block;" target=3D"_blank">Oxford squash</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </td></tr>
+<!-- End button option row -->
+                                                        <!-- Button option =
+row -->
+                                                        <tr><td align=3D"ce=
+nter" style=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial=
+, sans-serif; padding: 16px 0 0;">
+                                                            <table class=3D=
+"cta" align=3D"center" bgcolor=3D"#4255FF" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: 0px;=
+ mso-table-rspace: 0px; border-radius: 26px; width: 272px;" width=3D"272">
+                                                                <tr>
+                                                                    <td ali=
+gn=3D"center" height=3D"55" style=3D"border-collapse: collapse; mso-line-he=
+ight-rule: exactly; height: 55px; c olor: #ffffff; font-family: 'Hurme Geom=
+etric Sans 2', 'Trebuchet MS', Arial, sans-serif; font-size: 16px; font-wei=
+ght: 600;" valign=3D"middle">
+                                                                        <a =
+href=3D"https://ablink.newsletter.quizlet.com/uni/ls/click?upn=3Du001.T6f6r=
+JT-2B6UcdyLy19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N755xP88HDY9a8=
+O1tb8i05dosbS3EqvTlwNkA8q-2BUMTVQ3-2FrwYJ3RmPkHFJtB8L5zHBWbyc41SufScnbancr4=
+D-2FQ-3D-3DM4-r_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9w=
+mZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWI=
+i-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjY=
+mlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTG=
+nhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf3=
+1T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm=
+-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI=
+6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQ=
+L6uIGBWl7uI-2BUM-2BNlF0jMeoMH1-2FpL-2BNvHd5tKmSdGRjanEbP-2FWKidlNg-2B7vhhHJ=
+R2-2FYyMsGiB9ZHA-2BGHiZ9e8-2FNBjumk3-2BHrVmvt6tuMAzpDjrQPvxAiWo-2FTpUrgRXAU=
+yq9OAShXCrTwBe-2BtmAzbRc" universal=3D"true" style=3D"border-collapse: coll=
+apse; mso-line-height-rule: exactly; color: #ffffff; text-decoration: none;=
+ line-height: 55px; display: block;" target=3D"_blank">Aubergine</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </td></tr>
+<!-- End button option row -->
+                                                        <!-- Button option =
+row -->
+                                                        <tr><td align=3D"ce=
+nter" style=3D"font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial=
+, sans-serif; padding: 16px 0 0;">
+                                                            <table class=3D=
+"cta" align=3D"center" bgcolor=3D"#4255FF" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: 0px;=
+ mso-table-rspace: 0px; border-radius: 26px; width: 272px;" width=3D"272">
+                                                                <tr>
+                                                                    <td ali=
+gn=3D"center" height=3D"55" style=3D"border-collapse: collapse; mso-line-he=
+ight-rule: exactly; height: 55px; c olor: #ffffff; font-family: 'Hurme Geom=
+etric Sans 2', 'Trebuchet MS', Arial, sans-serif; font-size: 16px; font-wei=
+ght: 600;" valign=3D"middle">
+                                                                        <a =
+href=3D"https://ablink.newsletter.quizlet.com/uni/ls/click?upn=3Du001.T6f6r=
+JT-2B6UcdyLy19QBnzQcHcQsejsWuWeysczgpunBf2Oiw3HEZxmakLQ-2Bxu0N7uG1U4b2QaNE9=
+sHOVnH1-2Fw9VJx7woE7uiIBn7TEyfiW8fn-2BXvIy5J21B7HZXZSMg7GdziMs4c1BE9pH5ZRRw=
+YKg-3D-3DxycU_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZ=
+I7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-=
+2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYml=
+Qv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnh=
+G2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T=
+4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2=
+B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-=
+2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQL6=
+uIGBWl7uI-2BUM-2BNlF0jMe-2FUjeL8ejUMvT6ZAFJctYbOyO9LlZRZA7si9XnVEwJKearvvcX=
+QkrxzwfG7uV0c3yXOhnVyHv9y1jo1Dk08JOq-2Fl-2BfrbRktZK6es7RuyCf-2BcNf9bnG-2FcU=
+3nDbOCjbzRyN" universal=3D"true" style=3D"border-collapse: collapse; mso-li=
+ne-height-rule: exactly; color: #ffffff; text-decoration: none; line-height=
+: 55px; display: block;" target=3D"_blank">King=E2=80=99s marrow</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            </td></tr>
+<!-- End button option row -->
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+<!-- End row -->
+                </table>
+                <!--[if gte mso 9]></v:textbox></v:rect><![endif]-->
+            </td>
+        </tr>
+    </table>
+<!-- =3D=3D=3D=3D // SURVEY BUTTONS WITH BACKGROUND IMAGE =3D=3D=3D=3D -->
+        <!-- =3D=3D=3D=3D PROTIP_ICON =3D=3D=3D=3D -->
+    <table class=3D"outer" width=3D"600" align=3D"center" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" style=3D"" role=3D"presentation" bgcolor=3D=
+"#4255FF">
+        <tr>
+            <td class=3D"padBoth" style=3D"font-family: 'Hurme Geometric Sa=
+ns 2', 'Trebuchet MS', Arial, sans-serif; padding: 48px 0;">
+                <table class=3D"inner" width=3D"400" align=3D"center" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation">
+                    <tr>
+                        <td align=3D"center" style=3D"font-family: 'Hurme G=
+eometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">
+                            <table class=3D"outer" width=3D"105" align=3D"l=
+eft" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+>
+                                <tr>
+                                    <td align=3D"center" style=3D"font-fami=
+ly: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">
+                                        <a href=3D"https://ablink.newslette=
+r.quizlet.com/uni/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzWBFEepTazk3JKH=
+PPW-2BxGTZ7O-2B5xgYXhAbW9oSJqiJm5Xlyi8umH3q-2Bw-2BwpatogDpTNrgarQDqOMy-2Bcm=
+jdMCOCoqWSkIRfWODGXqrSJ90ZVQtyibJFVe166POI-2BGlJ2ZiXZVK64vAw36woyAAk67l0Lm7=
+znyjctB1frO2Mm-2FpxdDGZBFKOGsa0StCljJ70TAEfYV7T296xROhNGY0gYGUJA-3D2hQO_IaE=
+OxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BP=
+xNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3w=
+ALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZ=
+J1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRr=
+zNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7=
+Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5=
+yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9Kz=
+GGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQL6uIGBWl7uI-2BUM-2B=
+NlF0jMesn46DjjkZqubV-2F7qRKjC9aV4tgSUIAGppJCmhSUUFQjXY-2Bz-2BSztnZA7FLFRn4a=
+V037Otk-2BSVAspwszrLvG081xSabuKvME1lWjBK-2Fc6IecPCIi43b-2FUCPCb2g42y8O-2Fh"=
+ universal=3D"true" style=3D"color: inherit; text-decoration: underline;">
+                                        <img src=3D"https://braze-images.co=
+m/appboy/communication/assets/image_assets/images/69b09b4ec0399b0063a17688/=
+original.png?1773181773" width=3D"105" style=3D"display: block; outline: no=
+ne !important; -ms-interpolation-mode: bicubic; margin: 0 auto; border-widt=
+h: 0;" role=3D"presentation" aria-hidden=3D"true" alt=3D""></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class=3D"outer" width=3D"270" align=3D"r=
+ight" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation=
+">
+                                <tr>
+                                    <td class=3D"copy padTop" style=3D"font=
+-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif; font-=
+size: 16px; line-height: 24px; color: #ffffff; font-weight: inherit;" align=
+=3D"left">
+                                        <h2 style=3D"font-size: 24px; line-=
+height: 1.25em !important; font-weight: bold; margin: 0 0 8px; padding: 0;"=
+>Level up your March Madness game</h2>
+                                        <p style=3D"margin: 0 0 10px; paddi=
+ng: 0;">
+                                            Master the madness in minutes w=
+ith Quizlet=E2=80=99s Bracket IQ Toolkit created with sports content creato=
+r Sam Holtz.
+                                        </p>
+                                        <a class=3D"arrow" href=3D"https://=
+ablink.newsletter.quizlet.com/uni/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QB=
+nzWBFEepTazk3JKHPPW-2BxGTZ7O-2B5xgYXhAbW9oSJqiJm5Xlyi8umH3q-2Bw-2BwpatogDpT=
+NrgarQDqOMy-2BcmjdMCOCoqWSkIRfWODGXqrSJ90ZVQtyibJFVe166POI-2BGlJ2ZiY6wIRSd1=
+prPs3sRBuPRp3ne7-2B1aiHsObBOKgd9qWd1k20vJsKA3h-2BuCY1-2FxGNKDUz245mpxGvP1e-=
+2FBj4YpydbA-3Dvq9V_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6=
+I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7=
+LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2=
+FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHh=
+VTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lg=
+jf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1f=
+VXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeS=
+lRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIj=
+FUQL6uIGBWl7uI-2BUM-2BNlF0jMe3wnEsjmQq-2FE0qUFPhVBnhrqLfnyR33VbBf3z0xmPcgaz=
+p9Z74ZvJ0PQssHh-2Fi84afzMNtbA0r29jFKv-2Bh1Iwh2IojfYLtUbIZFk0DqF8Xc8MibHDBAW=
+l8pSDFskxAoCU" universal=3D"true" target=3D"_blank" style=3D"color: #51CFFF=
+; font-weight: 600; text-decoration: none;">Learn now <span style=3D"color:=
+ #51cfff;">=E2=86=92 </span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!-- =3D=3D=3D=3D // PROTIP_ICON =3D=3D=3D=3D -->
+<!-- =3D=3D=3D=3D END MODULES =3D=3D=3D=3D -->
+ =20
+  <!-- =3D=3D Footer Section =3D=3D=20
+
+
+
+
+
+-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"em_full_wrap" style=3D"table-layout: fixed;" bgcolor=3D"#F0F0F0">
+  <tr>
+    <td align=3D"center" valign=3D"top" style=3D"font-family: 'Hurme Geomet=
+ric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><table align=3D"center" wi=
+dth=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"em_ma=
+in_table" style=3D"width: 600px;" bgcolor=3D"#ffffff">
+        <tr>
+          <td valign=3D"top" align=3D"center" style=3D"font-family: 'Hurme =
+Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><table align=3D"cent=
+er" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+              <tr>
+                <td width=3D"24" style=3D"width: 24px; font-family: 'Hurme =
+Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">&nbsp;</td>
+                <td valign=3D"top" align=3D"center" style=3D"font-family: '=
+Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif; padding: 40px 0=
+ 0;"><table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"font-fam=
+ily: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><table a=
+lign=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                          <tr>
+                          <td valign=3D"top" align=3D"center" style=3D"padd=
+ing-right: 20px; font-size: 0px; line-height: 0px; font-family: 'Hurme Geom=
+etric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><a href=3D"https://ablin=
+k.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzS-2Fml5=
+o-2BiucjNY90OstKo3Hp8u5CiDBF8hFDjdzxmS-2F4Ogg-_IaEOxqgZXlhF-2FWeAthks66UjCO=
+Pf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWH=
+heMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWti=
+wFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOa=
+MfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImd=
+byWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJ=
+tCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeI=
+zs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCY=
+BKhwSwQ6L96-2Blq9unuVZviiVIjFUQL6uIGBWl7uI-2BUM-2BNlF0jMeBZGLkw05BTpJC3wGm2=
+73-2Boi8lCJjxt79BBSv33jyqHXNSdtLuGPRA48Cpgzcydm3sHOLkFVK79ZnWjgENaCy6I-2Fn6=
+YVyO71WsJ-2Bq2ndn2TKYM-2BstSeVO1fZ9Qo2J6QWg" target=3D"_blank" style=3D"tex=
+t-decoration: none; color: inherit;"><img src=3D"https://braze-images.com/a=
+ppboy/communication/assets/image_assets/images/63c1c2979522c319972752fe/ori=
+ginal.png?1673642647" width=3D"24" height=3D"24" alt=3D"tiktok" border=3D"0=
+" style=3D"display: block; font-family: Arial, Helvetica, sans-serif; font-=
+size: 15px; line-height: 17px; color: #000000; max-width: 24px; outline: no=
+ne !important; -ms-interpolation-mode: bicubic; border-width: 0;"></a></td>
+                            <td valign=3D"top" align=3D"center" style=3D"pa=
+dding-right: 20px; font-size: 0px; line-height: 0px; font-family: 'Hurme Ge=
+ometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><a href=3D"https://abl=
+ink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzTTmVn=
+TvlSvcVj0M3az3plFUi5YAs3EcsV1vFGYafg7fMlKj_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2=
+F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMp=
+nSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9=
+JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1=
+d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWV=
+BfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEt=
+h0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0p=
+wrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhw=
+SwQ6L96-2Blq9unuVZviiVIjFUQL6uIGBWl7uI-2BUM-2BNlF0jMeMuOS6hCRxDEqp-2F-2FfBI=
+m-2F9DtuhZHoIdEoCeri78CY-2FtMqPtH-2B7pNf1vIDYVJoIto7vnaVHlWJRc7MN764CZbPCM0=
+4CfAIlsVtHbPTLIlKd9iVSkW-2BsNJ2keLHQY6IBRVC" target=3D"_blank" style=3D"tex=
+t-decoration: none; color: inherit;"><img src=3D"https://appboy-images.com/=
+appboy/communication/assets/image_assets/images/60748c7a5ff908527006d389/or=
+iginal.png?1618250874" width=3D"24" height=3D"24" alt=3D"fb" border=3D"0" s=
+tyle=3D"display: block; font-family: Arial, Helvetica, sans-serif; font-siz=
+e: 15px; line-height: 17px; color: #000000; max-width: 24px; outline: none =
+!important; -ms-interpolation-mode: bicubic; border-width: 0;"></a></td>
+                            <td valign=3D"top" align=3D"center" style=3D"pa=
+dding-right: 20px; font-size: 0px; line-height: 0px; font-family: 'Hurme Ge=
+ometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><a href=3D"https://abl=
+ink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzTMf0W=
+FVTNVwhw3dQImUSFNTrao2uJKOtW-2B5yvegOfROIoom_IaEOxqgZXlhF-2FWeAthks66UjCOPf=
+-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHhe=
+MpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwF=
+P9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMf=
+G1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdby=
+WVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtC=
+Eth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs=
+0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBK=
+hwSwQ6L96-2Blq9unuVZviiVIjFUQLFMpUVLI-2BxXoPY800wkZtQeKx0jJ-2Bnd6cyrTHMFaEp=
+sPBni1T-2BF8zBORCTjBsBJWQ7H33GymAlsokaY6lLh9Scns-2B-2FcYKAgzJHW17X7rI4kw2ac=
+iOprd-2BuLt1SWzrx5CFcLPHt0Dx924FPfKSfhzlI" target=3D"_blank" style=3D"text-=
+decoration: none; color: inherit;"><img src=3D"https://appboy-images.com/ap=
+pboy/communication/assets/image_assets/images/60748c7a9d7fd53e6dfa22b9/orig=
+inal.png?1618250874" width=3D"24" height=3D"24" alt=3D"insta" border=3D"0" =
+style=3D"display: block; font-family: Arial, Helvetica, sans-serif; font-si=
+ze: 15px; line-height: 17px; color: #000000; max-width: 24px; outline: none=
+ !important; -ms-interpolation-mode: bicubic; border-width: 0;"></a></td>
+                             <td valign=3D"top" align=3D"center" style=3D"p=
+adding-right: 20px; font-size: 0px; line-height: 0px; font-family: 'Hurme G=
+eometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><a href=3D"https://ab=
+link.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzSegi=
+am2eJ2JhKYNKiwEbdjwKiJvNQENO6VwIlkvw8ThIQgxX7b6iU7qezeUFVtjSA-3D-3DyDbN_IaE=
+OxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BP=
+xNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3w=
+ALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZ=
+J1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRr=
+zNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7=
+Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5=
+yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9Kz=
+GGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLFMpUVLI-2BxXoPY800=
+wkZtQuvu-2FXABHl3EEWlscwAl-2FZJw9MwT0stEgJT-2Beh7jZgfm7t1P240bBgY-2B39xDPLG=
+-2Bveu-2Bzkt7tkDm-2FMMuEFW2i3N6RqnHLcUDcsC9wERD56PyDRMiyQjP4PK5FPHLPznqR" t=
+arget=3D"_blank" style=3D"text-decoration: none; color: inherit;"><img src=
+=3D"https://appboy-images.com/appboy/communication/assets/image_assets/imag=
+es/60748c1b5d79a054c75800e5/original.png?1618250779" width=3D"24" height=3D=
+"24" alt=3D"youtube" border=3D"0" style=3D"display: block; font-family: Ari=
+al, Helvetica, sans-serif; font-size: 15px; line-height: 17px; color: #0000=
+00; max-width: 24px; outline: none !important; -ms-interpolation-mode: bicu=
+bic; border-width: 0;"></a></td>
+<td valign=3D"top" align=3D"center" style=3D"padding-right: 20px; font-size=
+: 0px; line-height: 0px; font-family: 'Hurme Geometric Sans 2', 'Trebuchet =
+MS', Arial, sans-serif;"><a href=3D"https://ablink.newsletter.quizlet.com/l=
+s/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzXkxNG6nupIJTmYwenIXfw1fQtt8S2q8wx=
+rBXPNCDaH5SJIy_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wm=
+ZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi=
+-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYm=
+lQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGn=
+hG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31=
+T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-=
+2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6=
+-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQL=
+FMpUVLI-2BxXoPY800wkZtQ7GgHi3DVGdERFmTXYy3uxOVvzAFBlDVVCR0ftJE3R-2FJ7yjZ0RL=
+IaNQGArR450sCV4H9Ew7lfbSFZmtzF5v7qkyDURrW0X0LBTHxMZNLflCXQohTdGDAF6VQfuSjEH=
+Hkx" target=3D"_blank" style=3D"text-decoration: none; color: inherit;"><im=
+g src=3D"https://braze-images.com/appboy/communication/assets/image_assets/=
+images/66fb42f5baa32c0063df79aa/original.png?1727742709" width=3D"24" heigh=
+t=3D"24" alt=3D"x" border=3D"0" style=3D"display: block; font-family: Arial=
+, Helvetica, sans-serif; font-size: 15px; line-height: 17px; color: #000000=
+; max-width: 24px; outline: none !important; -ms-interpolation-mode: bicubi=
+c; border-width: 0;"></a></td>
+
+
+                            <td valign=3D"top" align=3D"center" style=3D"fo=
+nt-size: 0px; line-height: 0px; font-family: 'Hurme Geometric Sans 2', 'Tre=
+buchet MS', Arial, sans-serif;"><a href=3D"https://ablink.newsletter.quizle=
+t.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzRWufF8Sj7Lh42RcHWoiKpxmCk4=
+KoY3KNfcM9Ol4DFboqQlK7BYFN0-2FTPY7y10hbMw-3D-3D97cD_IaEOxqgZXlhF-2FWeAthks6=
+6UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APU=
+D9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7g=
+arWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoH=
+lVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUK=
+koImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9=
+NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBL=
+UuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0a=
+inhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLFMpUVLI-2BxXoPY800wkZtQr5d9wzVdloG6s7L=
+flbg9kdn47pne7Sd-2BlJ-2BtOu0Ex5PDsRk-2FUqHod3JszZebWYvnw2H6t8nXhHLQZjq0bxlo=
+faJG2-2FJzPfZtMFO2z8cMhP0TUa-2FT8vOJgs3jGHaqhR0q" target=3D"_blank" style=
+=3D"text-decoration: none; color: inherit;"><img src=3D"https://braze-image=
+s.com/appboy/communication/assets/image_assets/images/686c0128e3ed710064e68=
+893/original.png?1751908648" width=3D"24" height=3D"24" alt=3D"linkedin" bo=
+rder=3D"0" style=3D"display: block; font-family: Arial, Helvetica, sans-ser=
+if; font-size: 15px; line-height: 17px; color: #000000; max-width: 24px; ou=
+tline: none !important; -ms-interpolation-mode: bicubic; border-width: 0;">=
+</a></td>
+                           =20
+                          =20
+                           =20
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height=3D"26" style=3D"height: 26px; font-family:=
+ 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"font-fam=
+ily: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><table a=
+lign=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                          <tr>
+                            <td valign=3D"top" align=3D"center" style=3D"pa=
+dding-right: 16px; font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', A=
+rial, sans-serif;"><a href=3D"https://ablink.newsletter.quizlet.com/ls/clic=
+k?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzaWV-2FrnRrTfHxdSEgKhTNu1NmlIOUYOjL0orpe=
+j-2BuUJDM3U-2F3OitexCdhp23mEkmEgjhL94rU5GC-2FPkHAvXFFVGdFDiTM5ZB7asGP21-2BE=
+LlXkkWSkgHCEZtviu81fjzCn02V8iQ3jaL17QwkBtKYvpiq59y8zARn1zjXZd-2B0nBTN3zEEPB=
+S9kjoS2RKA5TZCHw-3D-3DSDYv_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM=
+4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZ=
+cFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42=
+AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHD=
+EhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK=
+2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA=
+742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhU=
+B86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unu=
+VZviiVIjFUQLFMpUVLI-2BxXoPY800wkZtQbBzFNH0ZwSrL0jqmSpGL5TT99u1WBNjnxsoYJNx-=
+2B-2F5OsZl4mtqU89pIItHm5IieXodA63tbj6wkvjF5OTc2MeBLYN-2B4XC2eh98rPQEFMTAm26=
+tvvToLl35SpIIZMsp-2Fi" =3D"" target=3D"_blank" style=3D"text-decoration: no=
+ne; color: inherit;"><img src=3D"https://appboy-images.com/appboy/communica=
+tion/assets/image_assets/images/5e724b7e302b7f3d70f4cadd/original.png?15845=
+48734" width=3D"84" height=3D"28" alt=3D"Download on the App Store" border=
+=3D"0" style=3D"display: block; font-family: Arial, Helvetica, sans-serif; =
+font-size: 15px; line-height: 17px; color: #000000; outline: none !importan=
+t; -ms-interpolation-mode: bicubic; border-width: 0;"></a></td>
+                            <td valign=3D"top" align=3D"center" style=3D"pa=
+dding-right: 16px; font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', A=
+rial, sans-serif;"><a href=3D"https://ablink.newsletter.quizlet.com/ls/clic=
+k?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzfKtGYeve1eRObic-2FWZbMw9tOqpQ9vJU9QEdGX=
+x1PIVylv5j-2BoGwdRsDKLYEC0skSW1XozKoc9vIZzKVfX-2BHsxOnzph3qTBSMrZS963X4hBRI=
+vqqLk9QYqn9kIOT088gjr-2BRC-2FjvOZ6MHtKWTbJSAiR72RGkRoPGmha1nyvSPgMDtS5QF0R1=
+prEGZXdQxezvBg-3D-3D57FW_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4y=
+LMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcF=
+YIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP=
+5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEh=
+TLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2p=
+Suw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA74=
+2OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB8=
+6JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZ=
+viiVIjFUQLFMpUVLI-2BxXoPY800wkZtQDVhooCZ62D3G-2FEbSDVQGUtxXvrLjL9PtICMhu0za=
+ELbk5f-2FX5k-2Boh2MLhD7lhRwI7BvjMcnnsE6QwboCVdbV7YCbfSGEbzmrUmqTz4Zhy6NPvTO=
+VMVeqDnJCB-2BsVa-2B4y" =3D"" target=3D"_blank" style=3D"text-decoration: no=
+ne; color: inherit;"><img src=3D"https://appboy-images.com/appboy/communica=
+tion/assets/image_assets/images/5e724b8638968048a7373e0b/original.png?15845=
+48742" width=3D"84" height=3D"28" alt=3D"GET IT ON Google Play" border=3D"0=
+" style=3D"display: block; font-family: Arial, Helvetica, sans-serif; font-=
+size: 15px; line-height: 17px; color: #000000; outline: none !important; -m=
+s-interpolation-mode: bicubic; border-width: 0;"></a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height=3D"26" style=3D"height: 26px; font-family:=
+ 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"font-fam=
+ily: 'Hurme Geometric Sans 2', Arial, sans-serif; font-size: 10px; line-hei=
+ght: 12px; color: #455358;" class=3D"em_defaultlink">Quizlet, Inc. <br>1=E2=
+=80=8C2=E2=80=8C3 T=E2=80=8Co=E2=80=8Cw=E2=80=8Cn=E2=80=8Cs=E2=80=8Ce=E2=80=
+=8Cn=E2=80=8Cd S=E2=80=8Ct=E2=80=8Cr=E2=80=8Ce=E2=80=8Ce=E2=80=8Ct, S=E2=80=
+=8Cu=E2=80=8Ci=E2=80=8Ct=E2=80=8Ce 6=E2=80=8C0=E2=80=8C0  <br>S=E2=80=8Ca=
+=E2=80=8Cn
+                        F=E2=80=8Cr=E2=80=8Ca=E2=80=8Cn=E2=80=8Cc=E2=80=8Ci=
+=E2=80=8Cs=E2=80=8Cc=E2=80=8Co, C=E2=80=8CA 9=E2=80=8C4=E2=80=8C1=E2=80=8C0=
+=E2=80=8C7 U=E2=80=8CS=E2=80=8CA  <br><br>This message was intended for: ja=
+smind009@gmail.com</td>
+                       =20
+                    </tr>
+                    <tr>
+                      <td height=3D"26" style=3D"height: 26px; font-family:=
+ 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"font-fam=
+ily: 'Hurme Geometric Sans 2', Arial, sans-serif; font-size: 10px; line-hei=
+ght: 12px; color: #455358; font-weight: bold;" class=3D"em_defaultlink">
+<a href=3D"https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJ=
+T-2B6UcdyLy19QBnzWmr-2BdS5XEmP6ZchAvhDy-2FA4kvk53cK3s-2BBqDwgPO1k-2F2E0M1Uh=
+PweY-2BFtsYW6kIBq6o7gq1e951GtOuzRqyHpebtgF5cBm6wzSheGDWB-2Bj6G6O1WpWxkWJJnU=
+lo1X-2BjlQ-3D-3DUmjF_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1=
+i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIez=
+F7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP=
+-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvB=
+HhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9=
+Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf=
+1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIU=
+eSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiV=
+IjFUQLFMpUVLI-2BxXoPY800wkZtQmcIOUDv4L11of7RYVwAWxav8caGXLY1MwXz5fpOPFERTBD=
+mJT7TCTvnBGajnQiyth58SI2jgqqS-2FeLhRCbyXCHPS2pGSnOmDmOk3l-2BweILP3vbfr1qNVB=
+6AF9Agygd1F" target=3D"_blank" style=3D"text-decoration: none; color: #4553=
+58;">Help Center</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href=3D"https:/=
+/ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzW=
+UQTRKYo0hOnxocQgf3WrlewjIeoz-2BI5qP-2FtN5pBAv7cnEKRfdNXZcvE5p-2BxI9E38El5Gp=
+m7WypPtVdVnBeNnImqSqqnH6mXnbj6qUczt4WWCah4wL9aEc5w5B3SASEPh-2B2O2xU5SRB2tDa=
+T-2FsmhNDM89BnZFChwE-2FAY7jSCARjLDWL_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5ge=
+l7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMp=
+EA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6=
+b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJ=
+RhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2i=
+sW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9ed=
+OwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9Gu=
+BlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L9=
+6-2Blq9unuVZviiVIjFUQLFMpUVLI-2BxXoPY800wkZtQZnayUH9Z3zJfZ6w6IfBFk4XY1-2B3g=
+Bxncgly3y3v8Gegqw2-2BwsAbkOdvQD8MxNQO13DtnpIIiD0c66xlhAy4KGUjaK8VxRaRcukHmX=
+E0GjLhyE-2FI20HaarZHADuqwXPg2" target=3D"_blank" style=3D"text-decoration: =
+none; color: #455358;">Unsubscribe</a>
+</td>
+                    </tr>
+                                        <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"font-fam=
+ily: 'Hurme Geometric Sans 2', Arial, sans-serif; font-size: 10px; line-hei=
+ght: 12px; color: #455358; font-weight: bold;" class=3D"em_defaultlink">
+<a href=3D"https://ablink.newsletter.quizlet.com/ls/click?upn=3Du001.T6f6rJ=
+T-2B6UcdyLy19QBnzTyZVllmxTk6zm-2FVh0jbL-2BGbAzY68KaGjapCPbYvzKLNNA7u_IaEOxq=
+gZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP1i6I9wmZI7zlEQAVRdTkk-2BPxNZ=
+wyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIezF7LWIi-2Fo1-2FPrtUsUWx3wALK=
+QdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5ToP-2FjYmlQv1snYm9Oa2-2B9jZJ1-=
+2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLvBHhVTGnhG2hHQsF3JDJxnLDRrzNP=
+ll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw9Lgjf31T4-2F83QuTBwnnaOE7Ob8=
+K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OSf1fVXm-2B8CJSRRUSnGR4hLZ5yMw=
+9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JIUeSlRI6-2BoVtb9mLi9qis9KzGGk=
+pf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZviiVIjFUQLFMpUVLI-2BxXoPY800wkZ=
+tQArHxP-2BNFhGrV-2Bm-2BR0wWeyMWMZOJGhppY7VF8wOiTirX6oexqVR4FeMijS97sU-2FYzN=
+74BpE4Kz7-2FRm2wLJRLkJ09hnzsJMXSoyfBIdhM-2BZDeUL4i4EnvO9FakAcoADH47" target=
+=3D"_blank" style=3D"text-decoration: none; color: #455358;">Terms</a>&nbsp=
+;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href=3D"https://ablink.newsletter.quizle=
+t.com/ls/click?upn=3Du001.T6f6rJT-2B6UcdyLy19QBnzSCR3aVgjFN48UnzqzsqiOBY7vk=
+5SpV7wzNYXfqY3eipeQm3_IaEOxqgZXlhF-2FWeAthks66UjCOPf-2F1c5gel7vP7e2XDM4yLMP=
+1i6I9wmZI7zlEQAVRdTkk-2BPxNZwyE1oAGP9tzrA3APUD9fWHheMpnSjiMpEA3emLAhPZcFYIe=
+zF7LWIi-2Fo1-2FPrtUsUWx3wALKQdZPTJa8wXdpgkY7garWtiwFP9JuFYn6b6V1DS2C42AP5To=
+P-2FjYmlQv1snYm9Oa2-2B9jZJ1-2BOwJuzQ9ucuDGGoHlVpOaMfG1d-2FsJRhD-2BZyHDEhTLv=
+BHhVTGnhG2hHQsF3JDJxnLDRrzNPll5yWvXQbYJPLSMUKkoImdbyWVBfiM2isW5GmEqdeK2pSuw=
+9Lgjf31T4-2F83QuTBwnnaOE7Ob8K6I7966bpJtI9yCO9NHzdJtCEth0A9edOwgU6VTZAA742OS=
+f1fVXm-2B8CJSRRUSnGR4hLZ5yMw9rTiFCBUHamKkwvBLUuoeIzs0pwrO9GuBlJUDUVQhUB86JI=
+UeSlRI6-2BoVtb9mLi9qis9KzGGkpf0E-2Fbh95nf2F0ainhCYBKhwSwQ6L96-2Blq9unuVZvii=
+VIjFUQLFMpUVLI-2BxXoPY800wkZtQfL7h37DI2IDiEOys0acGN15RRcC0NlaZrCGrTfMwyidQY=
+ThktC3VIE57p-2FKXb2rX412z-2F1K5arlW7QhrznlP8HJkxhhSjhxXlrYoMrXyAw80aOTUo0sR=
+1KBiKyLkJ3iI" target=3D"_blank" style=3D"text-decoration: none; color: #455=
+358;">Privacy Policy</a>
+</td>
+                    </tr>
+                    <tr>
+                      <td height=3D"26" style=3D"height: 26px; font-family:=
+ 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                <td width=3D"24" style=3D"width: 24px; font-family: 'Hurme =
+Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;">&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td class=3D"em_hide" style=3D"line-height: 1px; min-width: 600px=
+; font-family: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;=
+" bgcolor=3D"#ffffff"><img alt=3D"" src=3D"images/spacer.gif" height=3D"1" =
+width=3D"600" style=3D"max-height: 1px; min-height: 1px; display: block; wi=
+dth: 600px; min-width: 600px; outline: none !important; -ms-interpolation-m=
+ode: bicubic; border-width: 0;" border=3D"0"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- =3D=3D //Footer Section =3D=3D -->
+ =20
+<!-- BEGIN ANDROID 7.1 FIX -->
+<table class=3D"hide" width=3D"100%" align=3D"center" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" role=3D"presentation"><tr><td style=3D"font-fam=
+ily: 'Hurme Geometric Sans 2', 'Trebuchet MS', Arial, sans-serif;"><img src=
+=3D"https://appboy-images.com/appboy/communication/assets/image_assets/imag=
+es/6058fe64078b9d2113567d7c/original.gif?1616445028" width=3D"600" style=3D=
+"height: 1px; width: 600px; min-width: 320px; outline: none !important; -ms=
+-interpolation-mode: bicubic; border-width: 0;" alt=3D""></td></tr></table>
+<!--// ANDROID 7.1 FIX-->
+</td></tr></table>
+<!-- // WRAPPER TABLE -->
+<img src=3D"https://ablink.newsletter.quizlet.com/wf/open?upn=3Du001.S-2Fz7=
+4AnqOF1baGHNOFqmttaH352PzPKkIyBQHvu29pi8LefoAxi0oIb-2FcpHlxlVPai7nKL9GWb-2F=
+Fd4KfhKeDHQwNqrkb9ayob-2BplX3zHkx-2BId68kEj8b1k2meCz5n-2FrEOdSMinGBmcycziut=
+fc1zcvcN-2F-2FicFna3pWJDP3GTKuT1rJAt2mT2XgzADq0NcMyCjVwyrVXC8U03oXDF4GQwslH=
+Xqcd002mTnptaCPBFxW8CdUmcFJbjBNnriacyqJhY5ecm10EQT1k3TUEoHwK9chxzhup9vMLNt5=
+mrP5x21JKhD2PG70bJdmk9jeOrCyRsNIIvdKXSpkxYYWnn66sx4RdTz87OlZFRyN0Q-2BXybaQr=
+H2mz8tLrf8vh6ro3ngZhI-2B0acMoUpBDLMeiSh-2FKMQSqOYEaan2rI38TGpgtV9kSbDbnPAUR=
+VKaeyefzc7wdoB3VGm9lXu8pVoQ0kq1JoIJu-2Bf0687XaazkDxKibVQTdkB1pC1PomfRil6GNP=
+JSefOYQHWoOKe0kPm2HN0gK8n1VVxUKk7V6npmQA5v8r-2B-2BI-2Bis8OeSl1nj1YOcq9wPGxO=
+D61eP0pFfzm-2FhjrwXzpSzC-2FCpzCCgKNwHaa2UWd8bIpuWOea2zsFJmaiXjb9lHlR9bvL5ZS=
+fGWUOfcHrsNpXAiFjw7u9EG6qp2r-2F74XkNE-2B9hUWPYDGY-2Fkl7xbfLT2VAh11hGgZ3GRgd=
+43ps6WgjgQ-3D-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"h=
+eight:1px !important;width:1px !important;border-width:0 !important;margin-=
+top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margi=
+n-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;pa=
+dding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--4aeb4c6c9cecac7d0413183c8ea42a354835b5c2d7be5c65117cb3b9b585--

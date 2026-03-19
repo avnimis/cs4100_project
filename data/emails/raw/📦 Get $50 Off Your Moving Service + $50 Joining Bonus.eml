@@ -1,0 +1,1492 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:a05:6000:4709:b0:43b:44c0:9cea with SMTP id gx9csp297826wrb;
+        Wed, 18 Mar 2026 11:10:20 -0700 (PDT)
+X-Received: by 2002:a05:6214:43c9:b0:89a:2b9:ccf2 with SMTP id 6a1803df08f44-89c6b5c526emr63316196d6.53.1773857419945;
+        Wed, 18 Mar 2026 11:10:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773857419; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Cc3BNIndbsd45RGR46JgXo5JU64CjhHGRYPTkxpoagyoO2ih1Xfu2gKYFaPSjD5jbN
+         i5VYPUlwwqas+KKKZh7c0uoafUbjyRTvdAiLWfdJXQnfGnvWLVqAYAoLo152kyOaugNM
+         pKh/OMHfp48gzQH3XA//AboURDz8Z6rZ6DETCw7euP3axIYNcaRAc2zIw6mGXVOm3EC7
+         mQZiBJ7UJtytxrDJ6yqq8h23iqwNLdgqjMUXIljNT+zlf/aoIIIj3Fsm/Po946Wb7WD5
+         JS6J+sUvcxB8gIDklcrWALA0csrCeeyF3GMQ9vOkUI778bbCm5f+ZC+EyR8caAfHdUZ2
+         391A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:to:from:subject:mime-version:date:dkim-signature
+         :dkim-signature;
+        bh=qSvpGSqPm/B7BHfioPKaztvfR+wKO1Qsaw4kKwFAy0g=;
+        fh=gYIh15b8nGBadAT/ysZc0l9lwLnBlxCACkFrvbnfWaw=;
+        b=dleYn7IILRkXEvcvYDxpdz30zd7r/FSaklKPRCmp1LpkTEIT00A5Ld6vwSIlAO2yjH
+         IB+qpZdC5P1HujMi/ddOQXV9K8iMKkJClbRQoozDPbU6+uyk1DWlC1b6FM9WvPhgoO/g
+         QilIvdYRIDY0KIrZNdH+j98DfSVaiL5ROVAUhIbvKisEIU3o7GOydeTLP+wui6H9jbWt
+         EkOmtj9EfCSfO8qRpGLq2LcjIb5auNUeLgecW9K8KTWuJuTUpwd6aFE4lL61dPMDGI45
+         XEGXS78MHu2SkuDftzpHj74C/kwRy8ZeOzw5RLH6EzUTfxYJLGmEoUD0/U/LmRZxAjn6
+         hCRQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio52573.amenify.com header.s=mx header.b="X/kAs32C";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=fJGKT6HD;
+       spf=pass (google.com: domain of postmaster@cio52573.amenify.com designates 161.38.193.5 as permitted sender) smtp.mailfrom=postmaster@cio52573.amenify.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=amenify.com
+Return-Path: <postmaster@cio52573.amenify.com>
+Received: from v55.v56f0a4e3.use4.send.mailgun.net (v55.v56f0a4e3.use4.send.mailgun.net. [161.38.193.5])
+        by mx.google.com with UTF8SMTPS id 6a1803df08f44-89c6b8e7ff8si38742956d6.32.2026.03.18.11.10.19
+        for <jasmind009@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 18 Mar 2026 11:10:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of postmaster@cio52573.amenify.com designates 161.38.193.5 as permitted sender) client-ip=161.38.193.5;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio52573.amenify.com header.s=mx header.b="X/kAs32C";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=fJGKT6HD;
+       spf=pass (google.com: domain of postmaster@cio52573.amenify.com designates 161.38.193.5 as permitted sender) smtp.mailfrom=postmaster@cio52573.amenify.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=amenify.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio52573.amenify.com; q=dns/txt; s=mx; t=1773857419; x=1773864619;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=qSvpGSqPm/B7BHfioPKaztvfR+wKO1Qsaw4kKwFAy0g=;
+ b=X/kAs32Cu83CXSrDQlLVeCc7vFreCOZF3PpW8+OcfUvgQLlovD620hRf386qqThR6IWODeredrMdYuhwZF2NJiovlv2H+njhAjqcsjyG3Rv2Xga0H32hbSPq7hbrCG+ju21Nb+YHq/KFjtO3XI2UI7BDEGAuXPLzMHNQNd/tuss=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1773857419; x=1773864619;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=qSvpGSqPm/B7BHfioPKaztvfR+wKO1Qsaw4kKwFAy0g=;
+ b=fJGKT6HDFIm/IEaLNf2Q3zmvrmGqUZvvTC+BIT3qqQmlGeyrmPCj7GvBqjqVXeoqGmJEkRGmXU3/KmX1vqo3q7hwwaVz/GRWPuaW5N9sxofh8RCJ4cFryP8zrIibPhyV+QXba6sElaQLv9tJXCkfdHY9Lzednkna7qbQK7wvf+0=
+X-Mailgun-Sid: WyJjYmZlYiIsImphc21pbmQwMDlAZ21haWwuY29tIiwiODRlZDI0YSJd
+X-Feedback-Id: postmaster@cio52573.amenify.com::5dc034c208eae4735e2fd7ca:mailgun
+Received: by 53dcd3a59040499e3803d6461fdeccfe4b07d219e9605daae8bcd05d50e17098 with HTTP
+ id 69baea8b7682a5d473bc6f9f; Wed, 18 Mar 2026 18:10:19 GMT
+X-Mailgun-Sending-Ip: 161.38.193.5
+Date: Wed, 18 Mar 2026 18:10:19 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="7e7f55a8df20f758fd31f817341b327241aab025b435e795e2e704f5b773"
+Subject: =?UTF-8?q?=F0=9F=93=A6_Get_$50_Off_Your_Moving_Service_+_$50_Joining_Bonu?=
+ =?UTF-8?q?s?=
+From: =?utf-8?b?Q2xlYXJ3YXkgQXBhcnRtZW50cyAtIEFtZW5pZnkgT25zaXRlIFRlYW3vu78=?=
+ <concierge@amenify.com>
+To: jasmind009@gmail.com
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: false
+X-Mailer: Customer.io (dgSbsQUDAO6EVOyEVAGdAhxRecf3L8-erKzEQQY=;
+ +https://whatis.customeriomail.com)
+X-Report-Abuse-To: badactor@customer.io
+X-Mailgun-Variables: {"email_id": "dgSbsQUDAO6EVOyEVAGdAhxRecf3L8-erKzEQQY="}
+Message-Id: <20260318181019.935a7d9d0d8588ca@cio52573.amenify.com>
+
+--7e7f55a8df20f758fd31f817341b327241aab025b435e795e2e704f5b773
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Claim Your $50 Joining Credit =C2=A0
+
+( https://m.amenify.com/?utm_campaign=3DMAR+2026+-+Prospects+Email+05&utm_c=
+ontent=3DEmail+content&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+
+Book Now ( https://m.amenify.com/sign-up?token=3DhCGcRJHq&utm_campaign=3DMA=
+R+2026+-+Prospects+Email+05&utm_content=3DEmail+content&utm_medium=3Demail_=
+action&utm_source=3Dcustomer.io )
+
+------------------------------------
+=F0=9F=93=A6 Stress-Free Moving with $50 Off
+------------------------------------
+
+Moving doesn=E2=80=99t have to be a headache. Our professional team handles=
+ all the heavy lifting and logistics, letting you focus on settling into yo=
+ur new home.
+
+Get a $50 joining bonus + Use code SPRING26 to get $50 OFF* your moving ser=
+vice.
+
+Join Amenify ( https://m.amenify.com/sign-up?token=3DhCGcRJHq&utm_campaign=
+=3DMAR+2026+-+Prospects+Email+05&utm_content=3DEmail+content&utm_medium=3De=
+mail_action&utm_source=3Dcustomer.io )
+
+-----------------------------------------
+=F0=9F=A7=BD Pristine Move-In & Move-Out Cleaning
+-----------------------------------------
+
+Step into a home that feels truly yours from day one. Our deep cleaning exp=
+erts ensure every corner is scrubbed, sanitized, and sparkling, giving you =
+a pristine environment to start your next chapter before you even unpack a =
+box.
+
+Book a Moving Service ( https://m.amenify.com/sign-up?token=3DhCGcRJHq&utm_=
+campaign=3DMAR+2026+-+Prospects+Email+05&utm_content=3DEmail+content&utm_me=
+dium=3Demail_action&utm_source=3Dcustomer.io )
+
+-------------------------------------------------------
+=F0=9F=99=8B=F0=9F=8F=BB=E2=80=8D=E2=99=82=EF=B8=8F Top-Rated Professionals=
+ You Can Trust
+-------------------------------------------------------
+
+We combine top-tier talent (rated 4.6/5 stars) with rigorous background che=
+cks to ensure total safety and transparency. Enjoy locked-in savings on sub=
+scriptions and real-time concierge support to keep your home guest-ready.
+
+Schedule Now ( https://m.amenify.com/sign-up?token=3DhCGcRJHq&utm_campaign=
+=3DMAR+2026+-+Prospects+Email+05&utm_content=3DEmail+content&utm_medium=3De=
+mail_action&utm_source=3Dcustomer.io )
+
+---------------------------------------
+=F0=9F=8F=86 Join Over 100,000 5-Star Residents
+---------------------------------------
+
+Reliability is the foundation of everything we do. We have earned over 100,=
+000 5-star reviews by consistently delivering trust and quality. Join the t=
+housands of neighbors who rely on us for a better home experience.
+
+Join the 5-Star Club ( https://m.amenify.com/sign-up?token=3DhCGcRJHq&utm_c=
+ampaign=3DMAR+2026+-+Prospects+Email+05&utm_content=3DEmail+content&utm_med=
+ium=3Demail_action&utm_source=3Dcustomer.io )
+
+------------------
+=F0=9F=A4=9D Meet Our Pros
+------------------
+
+Featured Pro Who Helps Your Neighbors
+
+Joe Jenkins
+
+Dan
+---
+
+=E2=98=85=E2=98=85=E2=98=85=E2=98=85=E2=98=85 4.9/5
+
+"Moving was so much easier with Amenify."
+
+Would you like to see Dan again?
+
+Book Now ( https://m.amenify.com/sign-up?utm_campaign=3DMAR+2026+-+Prospect=
+s+Email+05&utm_content=3DEmail+content&utm_medium=3Demail_action&utm_source=
+=3Dcustomer.io )
+
+Don't have the Amenify app?
+---------------------------
+
+Download it today!
+
+Amenify iOS App ( https://apps.apple.com/us/app/amenify-resident/id14749896=
+84?utm_campaign=3DMAR+2026+-+Prospects+Email+05&utm_content=3DEmail+content=
+&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+
+Amenify Android App ( https://play.google.com/store/apps/details?id=3Dcom.j=
+oinamenify.amenify&utm_campaign=3DMAR+2026+-+Prospects+Email+05&utm_content=
+=3DEmail+content&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+
+735 Montgomery Street, San Francisco, CA 94111 | =C2=A9 2024 Amenify Corpor=
+ation
+Email: concierge@amenify.com | Phone: (719) 767-1963.
+
+If you prefer not to receive our emails, you may ( https://api.amenify.com/=
+unsubscribe?email=3Djasmind009@gmail.com&utm_campaign=3DMAR+2026+-+Prospect=
+s+Email+05&utm_content=3DEmail+content&utm_medium=3Demail_action&utm_source=
+=3Dcustomer.io ) unsubscribe ( https://api.amenify.com/unsubscribe?email=3D=
+jasmind009@gmail.com&utm_campaign=3DMAR+2026+-+Prospects+Email+05&utm_conte=
+nt=3DEmail+content&utm_medium=3Demail_action&utm_source=3Dcustomer.io )
+--7e7f55a8df20f758fd31f817341b327241aab025b435e795e2e704f5b773
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schem=
+as-microsoft-com:office:office" style=3D"font-family: 'open sans', 'helveti=
+ca neue', helvetica, arial, sans-serif;"><head></head><body><div style=3D"d=
+isplay: none">Claim Your $50 Joining Credit =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+=C2=A0</div><div style=3D"background-color: #eeeeef;">
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0;=
+" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style=3D"font-size: 0px; word=
+-break: break-word; padding: 0;">
+                                             <div style=3D"height: 5px; lin=
+e-height: 5px;"> </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%">
+                     <tbody>
+                        <tr>
+                           <td align=3D"left" valign=3D"bottom" width=3D"50=
+%" style=3D"vertical-align: bottom; padding: 32px 40px;" class=3D"m_-430490=
+2202866913557logo-content-padding">
+                              <a target=3D"_blank" href=3D"http://mail.amen=
+ify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZPeUVWQUdkQWh4UmVjZjNMOC1lckt=
+6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29tLz91dG1fY2FtcGFpZ249TUFSKz=
+IwMjYrLStQcm9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50X=
+HUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlv=
+IiwiaW50ZXJuYWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE2Njh9/7febc0=
+9884629191c249d4a0813e9510ea0241b2f7026e5b3c32dc497f6b4e61"><img alt=3D"" s=
+rc=3D"https://userimg-assets.customeriomail.com/images/client-env-88219/174=
+0384080088_Untitled%20design%20(56)_01JMVFK4DPRSKJPBHSEWSCY3GS.png" style=
+=3D"width: 100px; display: block;" title=3D"Amenify Logo"/></a>
+                           </td>
+                           <td align=3D"right" valign=3D"bottom" width=3D"5=
+0%" style=3D"vertical-align: bottom; padding: 5px 40px 32px;" class=3D"m_-4=
+304902202866913557logo-content-padding">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse: separate; line-height: 60%; margin-lef=
+t: auto;">
+                                 <tbody>
+                                    <tr>
+                                       <td align=3D"right" bgcolor=3D"trans=
+parent" valign=3D"middle" style=3D"border-radius: 8px; background-color: tr=
+ansparent; border: 2px solid #1b1b20;">
+                                          <a target=3D"_blank" href=3D"http=
+://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZPeUVWQUdkQWh4UmV=
+jZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29tL3NpZ24tdXA_dG=
+9rZW49aENHY1JKSHFcdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIwMjYrLStQcm9zcGVjdHMrRW1ha=
+WwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHUwMDI2dXRtX21lZGl1bT1lbWFp=
+bF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiI5YmIxMDU=
+yZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE2MjF9/caf75576c871f932d9f069cf0a5ac350c=
+f5817421f3ed600128151c5112cf8cf" style=3D"display: inline-block; background=
+-color: transparent; color: #1b1b20; font-family: Helvetica,Arial,sans-seri=
+f; font-size: 14px; font-weight: 700; line-height: 25px; text-decoration: n=
+one; border-radius: 8px; text-transform: none; margin: 0; padding: 4px 8px;=
+">Book Now</a>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0;=
+" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style=3D"border-radius: 20px =
+20px 0 0; background-color: #ffffff; font-size: 0px; word-break: break-word=
+; padding: 0;" class=3D"m_-4304902202866913557mobile-hidden m_-430490220286=
+6913557bg-radius-top" bgcolor=3D"#ffffff">
+                                             <div style=3D"height: 24px; li=
+ne-height: 24px;"> </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"background-color: #ffffff; verti=
+cal-align: top; padding: 0 0 32px;" bgcolor=3D"#ffffff" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 20px 40px 0;" class=3D"m_-43049=
+02202866913557content-padding">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <h2 style=3D"font-size: 28p=
+x; line-height: 38px; margin: 0px; padding: 0px;">=F0=9F=93=A6 Stress-Free =
+Moving with $50 Off</h2>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;" class=3D"m_-4304902202866913557mobile-padding">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: rtl; font-size: 0px; text-align: cen=
+ter; padding: 0 40px 32px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-l" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;">
+                                             <img alt=3D"" src=3D"https://u=
+serimg-assets.customeriomail.com/images/client-env-88219/1769601158733_JAN0=
+9-01_01KG275MS4A73JRDWBNETDPQ7X.png" style=3D"width: 300px;" title=3D"Image=
+"/>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-r" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 0 16px;" class=3D"m_-43049022=
+02866913557mobile-text-center ">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;"><br/></p>
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;"><b></b>Moving doesn=E2=80=99t have to be a headach=
+e. Our professional team handles all the heavy lifting and logistics, letti=
+ng you focus on settling into your new home. </p><p style=3D"color: #000000=
+; margin: 0; padding: 0;"><br/></p><p style=3D"color: #000000; margin: 0; p=
+adding: 0;"><i>Get a <b>$50 joining bonus</b> + Use code <b>SPRING26</b> to=
+ get <b>$50 OFF*</b> your moving service.</i><br/></p><p style=3D"color: #0=
+00000; margin: 0; padding: 0;"><br/></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0;" class=3D"m_-430490220286691=
+3557mobile-button-center">
+                                             <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border-collapse: separate; line-height: =
+100%;">
+                                                <tbody>
+                                                   <tr>
+                                                      <td align=3D"center" =
+bgcolor=3D"#0066FF" valign=3D"middle" style=3D"border-radius: 8px; backgrou=
+nd-color: #0066ff; border: none;">
+                                                         <a target=3D"_blan=
+k" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZP=
+eUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29=
+tL3NpZ24tdXA_dG9rZW49aENHY1JKSHFcdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIwMjYrLStQcm=
+9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHUwMDI2dXRtX=
+21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJu=
+YWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE2MjF9/caf75576c871f932d9=
+f069cf0a5ac350cf5817421f3ed600128151c5112cf8cf" style=3D"display: inline-bl=
+ock; background-color: #0066ff; color: #ffffff; font-family: Helvetica,Aria=
+l,sans-serif; font-size: 14px; font-weight: 600; line-height: 22px; text-de=
+coration: none; border-radius: 8px; text-transform: none; margin: 0; paddin=
+g: 8px 16px;">Join Amenify</a>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                             <br/><br/>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"background-color: #ffffff; verti=
+cal-align: top; padding: 0 0 24px;" bgcolor=3D"#ffffff" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 40px;" class=3D"m_-4304902202=
+866913557content-padding">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <h2 style=3D"font-size: 28p=
+x; line-height: 38px; margin: 0; padding: 0;">=F0=9F=A7=BD Pristine Move-In=
+ &amp; Move-Out Cleaning<br/></h2>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;" class=3D"m_-4304902202866913557mobile-padding">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: rtl; font-size: 0px; text-align: cen=
+ter; padding: 0 40px 32px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-l" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;">
+                                             <img alt=3D"" src=3D"https://u=
+serimg-assets.customeriomail.com/images/client-env-88219/1769601162055_JAN0=
+9-02_01KG275QK5Y26NNRZJYQP70AC0.png" style=3D"width: 300px;" title=3D"Image=
+"/>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-r" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 0 16px;" class=3D"m_-43049022=
+02866913557mobile-text-center">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;"><br/></p>
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;">Step into a home that feels truly yours from day o=
+ne. Our <b>deep cleaning experts</b> ensure every corner is scrubbed, sanit=
+ized, and sparkling, giving you a pristine environment to start your next c=
+hapter before you even unpack a box.<br/><br/></p><p></p><p></p>
+                                                <p></p>
+                                                <ul style=3D"color: #000000=
+;">
+                                                </ul>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0;" class=3D"m_-430490220286691=
+3557mobile-button-center">
+                                             <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border-collapse: separate; line-height: =
+100%;">
+                                                <tbody>
+                                                   <tr>
+                                                      <td align=3D"center" =
+bgcolor=3D"#0066FF" valign=3D"middle" style=3D"border-radius: 8px; backgrou=
+nd-color: #0066ff; border: none;">
+                                                         <a target=3D"_blan=
+k" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZP=
+eUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29=
+tL3NpZ24tdXA_dG9rZW49aENHY1JKSHFcdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIwMjYrLStQcm=
+9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHUwMDI2dXRtX=
+21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJu=
+YWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE2MjF9/caf75576c871f932d9=
+f069cf0a5ac350cf5817421f3ed600128151c5112cf8cf" style=3D"display: inline-bl=
+ock; background-color: #0066ff; color: #ffffff; font-family: Helvetica,Aria=
+l,sans-serif; font-size: 14px; font-weight: 600; line-height: 22px; text-de=
+coration: none; border-radius: 8px; text-transform: none; margin: 0; paddin=
+g: 8px 16px;">Book a Moving Service</a>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"background-color: #ffffff; verti=
+cal-align: top; padding: 0 0 24px;" bgcolor=3D"#ffffff" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 40px;" class=3D"m_-4304902202=
+866913557content-padding">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <h2 style=3D"font-size: 28p=
+x; line-height: 38px; margin: 0; padding: 0;">=F0=9F=99=8B=F0=9F=8F=BB=E2=
+=80=8D=E2=99=82=EF=B8=8F Top-Rated Professionals You Can Trust</h2>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;" class=3D"m_-4304902202866913557mobile-padding">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: rtl; font-size: 0px; text-align: cen=
+ter; padding: 0 40px 32px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-l" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;"><img alt=3D"" src=3D"http=
+s://userimg-assets.customeriomail.com/images/client-env-88219/1765620256820=
+_Email%20Marketing%20Amenify%20(4)_01KCBJP47CJB7WAY8NAW123CPY.png" style=3D=
+"width: 300px;" title=3D"Image"/>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-r" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 0 16px;" class=3D"m_-43049022=
+02866913557mobile-text-center">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;"><br/></p>
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;"></p>We combine <b>top-tier talent (rated 4.6/5 sta=
+rs)</b> with rigorous background checks to ensure total safety and transpar=
+ency. Enjoy locked-in savings on subscriptions and real-time concierge supp=
+ort to keep your home guest-ready.<br/><p></p>
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;"><br/></p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0;" class=3D"m_-430490220286691=
+3557mobile-button-center">
+                                             <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border-collapse: separate; line-height: =
+100%;">
+                                                <tbody>
+                                                   <tr>
+                                                      <td align=3D"center" =
+bgcolor=3D"#0066FF" valign=3D"middle" style=3D"border-radius: 8px; backgrou=
+nd-color: #0066ff; border: none;">
+                                                         <a target=3D"_blan=
+k" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZP=
+eUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29=
+tL3NpZ24tdXA_dG9rZW49aENHY1JKSHFcdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIwMjYrLStQcm=
+9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHUwMDI2dXRtX=
+21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJu=
+YWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE2MjF9/caf75576c871f932d9=
+f069cf0a5ac350cf5817421f3ed600128151c5112cf8cf" style=3D"display: inline-bl=
+ock; background-color: #0066ff; color: #ffffff; font-family: Helvetica,Aria=
+l,sans-serif; font-size: 14px; font-weight: 700; line-height: 22px; text-de=
+coration: none; border-radius: 8px; text-transform: none; margin: 0; paddin=
+g: 8px 16px;">Schedule Now</a>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"background-color: #ffffff; verti=
+cal-align: top; padding: 0 0 24px;" bgcolor=3D"#ffffff" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 40px;" class=3D"m_-4304902202=
+866913557content-padding">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <h2 style=3D"font-size: 28p=
+x; line-height: 38px; margin: 0; padding: 0;">=F0=9F=8F=86 Join Over 100,00=
+0 5-Star Residents<br/></h2>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;" class=3D"m_-4304902202866913557mobile-padding">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: rtl; font-size: 0px; text-align: cen=
+ter; padding: 0 40px 32px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-l" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;">
+                                             <img alt=3D"" src=3D"https://u=
+serimg-assets.customeriomail.com/images/client-env-88219/1768991866034_Emai=
+l%20Marketing%20Amenify%20(17)_01KFG23FD9JB7Z32FJB67QABPJ.png" style=3D"wid=
+th: 300px;" title=3D"Image"/>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-r" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 0 16px;" class=3D"m_-43049022=
+02866913557mobile-text-center">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <p style=3D"font-size: 18px=
+; color: #000000; font-family: Helvetica, Arial, sans-serif; line-height: 2=
+6px; margin: 0px; padding: 0px;"><br/></p><p style=3D"font-size: 18px; colo=
+r: #000000; font-family: Helvetica, Arial, sans-serif; line-height: 26px; m=
+argin: 0px; padding: 0px;"><b></b>Reliability is the foundation of everythi=
+ng we do. We have earned over <b>100,000 5-star reviews</b> by consistently=
+ delivering trust and quality. Join the thousands of neighbors who rely on =
+us for a better home experience.</p>
+                                                <p style=3D"font-size: 18px=
+; color: #000000; font-family: Helvetica, Arial, sans-serif; line-height: 2=
+6px; margin: 0px; padding: 0px;"><br/></p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0;" class=3D"m_-430490220286691=
+3557mobile-button-center">
+                                             <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border-collapse: separate; line-height: =
+100%;">
+                                                <tbody>
+                                                   <tr>
+                                                      <td align=3D"center" =
+bgcolor=3D"#0066FF" valign=3D"middle" style=3D"border-radius: 8px; backgrou=
+nd-color: #0066ff; border: none;">
+                                                         <a target=3D"_blan=
+k" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZP=
+eUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29=
+tL3NpZ24tdXA_dG9rZW49aENHY1JKSHFcdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIwMjYrLStQcm=
+9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHUwMDI2dXRtX=
+21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJu=
+YWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE2MjF9/caf75576c871f932d9=
+f069cf0a5ac350cf5817421f3ed600128151c5112cf8cf" style=3D"display: inline-bl=
+ock; background-color: #0066ff; color: #ffffff; font-family: Helvetica,Aria=
+l,sans-serif; font-size: 14px; font-weight: 600; line-height: 22px; text-de=
+coration: none; border-radius: 8px; text-transform: none; margin: 0; paddin=
+g: 8px 16px;">Join the 5-Star Club</a>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"background-color: #ffffff; verti=
+cal-align: top; padding: 0 0 24px;" bgcolor=3D"#ffffff" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0 40px;" class=3D"m_-4304902202=
+866913557content-padding">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: le=
+ft; color: #000000;" align=3D"left">
+                                                <h2 style=3D"font-size: 28p=
+x; line-height: 38px; margin: 0; padding: 0;">=F0=9F=A4=9D Meet Our Pros<br=
+/></h2>
+                                                <p style=3D"color: #000000;=
+ font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin: 5=
+px 0 0;">Featured Pro Who Helps Your Neighbors</p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;" class=3D"m_-4304902202866913557mobile-padding">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: rtl; font-size: 0px; text-align: cen=
+ter; padding: 0 40px 32px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-l" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0 0 20px;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;">
+                                             <img alt=3D"Joe Jenkins" src=
+=3D"https://userimg-assets.customeriomail.com/images/client-env-88219/17738=
+30943440_Untitled%20design_01KM090DXBA4KDAZA1WFHB5E8H.png" style=3D"border-=
+radius: 50%; width: 160px; height: 160px; object-fit: cover; display: block=
+; border: 3px solid #0066ff;" title=3D"Image"/>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: middle; width: 100%;" class=
+=3D"m_-4304902202866913557mj-column-per-50 m_-4304902202866913557col-r" ali=
+gn=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: middle; padding:=
+ 0;" valign=3D"middle">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"left" style=3D"word-=
+break: break-word; padding: 0px 0px 16px;" class=3D"m_-4304902202866913557m=
+obile-text-center">
+                                             <div style=3D"line-height: 26p=
+x; text-align: left;" align=3D"left">
+                                                <h3 style=3D"color: rgb(0, =
+0, 0); font-family: Helvetica, Arial, sans-serif; font-size: 22px; line-hei=
+ght: 30px; margin: 0px;">Dan</h3>
+                                                <p style=3D"color: rgb(244,=
+ 180, 0); font-family: Helvetica, Arial, sans-serif; font-size: 18px; margi=
+n: 0px; padding: 0px;">=E2=98=85=E2=98=85=E2=98=85=E2=98=85=E2=98=85 <b>4.9=
+/5</b></p>
+                                                <p style=3D"color: rgb(0, 0=
+, 0); font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-styl=
+e: italic; margin: 10px 0px;"></p><i style=3D"color: rgb(0, 0, 0); font-fam=
+ily: Helvetica, Arial, sans-serif; font-size: 18px;">&#34;</i><font><span s=
+tyle=3D"font-size: 18px;"><i>Moving was so much easier with Amenify.</i></s=
+pan></font><i style=3D"font-size: 18px;">&#34;</i></div><div style=3D"font-=
+size: 18px; font-family: Helvetica, Arial, sans-serif; line-height: 26px; t=
+ext-align: left; color: rgb(0, 0, 0);" align=3D"left"><p></p>
+                                                <p style=3D"margin-top: 0px=
+; margin-bottom: 15px; font-weight: bold; color: #0066ff; font-size: 16px;"=
+>Would you like to see Dan again?</p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td align=3D"left" style=3D"font-=
+size: 0px; word-break: break-word; padding: 0;" class=3D"m_-430490220286691=
+3557mobile-button-center">
+                                             <table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border-collapse: separate; line-height: =
+100%;">
+                                                <tbody>
+                                                   <tr>
+                                                      <td align=3D"center" =
+bgcolor=3D"#0066FF" valign=3D"middle" style=3D"border-radius: 8px; backgrou=
+nd-color: #0066ff; border: none;">
+                                                         <a target=3D"_blan=
+k" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZP=
+eUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9tLmFtZW5pZnkuY29=
+tL3NpZ24tdXA_dXRtX2NhbXBhaWduPU1BUisyMDI2Ky0rUHJvc3BlY3RzK0VtYWlsKzA1XHUwMD=
+I2dXRtX2NvbnRlbnQ9RW1haWwrY29udGVudFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uX=
+HUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiOWJiMTA1MmRmY2QxMDFl=
+ZTg0NTQiLCJsaW5rX2lkIjoxODM4fQ/76dd1bbe8bdcc71b44a3e648ef1c4e69c183ad99bc1c=
+027ccc65b3b941190e31" style=3D"display: inline-block; background-color: #00=
+66ff; color: #ffffff; font-family: Helvetica,Arial,sans-serif; font-size: 1=
+4px; font-weight: 600; line-height: 22px; text-decoration: none; border-rad=
+ius: 8px; text-transform: none; margin: 0; padding: 8px 16px;">Book Now</a>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0 0 32px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0 =
+30px;" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;">
+                                             <p style=3D"padding: 0; margin=
+: 0; border-top-width: 1px; border-top-style: solid; border-top-color: #c9c=
+9cd; font-size: 1px; width: 100%;"></p>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0 =
+30px;" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 40px 0 0;">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: ce=
+nter; color: #000000;" align=3D"center">
+                                                <h3 style=3D"font-size: 26p=
+x; line-height: 34px; margin: 0; padding: 0;">Don't have the Amenify app?</=
+h3>
+                                                <p style=3D"color: #000000;=
+ margin: 0; padding: 0;">Download it today!</p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #ffffff; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #ffffff; width: 100%;" bgcolor=3D"#ffffff">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 24px 0px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-px-75" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td align=3D"center" style=3D"vertical-align:=
+ top; padding: 0;" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"50%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center"><a target=3D=
+"_blank" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU=
+82RVZPeUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9hcHBzLmFwc=
+GxlLmNvbS91cy9hcHAvYW1lbmlmeS1yZXNpZGVudC9pZDE0NzQ5ODk2ODQ_dXRtX2NhbXBhaWdu=
+PU1BUisyMDI2Ky0rUHJvc3BlY3RzK0VtYWlsKzA1XHUwMDI2dXRtX2NvbnRlbnQ9RW1haWwrY29=
+udGVudFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b2=
+1lci5pbyIsImludGVybmFsIjoiOWJiMTA1MmRmY2QxMDFlZTg0NTQiLCJsaW5rX2lkIjoxMzczf=
+Q/23abca1b0e1e1a5adaed4872f88d74c73c4c76cdcd95c2c67d7cb9fe2aabca3f"><img al=
+t=3D"Amenify iOS App" src=3D"https://frzaza.stripocdn.email/content/guids/C=
+ABINET_099a0bf3b3b0c3b6e309e00be0c09c85/images/53911612544677224.png" style=
+=3D"width: 120px;" title=3D"Image"/></a>=20
+                                          </td>
+                                          <td align=3D"center"><a target=3D=
+"_blank" href=3D"http://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU=
+82RVZPeUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9wbGF5Lmdvb=
+2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5qb2luYW1lbmlmeS5hbWVuaWZ5XHUw=
+MDI2dXRtX2NhbXBhaWduPU1BUisyMDI2Ky0rUHJvc3BlY3RzK0VtYWlsKzA1XHUwMDI2dXRtX2N=
+vbnRlbnQ9RW1haWwrY29udGVudFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dX=
+RtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiOWJiMTA1MmRmY2QxMDFlZTg0NTQiL=
+CJsaW5rX2lkIjoxNzF9/292ade7e9efdac408f21497bcbe20d0080288bab41383ff4a2c058f=
+be0a9fdc7"><img alt=3D"Amenify Android App" src=3D"https://frzaza.stripocdn=
+=2Eemail/content/guids/CABINET_099a0bf3=
+b3b0c3b6e309e00be0c09c85/images/940916=
+12544812332.png" style=3D"width: 130px;" title=3D"Image"/></a>=20
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-px-180" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0;=
+" valign=3D"top"><br/>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 20px 20px 0px;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-per-100" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0;=
+" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"wor=
+d-break: break-word; padding: 0px;">
+                                             <div style=3D"line-height: 26p=
+x; text-align: center;" align=3D"center">
+                                                <p style=3D"line-height: 18=
+px; margin: 0px; padding: 0px;"><span style=3D"font-size: 10px; color: #000=
+000;">735 Montgomery Street, San Francisco, CA 94111 | =C2=A9 2024 Amenify =
+Corporation<br/>Email: concierge@amenify.com | Phone: (719) 767-1963. </spa=
+n></p>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+   <div style=3D"background-color: #eeeeef; max-width: 600px; margin: 0px a=
+uto;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #eeeeef; width: 100%;" bgcolor=3D"#eeeeef">
+         <tbody>
+            <tr>
+               <td style=3D"direction: ltr; font-size: 0px; text-align: cen=
+ter; padding: 0;" align=3D"center">
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-px-120" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0;=
+" valign=3D"top">
+                                 <table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%">
+                                    <tbody>
+                                       <tr>
+                                          <td align=3D"center" style=3D"fon=
+t-size: 0px; word-break: break-word; padding: 0;">
+                                             <div style=3D"font-family: Hel=
+vetica,Arial,sans-serif; font-size: 18px; line-height: 26px; text-align: ce=
+nter; color: #000000;" align=3D"center"><a target=3D"_blank" href=3D"http:/=
+/mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZPeUVWQUdkQWh4UmVjZ=
+jNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9hcGkuYW1lbmlmeS5jb20vdW5zdWJzY3Jp=
+YmU_ZW1haWw9amFzbWluZDAwOUBnbWFpbC5jb21cdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIwMjY=
+rLStQcm9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHUwMD=
+I2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwia=
+W50ZXJuYWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE0NTN9/9d569772584=
+b9e11f5f660791cc217532a51e8d5013ffde8108826b5b76c4141" style=3D"text-decora=
+tion: none; font-size: 10px; line-height: 18px; color: #000000;">If you pre=
+fer not to receive our emails, you may</a> <a target=3D"_blank" href=3D"htt=
+p://mail.amenify.com/e/c/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZPeUVWQUdkQWh4Um=
+VjZjNMOC1lckt6RVFRWT0iLCJocmVmIjoiaHR0cHM6Ly9hcGkuYW1lbmlmeS5jb20vdW5zdWJzY=
+3JpYmU_ZW1haWw9amFzbWluZDAwOUBnbWFpbC5jb21cdTAwMjZ1dG1fY2FtcGFpZ249TUFSKzIw=
+MjYrLStQcm9zcGVjdHMrRW1haWwrMDVcdTAwMjZ1dG1fY29udGVudD1FbWFpbCtjb250ZW50XHU=
+wMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIi=
+wiaW50ZXJuYWwiOiI5YmIxMDUyZGZjZDEwMWVlODQ1NCIsImxpbmtfaWQiOjE0NTN9/9d569772=
+584b9e11f5f660791cc217532a51e8d5013ffde8108826b5b76c4141" style=3D"text-ali=
+gn: left; text-decoration-line: none; font-size: 10px; line-height: 18px; c=
+olor: #000000;">unsubscribe</a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div style=3D"font-size: 0px; text-align: left; direction=
+: ltr; display: inline-block; vertical-align: top; width: 100%;" class=3D"m=
+_-4304902202866913557mj-column-px-80" align=3D"left">
+                     <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+                        <tbody>
+                           <tr>
+                              <td style=3D"vertical-align: top; padding: 0;=
+" valign=3D"top"><br/>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+  =20
+</div>
+
+<img src=3D"http://mail.amenify.com/e/o/eyJlbWFpbF9pZCI6ImRnU2JzUVVEQU82RVZ=
+PeUVWQUdkQWh4UmVjZjNMOC1lckt6RVFRWT0ifQ=3D=3D" style=3D"height: 1px !import=
+ant; max-height: 1px !important; max-width: 1px !important; width: 1px !imp=
+ortant; display: none !important;" alt=3D""/></body></html>
+--7e7f55a8df20f758fd31f817341b327241aab025b435e795e2e704f5b773--

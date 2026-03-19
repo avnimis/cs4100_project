@@ -1,0 +1,1390 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:a05:6000:43d5:b0:43b:5bb4:d91 with SMTP id 21csp177372wrf;
+        Thu, 19 Mar 2026 03:21:03 -0700 (PDT)
+X-Received: by 2002:a05:6870:21c1:b0:417:d068:6029 with SMTP id 586e51a60fabf-41bd418f2e2mr4095787fac.36.1773915663168;
+        Thu, 19 Mar 2026 03:21:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773915663; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HftyA/6Qosn+ejLYB5R3lE6GFiiA59OAAqqxgPEf79rbs2hl1TUz0DTNgddyTRodyo
+         e42HVn7r7Fjq0KIHNPsWs4vM63+Lulwi5cWxp2+wgUievigWhBdpixT2xz8spVZ/mmsM
+         L0pUwhlzHjEDymRM+bPfW9W39BKzrxB+JeeH25yGIA+R0CUAq1lcVnpcTemolfm5fMqL
+         gpFfwLaK4dBf4a2xFTj0Cq/7LSR1ctmOUawXjvifZzY99YvHvQH7RWA7qM0jI+5+Sy5P
+         O9EZppxsEbxuS3NL3gH45SlDkG5dnbfH46R/MiQl0jSzAvMT6gqBz6e/mrTPB2hIs0Qm
+         TgZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:rcpt_domain:campaign_id:campaign_token
+         :list-unsubscribe-post:precedence:feedback-id:list-unsubscribe
+         :reply-to:message-id:date:to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=sfwG+IQ8buj8GLk+evgVlSuZgltwVai1xWS38Bhz7Go=;
+        fh=gYIh15b8nGBadAT/ysZc0l9lwLnBlxCACkFrvbnfWaw=;
+        b=ic5vda+2Gpxx2386mwOkS7PXe/gtx4HTMarGE3c44Jb1AhL2sxRtbWGbh0zPP69kO3
+         7SVkL3eXQQvWArqKgNJejZuHl0aj3hFFMDqRi2sqvQuKzjN32e62Z6UxczP18Qbozwhn
+         0AKQ5hy6lXL65Puw9lE0dz6e6NAmWinau0GRhCROrUrAOtw2a6ieCRrkzR8ea0/T02vz
+         G7Hmb2+SFahs0nQQ8Dgi1HMGxPDa1r/pswrRbC0/gnQmeBYXgTg4BLBCVptBt1MYMSOI
+         eJc0q4yK6fayDgHiidQcsva84iedd13hp3nu4UB+uUne1QfuJn23rGO7/zfpRrcO/CbZ
+         owlw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fbl.zetaglobal.net header.s=v2 header.b=xEfbRHLx;
+       dkim=pass header.i=@sports.comms.yahoo.net header.s=v2 header.b=ObwvD78q;
+       spf=pass (google.com: domain of bounce-yo3-zh_sports_nntan03192026c2012016-h-99b2b54823=2@response.sports.comms.yahoo.net designates 96.47.27.237 as permitted sender) smtp.mailfrom="bounce-yo3-ZH_sports_NNTAN03192026c2012016-h-99b2b54823=2@response.sports.comms.yahoo.net";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sports.comms.yahoo.net
+Return-Path: <bounce-yo3-ZH_sports_NNTAN03192026c2012016-h-99b2b54823=2@response.sports.comms.yahoo.net>
+Received: from yahoo-230-2.bm16.maas.zetaglobal.net (yahoo-230-2.bm16.maas.zetaglobal.net. [96.47.27.237])
+        by mx.google.com with ESMTPS id 586e51a60fabf-41bd288297csi4057121fac.96.2026.03.19.03.21.02
+        for <jasmind009@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 19 Mar 2026 03:21:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-yo3-zh_sports_nntan03192026c2012016-h-99b2b54823=2@response.sports.comms.yahoo.net designates 96.47.27.237 as permitted sender) client-ip=96.47.27.237;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fbl.zetaglobal.net header.s=v2 header.b=xEfbRHLx;
+       dkim=pass header.i=@sports.comms.yahoo.net header.s=v2 header.b=ObwvD78q;
+       spf=pass (google.com: domain of bounce-yo3-zh_sports_nntan03192026c2012016-h-99b2b54823=2@response.sports.comms.yahoo.net designates 96.47.27.237 as permitted sender) smtp.mailfrom="bounce-yo3-ZH_sports_NNTAN03192026c2012016-h-99b2b54823=2@response.sports.comms.yahoo.net";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sports.comms.yahoo.net
+DKIM-Signature: a=rsa-sha256; bh=sfwG+IQ8buj8GLk+evgVlSuZgltwVai1xWS38Bhz7Go=;
+ c=relaxed/relaxed; d=fbl.zetaglobal.net;
+ h=DKIM-Signature:X-Mailer-Info:X-Mailer-Info-Extra:Subject:From:To:Date:Received:Message-ID:Reply-to:List-Unsubscribe:Feedback-ID:X-rpcampaign:X-cid:X-messageuid:Precedence:List-Unsubscribe-Post:campaign_token:campaign_id:rcpt_domain:MIME-Version:Content-Type;
+ s=v2; t=1773915662; v=1;
+ b=xEfbRHLxvYlAkCSzILDs6OrJwU/FyNqWKI8tTIIVC2w3Vk+ETR1evYZAXn4HUjVzUcJ7uxiZ
+ 8NJSuUYwgg+AMR12p+he40/qCPQGC/JAup9jW5jJlJtZDgVOJhmZtLfLPgPHwKF1irINafB5alM
+ Bv8AlWyiV3uRDzhUCXKI6qk7UhySPKaXHU5rO4RgBJj8goIG0zhyKvDI2wseF6VgWptJqGvZ6ry
+ B+SMK9Ty2CfvNUhsJa0Srjwj9QsN7KMkfXF1qgiXjdrOpm6vmtpTOrpHgneZmMzQ2VcAneWKRGn
+ cg1KvynY/VyB6L9OmSl6rwLULnKWhffRY/FRlb2duUZrQ==
+DKIM-Signature: a=rsa-sha256; bh=sfwG+IQ8buj8GLk+evgVlSuZgltwVai1xWS38Bhz7Go=;
+ c=relaxed/relaxed; d=sports.comms.yahoo.net;
+ h=X-Mailer-Info:X-Mailer-Info-Extra:Subject:From:To:Date:Received:Message-ID:Reply-to:List-Unsubscribe:Feedback-ID:X-rpcampaign:X-cid:X-messageuid:Precedence:List-Unsubscribe-Post:campaign_token:campaign_id:rcpt_domain:MIME-Version:Content-Type;
+ s=v2; t=1773915662; v=1;
+ b=ObwvD78qX0rXu9CextEA65lz19PAflGZR92c+7tfOEZGwuxUGG0J/iuvifBSLIZT8IWBcsVc
+ keFv4QhQgPTczfpG/2pnRXLz2ZYDMuXU7gvOkk2Umhd0fAbVS5OLXNfLyZBNX7ZXBVX9sDZVdKG
+ X8JxPcXYArb4AmtAuOcwFkkRtKGeLVOjLG8xMG/VQxGlSSHJLWriMuCbBtNBaU00SHSwrobYq8W
+ BneIshDuipidICOeDAwoMCFZh3/GYJ80unWZqgU2aNqRhf+GrnDJATTr5lQoXVz+aM5FEuRtpio
+ nSa61PXk6qtRSA5P62nI+lYWLAycGziovbnUj03XFq6NA==
+X-Mailer-Info: 10.592M.geo91cw9mc0N3Xu5Gdh5GMzETOyAjM2MmMwEjMwEjN.oWYz1WauRGM
+ wkDQn1WYpxmLj9Wb.snItlGZiojIxczNzkTM1YzMyADOxMDN4UmZwE2MykjN1ICLiMGdiojI5FGa
+ v9WLzB3byR3ctU2N1gTOwQGMyQWMhJmYzQ2YkVGN0kzN0UGMzUmZmdjYtEjIsIickJiOicWbhlGb
+ uM2btJSf..AMzETOyAjM2MkMwEjMwEjN..
+X-Mailer-Info-Extra: 99b2b54823:0YTMwITMwIzQ2IDMykTMzADApBQfi02bj5CbpF
+ WbnJiOiQmciwiIx0iY3YmZlNDMlRzN5QDNlR2YkNjYiFWMkJDMkBTO4UzNl1yc0J3bwNX
+ Lv9GahlnI6ICdjJCLiUjN5IzMhBjZlhDNzEDOwIzM2UTM5MzN3EjI6ICZp1mI7BwYA02b
+ j5CbpFWbnBUOwADZulWbzFma++
+Subject: =?UTF-8?Q?=F0=9F=9A=A8_Men=E2=80=99s_brackets_close_soon,_don=E2=80=99t_m?=
+ =?UTF-8?Q?iss_your_shot?=
+From: Yahoo Fantasy Sports <fantasy@sports.comms.yahoo.net>
+To: jasmind009@gmail.com
+Date: 19 Mar 2026 10:21:02 -0000
+Received: from 10.118.28.229 by 10.119.0.21 with http; 19 Mar 2026 10:21:02 +0000
+Message-ID: <mid-1773915632081348ef0a32965@response.sports.comms.yahoo.net>
+Reply-to: "Yahoo Fantasy Sports"<reply@response.sports.comms.yahoo.net>
+List-Unsubscribe: <https://view.sports.comms.yahoo.net/messages/1773915632081348ef0a32965/unsubscribe>, <mailto:unsubscribe-1773915632081348ef0a32965@response.sports.comms.yahoo.net?subject=Unsubscribe>
+Feedback-ID: e75890d02d1abb3dcde44974e03eff7b:yahoo-sports:broadcast:bme
+X-rpcampaign: yahoosports2012017_1
+X-cid: yahoosports2012017_1
+X-messageuid: 1773915632081348ef0a32965
+Precedence: bulk
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+campaign_token: yahoo-sports-e75890d02d1abb3dcde44974e03eff7b-1
+campaign_id: 2012017
+rcpt_domain: gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="==f18ad63c574287161259841f1a6ed613"
+
+This is a multi-part message in MIME format.
+
+--==f18ad63c574287161259841f1a6ed613
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+It looks like your email client might not support HTML formatted email.
+
+Try opening this email in another email client.
+
+Or, open the following link to view this email in a browser:
+https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb20/CeyJ=
+taWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9ydHMtZTc=
+1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29tIn0/UaH=
+R0cHM6Ly92aWV3LnNwb3J0cy5jb21tcy55YWhvby5uZXQvbWVzc2FnZXMvMTc3MzkxNTYzMj=
+A4MTM0OGVmMGEzMjk2NS9yYXc/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/Le=
+W8z/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s0gaebd4de9
+
+------------------------------------------------------------------------=
+-------
+
+We respect your privacy, if this e-mail has been sent to you by error or=
+ you no longer wish to receive email, open the following link in a brows=
+er to unsubscribe:
+https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb20/CeyJ=
+taWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9ydHMtZTc=
+1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29tIn0/UaH=
+R0cHM6Ly92aWV3LnNwb3J0cy5jb21tcy55YWhvby5uZXQvbWVzc2FnZXMvMTc3MzkxNTYzMj=
+A4MTM0OGVmMGEzMjk2NS91bnN1YnNjcmliZQ/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZjMj=
+AxMjAxNg/LeW8z/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s4s073fc7a7
+
+--==f18ad63c574287161259841f1a6ed613
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w=
+ww.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"=
+>
+<!-- Fake Head Section: Yahoo Mail App Fix -->
+<script type=3D"application/ld+json">
+
+{
+"@context": "http://schema.org",
+"@type": "EmailMessage",
+"identifier":
+  [
+     { "@type": "PropertyValue", "name": "campaign_bucketid", "value": "=
+-2012016-20260319-1--A" },
+     { "@type": "PropertyValue", "name": "campaign_id", "value": "201201=
+6" },
+     { "@type": "PropertyValue", "name": "campaign_name", "value": "1343=
+_20260319_BracketMayhem_BatchOneTime_AllACQ_MensACQ4" },
+     { "@type": "PropertyValue", "name": "campaign_namespace", "value": =
+"zeta" }
+  ]
+}</script>
+</head>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"=
+>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+<meta name=3D"format-detection" content=3D"address=3Dno">
+<meta name=3D"robots" content=3D"noindex,nofollow">
+<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
+<link rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin>=
+
+<link href=3D"https://fonts.googleapis.com/css2?family=3DMontagu+Slab:op=
+sz,wght@16..144,100..700&amp;family=3DOpen+Sans:ital,wght@0,300..800;1,3=
+00..800&amp;display=3Dswap" rel=3D"stylesheet">
+<title>yahoo!fantasy</title>
+<!--Start CSS Style-->
+<style type=3D"text/css">
+/* Client-specific Styles */ /* setup webfonts */
+/* Client-specific Styles */ /* setup webfonts */
+{
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+#outlook a {
+padding: 0;
+}
+html, body {
+width: 100% !important;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+margin: 0 auto !important;
+padding: 0 !important;
+min-width: 100%;
+	font-size: 16px;
+}
+th {
+font-weight: normal !important;
+}
+.ExternalClass {
+width: 100%;
+}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass fo=
+nt, .ExternalClass td, .ExternalClass div {
+line-height: 100%;
+}
+.backgroundTable {
+margin: 0;
+padding: 0;
+width: 100% !important;
+line-height: 100% !important;
+}
+.backgroundImageTable {
+margin: 0;
+padding: 0;
+}
+img {
+outline: none;
+text-decoration: none;
+border: none;
+}
+a img {
+border: none;
+}
+a[href^=3Dtel] {
+color: inherit;
+text-decoration: none;
+}
+.sup {
+-webkit-text-size-adjust: none;
+}
+html {
+-webkit-text-size-adjust: none;
+}
+a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+}
+.x-gmail-data-detectors, .x-gmail-data-detectors *, .aBn {
+border-bottom: 0 !important;
+cursor: default !important;
+}
+div, a, tr, td, table, body, span, img, td, th, sup {
+-webkit-text-size-adjust: none;
+-ms-text-size-adjust: none;
+-moz-text-size-adjust: none;
+text-size-adjust: none;
+mso-line-height-rule: exactly !important;
+}
+#MessageViewBody a {
+color: inherit;
+text-decoration: none;
+font-size: inherit;
+font-family: inherit;
+font-weight: inherit;
+line-height: inherit;
+}
+table, tr, td, th, img {
+border-spacing: 0;
+cell-spacing: 0;
+mso-table-lspace: 0;
+mso-table-rspace: 0;
+}
+.link, .link a, .link a:link, .link a:active, .link a:hover, .link a:vis=
+ited {
+color: inherit!important;
+text-decoration: none !important;
+}
+.linkUnder, .linkUnder a, .linkUnder a:link, .linkUnder a:active, .linkU=
+nder a:hover, .linkUnder a:visited {
+color: inherit!important;
+text-decoration: underline !important;
+}
+.preheader {
+display: none !important;
+visibility: hidden;
+opacity: 0;
+color: transparent;
+height: 0;
+width: 0;
+}</style>
+=09
+<style>@media (prefers-color-scheme: dark) {
+.bgDark {
+background-color: #ffffff !important;
+}
+.bgDark2 {
+background-color: #EDEEF2 !important;
+}	=09
+.fontDark {
+color: #000000 !important;
+}
+.fontDark2 {
+color: #7D2EFF !important;
+}
+.buttonDark {
+background-color: #7D2EFF !important;	=09
+}
+.buttonFontDark {
+color: #ffffff !important;
+}
+.linkDark {
+color: #0F69FF !important;	=09
+}
+.borderDark {
+border-color: #EDEEF2 !important;	=09
+}=09
+}</style>
+=09
+<style>
+@media only screen and (max-width: 480px) {
+.noneMobile {
+display: none;
+display: none!important;
+}
+.hide {
+display: none !important;
+font-size: 0 !important;
+max-height: 0 !important;
+line-height: 0 !important;
+padding: 0 !important;
+mso-hide: all !important; /* hide elements in Outlook 2007-2013 */
+}
+.show {
+display: block !important;
+width: 100% !important;
+overflow: visible !important;
+float: none !important;
+max-height: inherit !important;
+line-height: inherit !important;
+}
+.tbl {
+width: 100% !important;
+clear: both !important;
+float: inherit !important;
+height: auto !important;
+min-width: 100% !important;
+max-width: 100% !important;
+}
+.tbl_50 {
+width: 50% !important;
+clear: both !important;
+float: inherit !important;
+height: auto !important;
+min-width: 50% !important;
+max-width: 50% !important;
+}
+.tbl_70 {
+width: 50% !important;
+clear: both !important;
+float: inherit !important;
+height: auto !important;
+min-width: 70% !important;
+max-width: 70% !important;
+}=09
+.tbl_90 {
+width: 90% !important;
+clear: both !important;
+float: inherit !important;
+height: auto !important;
+min-width: 90% !important;
+max-width: 90% !important;
+}
+.img_full {
+width: 100% !important;
+height: auto !important;
+}
+.img_200 {
+width: 100% !important;
+min-width: 200px !important;
+height: auto !important;
+}
+.bg_none {
+background-image: none !important;
+}
+.break {
+display: block !important;
+clear: both !important;
+}
+.drop {
+display: block !important;
+float: inherit!important;
+width: 100% !important;
+padding: 0 !important;
+}
+.drop {
+display: table!important;
+display: block!important;
+}
+.widthauto {
+width: auto !important;
+margin: 0 auto !important;
+float: inherit !important;
+min-width: inherit !important;
+}
+.table_center {
+margin: 0 auto !important;
+}
+.heightauto {
+height: auto !important;
+}
+.txt_center {
+text-align: center !important;
+}
+.txt_left {
+text-align: left !important;
+}
+.pad_null {
+padding: 0px 0px 0px 0px !important;
+}
+.pad_R0 {
+padding-right: 0% !important;
+}
+.pad_R5 {
+padding-right: 5% !important;
+}
+.pad_L0 {
+padding-left: 0% !important;
+}
+.pad_LR0 {
+padding-left: 0% !important;
+padding-right: 0% !important;
+}
+.pad_LR3 {
+padding-left: 3% !important;
+padding-right: 3% !important;
+}
+.pad_LR5 {
+padding-left: 5% !important;
+padding-right: 5% !important;
+}
+.pad_LR7 {
+padding-left: 7% !important;
+padding-right: 7% !important;
+}=09
+.pad_LR8 {
+padding-left: 8% !important;
+padding-right: 8% !important;
+}
+.pad_LR10 {
+padding-left: 10% !important;
+padding-right: 10% !important;
+}
+.pad_LR15 {
+padding-left: 15% !important;
+padding-right: 15% !important;
+}
+.pad_LR20 {
+padding-left: 20% !important;
+padding-right: 20% !important;
+}
+.pad_LR25 {
+padding-left: 25px !important;
+padding-right: 25px !important;
+}
+.pad_T10LR10 {
+padding-top: 10px !important;
+padding-left: 10px !important;
+padding-right: 10px !important;
+}
+.pad_T3 {
+padding-top: 3% !important;
+}
+.pad_T5 {
+padding-top: 5% !important;
+}
+.pad_T6 {
+padding-top: 6% !important;
+}
+.pad_T8 {
+padding-top: 8% !important;
+}=09
+.pad_T10 {
+padding-top: 10% !important;
+}
+.pad_B0 {
+padding-bottom: 0px !important;
+}
+.pad_B2 {
+padding-bottom: 2% !important;
+}
+.pad_B5 {
+padding-bottom: 5% !important;
+}
+.pad_B6 {
+padding-bottom: 6% !important;
+}=09
+.pad_B8 {
+padding-bottom: 8% !important;
+}
+.pad_B10 {
+padding-bottom: 10% !important;
+}
+.pad_B12 {
+padding-bottom: 12% !important;
+}
+.pad_TB5 {
+padding-top: 5% !important;
+padding-bottom: 5% !important;
+}
+.pad_TB10 {
+padding-top: 10% !important;
+padding-bottom: 10% !important;
+}
+.font_28 {
+font-size: 24px !important;
+}
+}
+
+</style>
+</head>
+<!--End CSS Style to read the Yahoo Mail App-->
+
+<!-- START OF MAIN BODY WRAPPER -->
+<body style=3D"-webkit-text-size-adjust: none; -webkit-font-smoothing: a=
+ntialiased; -moz-osx-font-smoothing: grayscale; -ms-text-size-adjust: no=
+ne; margin: 0 !important; background-color: #FFFFFF; padding:0 !importan=
+t;">
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Turn th=
+ose brackets into $50K</div><img src=3D"https://e.sports.comms.yahoo.net=
+/open?EamFzbWluZDAwOUBnbWFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYw=
+YTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAz=
+ZWZmN2ItMSIsInJkIjoiZ21haWwuY29tIn0/V/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZjM=
+jAxMjAxNg/LeW8z/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s8q7de6f916" height=3D"2=
+" width=3D"3" alt=3D"">
+=09
+ =20
+  =20
+
+ =20
+   =20
+ =20
+
+
+ =20
+<div style=3D"font-size:0px;display:none;visibility:hidden;opacity:0;col=
+or:transparent;max-height:0px;height:0;width:0;mso-hide:all;" class=3D"p=
+reheader">=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=A0=
+</div>=09
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center" bgcolor=3D"#ffffff" class=3D"full-wrap">
+  <tr>
+    <td valign=3D"top" align=3D"center" bgcolor=3D"#ffffff" class=3D"bgD=
+ark">
+<!-- START OF GMAIL WRAPPER -->
+     =20
+      <table width=3D"640" style=3D"max-width:640px; width: 640px; min-w=
+idth: 640px;" bgcolor=3D"#ffffff" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center" class=3D"tbl bgDark">
+			=09
+		<!-- BODY MODULE START -->
+        <tr>
+          <td align=3D"center" valign=3D"top"><table width=3D"100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+            <tbody>=09
+              <tr>
+                <td align=3D"center" valign=3D"top" style=3D"padding: 20=
+px 20px 0px;"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0">
+                  <tbody>
+					 =20
+                    <!-- HERO MODULE START --> =20
+                    <tr>
+                      <td align=3D"center" valign=3D"top" style=3D"paddi=
+ng: 0%;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                        <tbody>
+                          <tr>
+                            <td align=3D"center" valign=3D"top" class=3D=
+"hide"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+                              <tbody>
+                                <tr>
+                                  <td align=3D"center" valign=3D"top"><a=
+ href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5=
+jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG=
+9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY2=
+9tIn0/VaHR0cHM6Ly90b3VybmFtZW50LmZhbnRhc3lzcG9ydHMueWFob28uY29tL21lbnMtY=
+mFza2V0YmFsbC1icmFja2V0L3JlZ2lzdGVyL2NyZWF0ZXRlYW0/SWkhfc3BvcnRzX05OVEFO=
+MDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi50c3JjPTEzNDMmbm=
+NpZD1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSUyRm5UcVhvb3NvVU=
+9UR1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXhaSllvU2hOQjQyMH=
+I1JmJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s5vdba03f1=
+4" target=3D"_blank" style=3D"display: block;" data-location=3D"t1"><img=
+ src=3D"https://s.yimg.com/cv/apiv2/default/_2026/March/CRM-1085_Sports_=
+BM_ACQ4/1085_Desktop_Hero.png" width=3D"600" alt=3D"yahoo!fantasy - Men'=
+s &amp; Women's BRACKET MAYHEM - CLICK HERE" style=3D"display: block; ma=
+x-width: 600px; border-radius: 32px;" class=3D"img_full"></a></td>
+                                  </tr>
+                                </tbody>
+                              </table></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--[if !mso]><!-->
+                        <div style=3D"display:none; overflow:hidden; wid=
+th:0; max-height:0; line-height:0;" class=3D"show">
+                          <table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+                            <tbody>
+                              <tr>
+                                <td align=3D"center" valign=3D"top"><a h=
+ref=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb=
+20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9y=
+dHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29t=
+In0/VaHR0cHM6Ly90b3VybmFtZW50LmZhbnRhc3lzcG9ydHMueWFob28uY29tL21lbnMtYmF=
+za2V0YmFsbC1icmFja2V0L3JlZ2lzdGVyL2NyZWF0ZXRlYW0/SWkhfc3BvcnRzX05OVEFOMD=
+MxOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi50c3JjPTEzNDMmbmNp=
+ZD1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSUyRm5UcVhvb3NvVU9U=
+R1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXhaSllvU2hOQjQyMHI1=
+JmJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s5vdba03f14"=
+ target=3D"_blank" style=3D"display: block;" data-location=3D"t2"><img s=
+rc=3D"https://s.yimg.com/cv/apiv2/default/_2026/March/CRM-1085_Sports_BM=
+_ACQ4/1085_Mobile_Hero.png" width=3D"480" alt=3D"yahoo!fantasy - Men's &=
+amp; Women's BRACKET MAYHEM - CLICK HERE" style=3D"display: block; max-w=
+idth: 480px; border-radius: 14px;" class=3D"img_full"></a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        <!--<![endif] -->
+</td>
+</tr>
+                    <!-- HERO MODULE END -->
+					 =20
+					<!-- BODY COPY MODULE START --> =20
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"paddi=
+ng: 8% 0%;" class=3D"pad_T10 pad_B10"><table width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0">
+                        <tbody>
+                          <tr>
+                            <td valign=3D"top" align=3D"center" style=3D=
+"font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 2=
+8px; line-height: 110%; font-weight: 700; padding: 0% 0% 2%; letter-spac=
+ing: -.5px;" class=3D"fontDark pad_LR5 font_28">Last call to turn those =
+brackets into $25K*</td>
+                            </tr>
+                          <tr>
+                            <td valign=3D"top" align=3D"center" style=3D=
+"font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 1=
+6px; line-height: 135%; font-weight: 400; padding: 0% 10%;" class=3D"fon=
+tDark pad_LR0">Jasmin, there=E2=80=99s still time to enter the men's tou=
+rnament. Submit by 12:15 PM ET today, 3/19.<br>
+                            </td>
+</tr>
+                          <tr>
+                            <td align=3D"center" valign=3D"top" style=3D=
+"padding-top: 4%;" class=3D"pad_T5"><table width=3D"210" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" style=3D"width: 210px;">
+                              <tr>
+                                <td bgcolor=3D"#7D2EFF" height=3D"45" al=
+ign=3D"center" valign=3D"middle" style=3D"font-family: Helvetica, Arial,=
+ sans-serif; font-size: 16px; line-height: 100%; mso-line-height-rule:ex=
+actly; color:#ffffff; font-weight: 400; text-transform: none; cursor: po=
+inter; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; text-=
+size-adjust: none; -webkit-font-smoothing: antialiased; -moz-osx-font-sm=
+oothing: grayscale; letter-spacing: 0px; border-radius: 120px;" class=3D=
+"buttonDark"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWlu=
+ZDAwOUBnbWFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3Q=
+iOiJ5YWhvby1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJ=
+kIjoiZ21haWwuY29tIn0/VaHR0cHM6Ly90b3VybmFtZW50LmZhbnRhc3lzcG9ydHMueWFob2=
+8uY29tL21lbnMtYmFza2V0YmFsbC1icmFja2V0L3JlZ2lzdGVyL2NyZWF0ZXRlYW0/SWkhfc=
+3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi5=
+0c3JjPTEzNDMmbmNpZD1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSU=
+yRm5UcVhvb3NvVU9UR1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXh=
+aSllvU2hOQjQyMHI1JmJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMj=
+AxNg/s5vdba03f14" target=3D"_blank" style=3D"color: #ffffff; text-decora=
+tion: none; display: block; font-weight: 600;" class=3D"buttonFontDark" =
+data-location=3D"t3">FILL OUT BRACKET</a></td>
+                                </tr>
+                              </table></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+					<!-- BODY COPY MODULE END -->
+					 =20
+					<!-- MI MODULE START --> =20
+                    <tr>
+                      <td valign=3D"top" align=3D"center" class=3D"pad_L=
+R5" style=3D"padding: 0% 0% 5%;"><table width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0">
+                        <tbody>
+                          <tr>
+                            <td valign=3D"top" align=3D"center"><a href=3D=
+"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb20/Cey=
+JtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9ydHMtZT=
+c1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29tIn0/Va=
+HR0cHM6Ly93d3cubW92YWJsZS1pbmstNjU1OC5jb20vcC9jcC9hYTUxZTQ4NDk5MzBlNGE3L=
+2M/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP21pX3U9eWM1aXdMZn=
+A5S2V2cklwRWFaWkt5UXJsOEhWb2tSQ1ZBdEtKZHNwNUdac1Buc1ZmQWt2ZDdZVEZFVUdBTl=
+plSWM5WHpjT2lnZGlFcm44NHZFZVlzTXRRcmkxZ2lFMGlBQmpHTHBWclJHcnUtJm1pX2VjbX=
+A9LTIwMTIwMTYtMjAyNjAzMTktMS0tQSZ1cmw9aHR0cHMlM0ElMkYlMkZ3d3cubW92YWJsZS=
+1pbmstNjU1OC5jb20lMkZwJTJGcnAlMkY4NzBiNzQyZjdiMmI1MzUwJTJGdXJsJnVybF9zaW=
+c9bkRMcmRDaG4xWEdKMnUmc2VnbWVudF9pZD01ODk1MjMmLnRzcmM9MTM0MyZuY2lkPWNybV=
+8tMjAxMjAxNi0yMDI2MDMxOS0xLS1BJmJ0X3VzZXJfaWQ9JTJGblRxWG9vc29VT1RHV09ldn=
+QxQUc3RzdnV3VSbkpYJTJCY0poSDhzWTdxV3lUUnYxVWdVeFpKWW9TaE5CNDIwcjUmYnRfdH=
+M9MTc3MzkxNTYzMjA4Mw/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/sdjd6d810f6" target=
+=3D"_blank" style=3D"display: block;" data-location=3D"t4"><img src=3D"h=
+ttps://www.movable-ink-6558.com/p/rp/870b742f7b2b5350.png?mi_u=3Dyc5iwLf=
+p9KevrIpEaZZKyQrl8HVokRCVAtKJdsp5GZsPnsVfAkvd7YTFEUGANZeIc9XzcOigdiErn84=
+vEeYsMtQri1giE0iABjGLpVrRGru-&amp;mi_ecmp=3D-2012016-20260319-1--A" widt=
+h=3D"420" alt=3D"Cartoon bracket with emojis represeenting the teams." s=
+tyle=3D"display: block; max-width: 420px; border-radius: 20px;" class=3D=
+"img_full"></a></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                    </tr>
+                    <!-- MI MODULE END -->
+					 =20
+					<!-- FANTASY APP START --> =20
+                   =20
+=20
+ <tr>
+                      <td valign=3D"top" align=3D"center" class=3D"pad_L=
+R5"><table width=3D"420" style=3D"width: 420px; max-width: 420px;" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"tbl">
+                        <tbody>
+                          <tr>
+                            <td valign=3D"top" align=3D"center" style=3D=
+"border: 3px solid #EDEEF2; border-radius: 20px; padding: 10% 5%;"><tabl=
+e width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td valign=3D"top" align=3D"center"><a=
+ href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5=
+jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG=
+9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY2=
+9tIn0/VaHR0cHM6Ly9mYW50YXN5Lm9uZWxpbmsubWUvNzg2MzIwNDMx/SWkhfc3BvcnRzX05=
+OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3BpZD1FbWFpbCZjPVVTX0FjcXVpc2l0aW9uX=
+1lNa3RnXzEzNDNfMjAyNmJyYWNrZXRtYXloZW1fUHJvc3BlY3RpdmVVc2VycyZhZl9zdWIxP=
+UFjcXVpc2l0aW9uJmFmX3N1YjI9VVNfWU1rdGcmYWZfc3ViND0tMjAxMjAxNi0yMDI2MDMxO=
+S0xLS1BJmFmX3N1YjU9MjAyNkJNRmFudGFzeUFwcF9FbWFpbF9TdGF0aWNfJmFmX3N1YjY9e=
+WM1aXdMZnA5S2V2cklwRWFaWkt5UXJsOEhWb2tSQ1ZBdEtKZHNwNUdac1Buc1ZmQWt2ZDdZV=
+EZFVUdBTlplSWM5WHpjT2lnZGlFcm44NHZFZVlzTXRRcmkxZ2lFMGlBQmpHTHBWclJHcnUtJ=
+mFmX3N1Yjc9/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s3r69e040e6" target=3D"_blan=
+k" style=3D"display: block;" data-location=3D"t5"><img src=3D"https://s.=
+yimg.com/cv/apiv2/default/_2026/February/CRM-1068_Sports_BracketMayhem_A=
+CQ1/1068_Icon_y-fantasy.png" width=3D"83" alt=3D"yahoo!fantasy Icon - CL=
+ICK HERE - PNG" style=3D"display: block; border-radius: 20px;"></a></td>=
+
+                                </tr>
+                                <tr>
+                                  <td valign=3D"top" align=3D"center" st=
+yle=3D"font-family:Helvetica, Arial, sans-serif; font-weight: 700; color=
+: #000000; font-size: 24px; line-height: 115%; padding: 6% 0% 0%;" class=
+=3D"fontDark">Mayhem is better in the app</td>
+                                </tr>
+                                <tr>
+                                  <td valign=3D"top" align=3D"center" st=
+yle=3D"font-family:Helvetica, Arial, sans-serif; font-weight: 400; color=
+: #000000; font-size: 18px; line-height: 140%; padding: 2% 0% 6%;" class=
+=3D"fontDark">Get the latest Yahoo Fantasy app.</td>
+                                </tr>
+                                <tr>
+                                  <td valign=3D"top" align=3D"center" cl=
+ass=3D"pad_LR5"><table width=3D"90%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" class=3D"tbl">
+                                    <tbody>
+                                      <tr>
+                                        <td valign=3D"top" align=3D"cent=
+er"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0">
+                                          <tbody>
+                                            <tr>
+                                              <td valign=3D"top" align=3D=
+"center"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAw=
+OUBnbWFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ=
+5YWhvby1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjo=
+iZ21haWwuY29tIn0/VaHR0cHM6Ly9mYW50YXN5Lm9uZWxpbmsubWUvNzg2MzIwNDMx/SWkhf=
+c3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3BpZD1FbWFpbCZjPVVTX0FjcX=
+Vpc2l0aW9uX1lNa3RnXzEzNDNfMjAyNmJyYWNrZXRtYXloZW1fUHJvc3BlY3RpdmVVc2Vycy=
+ZhZl9zdWIxPUFjcXVpc2l0aW9uJmFmX3N1YjI9VVNfWU1rdGcmYWZfc3ViND0tMjAxMjAxNi=
+0yMDI2MDMxOS0xLS1BJmFmX3N1YjU9MjAyNkJNRmFudGFzeUFwcF9FbWFpbF9TdGF0aWNfJm=
+FmX3N1YjY9eWM1aXdMZnA5S2V2cklwRWFaWkt5UXJsOEhWb2tSQ1ZBdEtKZHNwNUdac1Buc1=
+ZmQWt2ZDdZVEZFVUdBTlplSWM5WHpjT2lnZGlFcm44NHZFZVlzTXRRcmkxZ2lFMGlBQmpHTH=
+BWclJHcnUtJmFmX3N1Yjc9/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s3r69e040e6" targ=
+et=3D"_blank" style=3D"display: block;" data-location=3D"t6"><img src=3D=
+"https://s.yimg.com/cv/apiv2/default/_2026/February/CRM-1068_Sports_Brac=
+ketMayhem_ACQ1/1068_Icon_AppStore.png" width=3D"145" alt=3D" Download on=
+ the App Store - CLICK HERE - PNG" style=3D"display: block; border-radiu=
+s: 5px; width: 100%; max-width: 145px;"></a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table></td>
+                                        <td valign=3D"top" align=3D"cent=
+er" style=3D"padding-left: 5px;"><table width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0">
+                                          <tbody>
+                                            <tr>
+                                              <td valign=3D"top" align=3D=
+"center"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAw=
+OUBnbWFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ=
+5YWhvby1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjo=
+iZ21haWwuY29tIn0/VaHR0cHM6Ly9mYW50YXN5Lm9uZWxpbmsubWUvNzg2MzIwNDMx/SWkhf=
+c3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3BpZD1FbWFpbCZjPVVTX0FjcX=
+Vpc2l0aW9uX1lNa3RnXzEzNDNfMjAyNmJyYWNrZXRtYXloZW1fUHJvc3BlY3RpdmVVc2Vycy=
+ZhZl9zdWIxPUFjcXVpc2l0aW9uJmFmX3N1YjI9VVNfWU1rdGcmYWZfc3ViND0tMjAxMjAxNi=
+0yMDI2MDMxOS0xLS1BJmFmX3N1YjU9MjAyNkJNRmFudGFzeUFwcF9FbWFpbF9TdGF0aWNfJm=
+FmX3N1YjY9eWM1aXdMZnA5S2V2cklwRWFaWkt5UXJsOEhWb2tSQ1ZBdEtKZHNwNUdac1Buc1=
+ZmQWt2ZDdZVEZFVUdBTlplSWM5WHpjT2lnZGlFcm44NHZFZVlzTXRRcmkxZ2lFMGlBQmpHTH=
+BWclJHcnUtJmFmX3N1Yjc9/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s3r69e040e6" styl=
+e=3D"display: block;" data-location=3D"t7"><img src=3D"https://s.yimg.co=
+m/cv/apiv2/default/_2026/February/CRM-1068_Sports_BracketMayhem_ACQ1/106=
+8_Icon_GooglePlay.png" width=3D"145" alt=3D"Get it on Google Play - CLIC=
+K HERE - PNG" style=3D"display: block; border-radius: 5px; width: 100%; =
+max-width: 145px;"></a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                    </tr>
+=20
+                    <!-- FANTASY APP END --> =20
+					 =20
+					<!-- LEGAL MODULE START --> =20
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"paddi=
+ng: 8% 0% 0%;" class=3D""><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+                        <tbody>
+                          <tr>
+                            <td valign=3D"top" align=3D"center" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-weight: 400; color: #000=
+000; font-size: 10px; line-height: 160%; padding: 0% 20%;" class=3D"font=
+Dark pad_LR10">*NO PURCHASE NECESSARY; void where prohibited. Open only =
+to legal residents of the 50 U.S., D.C. or CA, 18+. Ends prior to offici=
+al tournament tip=E2=80=91off=C2=A0on 03/19/2026 for Men=E2=80=99s Conte=
+st and 03/20/2026 for Women=E2=80=99s Contest. See <a href=3D"https://e.=
+sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb20/CeyJtaWQiOiIxN=
+zczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9ydHMtZTc1ODkwZDAyZ=
+DFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29tIn0/VaHR0cHM6Ly9s=
+ZWdhbC55YWhvby5jb20vdXMvZW4veWFob28vdGVybXMvbWVucy1iYXNrZXRiYWxsLWJyYWNr=
+ZXQvb2ZmaWNpYWwtcnVsZXMvaW5kZXguaHRtbA/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZj=
+MjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi50c3JjPTEzNDMmbmNpZD1jcm1fLT=
+IwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSUyRm5UcVhvb3NvVU9UR1dPZXZ0MU=
+FHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXhaSllvU2hOQjQyMHI1JmJ0X3RzPT=
+E3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s5pf550c639" target=3D=
+"_blank" style=3D"text-decoration: underline; color:#000000;" class=3D"f=
+ontDark" data-location=3D"t8">Men=E2=80=99s Official Rules</a> and <a hr=
+ef=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb2=
+0/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9yd=
+HMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29tI=
+n0/VaHR0cHM6Ly9sZWdhbC55YWhvby5jb20vdXMvZW4veWFob28vdGVybXMvd29tZW5zLWJh=
+c2tldGJhbGwtYnJhY2tldC9vZmZpY2lhbC1ydWxlcy9pbmRleC5odG1s/SWkhfc3BvcnRzX0=
+5OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi50c3JjPTEz=
+NDMmbmNpZD1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSUyRm5UcVhv=
+b3NvVU9UR1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXhaSllvU2hO=
+QjQyMHI1JmJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/seg2=
+4721036" target=3D"_blank" style=3D"text-decoration: underline; color:#0=
+00000;" class=3D"fontDark" data-location=3D"t9">Women=E2=80=99s Official=
+ Rules</a>.</td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                    </tr>
+					<!-- LEGAL MODULE END --> =20
+					 =20
+                  </tbody>
+                </table></td>
+              </tr>
+			=09
+			  <!-- SOCIAL MODULE START -->=09
+              <tr>
+                <td align=3D"center" valign=3D"top" style=3D"padding: 0p=
+x 20px 0px;"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top" align=3D"center" style=3D"paddi=
+ng: 8% 30px 10%;" class=3D"pad_LR0 pad_T10"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                        <tbody>
+                          <tr>
+                            <td valign=3D"top" align=3D"center"><table w=
+idth=3D"35%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"t=
+bl_70">
+                              <tbody>
+                                <tr>
+                                  <td valign=3D"top" align=3D"center"><t=
+able width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                    <tbody>
+                                      <tr>
+                                        <td valign=3D"top" align=3D"cent=
+er"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnb=
+WFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhv=
+by1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21h=
+aWwuY29tIn0/VaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1lhaG9vRmFudGFzeS8/SWkhfc3=
+BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/gabvODg/JMDMxOTIwMjZDMjAxMjAx=
+Ng/sau86cb314d" target=3D"_blank" style=3D"text-decoration: none; font-f=
+amily: 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; color: #000000;=
+" data-location=3D"t10"><img src=3D"https://s.yimg.com/cv/apiv2/default/=
+_2025/July/CRM-944_Sports_FF-SA-Template/944_Icon_FB.png" width=3D"24" a=
+lt=3D"Icon - Facebook"></a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table></td>
+                                  <td valign=3D"top" align=3D"center"><t=
+able width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                    <tbody>
+                                      <tr>
+                                        <td valign=3D"top" align=3D"cent=
+er"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnb=
+WFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhv=
+by1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21h=
+aWwuY29tIn0/VaHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AeWFob29mYW50YXN5/SWkhfc3Bvc=
+nRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/=
+s7s8d34501c" target=3D"_blank" style=3D"text-decoration: none; font-fami=
+ly: 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; color: #000000;" d=
+ata-location=3D"t11"><img src=3D"https://s.yimg.com/cv/apiv2/default/_20=
+25/July/CRM-944_Sports_FF-SA-Template/944_Icon_TikTok.png" width=3D"24" =
+alt=3D"Icon - TikTok"></a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table></td>
+                                  <td valign=3D"top" align=3D"center"><t=
+able width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                    <tbody>
+                                      <tr>
+                                        <td valign=3D"top" align=3D"cent=
+er"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnb=
+WFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhv=
+by1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21h=
+aWwuY29tIn0/VaHR0cHM6Ly94LmNvbS95YWhvb2ZhbnRhc3kv/SWkhfc3BvcnRzX05OVEFOM=
+DMxOTIwMjZjMjAxMjAxNg/LeW8z/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/saoe376c187"=
+ target=3D"_blank" style=3D"text-decoration: none; font-family: 'Helveti=
+ca Neue', Helvetica, Arial, 'sans-serif'; color: #000000;" data-location=
+=3D"t12"><img src=3D"https://s.yimg.com/cv/apiv2/default/_2025/July/CRM-=
+944_Sports_FF-SA-Template/944_Icon_X.png" width=3D"24" alt=3D"Icon - X">=
+</a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table></td>
+                                  <td valign=3D"top" align=3D"center"><t=
+able width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                    <tbody>
+                                      <tr>
+                                        <td valign=3D"top" align=3D"cent=
+er"><a href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnb=
+WFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhv=
+by1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21h=
+aWwuY29tIn0/VaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9ZYWhvb0ZhbnRhc3kv/SWkhfc=
+3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/gabvODg/JMDMxOTIwMjZDMjAxMjA=
+xNg/sel304f5869" target=3D"_blank" style=3D"text-decoration: none; font-=
+family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; color: #000000=
+;" data-location=3D"t13"><img src=3D"https://s.yimg.com/cv/apiv2/default=
+/_2025/July/CRM-944_Sports_FF-SA-Template/944_Icon_Insta.png" width=3D"2=
+4" alt=3D"Icon - Instagram"></a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table></td>
+                                  </tr>
+                                </tbody>
+                              </table></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+			  <!-- SOCIAL MODULE END -->
+			=09
+            </tbody>
+          </table></td>
+        </tr>
+		<!-- BODY MODULE END -->
+		 =20
+		<!-- FOOTER MODULE START -->
+          <tr>
+            <td bgcolor=3D"#EDEEF2" style=3D"padding: 0%;" class=3D"bgDa=
+rk2">
+<!-- Snippet Begins: footer_us_intl - Created: Dec 06 13:01 PM  By: mchi=
+ya@zetaglobal.com -->
+
+=20
+
+
+
+
+
+
+
+
+ =20
+
+ =20
+
+   =20
+
+
+
+
+ =20
+
+
+
+
+<!--START -- Page Overflow Color Table -->
+<div style=3D"padding :0px; margin:0px;">=20
+    <style>
+        @media screen and (max-width: 480px) {
+           =20
+        .wd23{
+            width: 23% !important;
+            max-width: 23%!important;
+        }
+      =20
+        }
+       =20
+    </style>
+
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+<v:fill type=3D"tile" src=3D"" color=3D"#edeef2"/>
+</v:background>
+<![endif]--> =20
+<table style=3D"padding :0px; margin:0px;" role=3D"presentation" height=3D=
+"100%" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" a=
+lign=3D"center" class=3D"email-container">
+<tr>
+<td align=3D"center" background=3D"" style=3D"vertical-align: top; backg=
+round-size: auto; background-repeat: repeat; padding :0px; margin:0px;" =
+valign=3D"top">
+<!--START -- Email Background Color Table  -->
+<table role=3D"presentation" width=3D"100%" border=3D"0" align=3D"center=
+" cellpadding=3D"0" cellspacing=3D"0" class=3D"wrap">
+
+
+
+
+<tr>
+<td bgcolor=3D"#edeef2">
+<!-- Start 1-024: Footer Navigation -->
+
+<table align=3D"center" role=3D"presentation" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#edeef2">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"center"><table align=3D"center" role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"vertical-align: top; padding: 30px 10px 0p=
+x 10px"><table role=3D"presentation" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" class=3D"wrap">
+<tbody>
+
+
+
+<tr>=20
+  <td>
+    <table align=3D"center" cellspacing=3D"0" cellpadding=3D"0">
+      <tr>
+        <td class=3D"drop" style=3D"line-height: 21px">
+          <table>
+            <tr>
+              <!-- Start Nav 1 -->
+  <th align=3D"center" valign=3D"middle" class=3D"" style=3D"vertical-al=
+ign: middle; padding: 0px; font-weight: normal">
+    <table align=3D"center" role=3D"presentation" width=3D"100%" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"vertical-align: middle; =
+font-weight: 400; text-align: center; padding: 0px 5px 0px 5px; letter-s=
+pacing: 0px; text-transform: none" class=3D"match "><span style=3D"color=
+: #03039F; font-size: 11px; font-family: Helvetica, Arial, sans-serif; l=
+ine-height: 150%" class=3D"mobile_match"><span style=3D"color: #03039F;"=
+><a data-reportingname=3D"Privacy Policy" style=3D"color: #002687; text-=
+decoration: none; font-weight: inherit;" href=3D"https://e.sports.comms.=
+yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMD=
+gxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZT=
+Q0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29tIn0/VaHR0cHM6Ly9sZWdhbC55YWhvb=
+y5jb20vdXMvZW4veWFob28vcHJpdmFjeS9pbmRleC5odG1s/SWkhfc3BvcnRzX05OVEFOMDM=
+xOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi50c3JjPTEzNDMmbmNpZ=
+D1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSUyRm5UcVhvb3NvVU9UR=
+1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXhaSllvU2hOQjQyMHI1J=
+mJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/sauae74e8af" =
+target=3D"_blank" rel=3D"noopener" data-location=3D"t22"><span style=3D"=
+font-size: 11px; font-family: Helvetica, Arial, sans-serif; font-weight:=
+ 400; line-height: 16px;">Privacy Policy</span></a></span></span></td>
+
+</tr>
+</tbody>
+</table>
+</th>
+<!-- End Nav 1 -->=20
+<th align=3D"center" valign=3D"middle" class=3D"lineHt150" style=3D"padd=
+ing: 0px; vertical-align: middle; font-size: 14px; font-weight: bold; he=
+ight: inherit; line-height: 16px; color: #6001D2"><span style=3D"color: =
+#03039F; font-size: 14px; font-family: Helveticarial, sans-serif; line-h=
+eight: 150%" class=3D"mobile_match"><span style=3D"color: #03039F;"><spa=
+n style=3D"font-size: 11px; font-family: Helvetica, Arial, sans-serif; f=
+ont-weight: 400; line-height: 16px;">=E2=80=A2</span></span></span></th>=
+
+<!-- Start Nav 2-->
+<th align=3D"center" valign=3D"middle" style=3D"vertical-align: middle; =
+padding: 0; font-weight: 400" class=3D""> <table align=3D"center" role=3D=
+"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0">
+<tbody>
+<tr>
+
+<th class=3D"" style=3D"vertical-align: top; padding: 0px; font-weight: =
+400"> <table align=3D"center" role=3D"presentation" width=3D"100%" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"vertical-align: middle; =
+font-weight: 400; text-align: center; padding: 0px 5px 0px 5px; letter-s=
+pacing: 0px; text-transform: none" class=3D"match "><span style=3D"color=
+:#03039F; font-size: 11px; font-family: Helvetica, Arial, sans-serif; li=
+ne-height: 16px;" class=3D"mobile_match"><a data-reportingname=3D"Terms"=
+ style=3D"color: #002687; text-decoration: none; font-weight: inherit;" =
+href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpbC5j=
+b20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1zcG9=
+ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwuY29=
+tIn0/VaHR0cHM6Ly9sZWdhbC55YWhvby5jb20vdXMvZW4veWFob28vdGVybXMvb3Rvcy9pbm=
+RleC5odG1s/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbn=
+RfaWQ9NTg5NTIzJi50c3JjPTEzNDMmbmNpZD1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQS=
+ZidF91c2VyX2lkPSUyRm5UcVhvb3NvVU9UR1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1=
+k3cVd5VFJ2MVVnVXhaSllvU2hOQjQyMHI1JmJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JM=
+DMxOTIwMjZDMjAxMjAxNg/sfg62b5aa68" target=3D"_blank" rel=3D"noopener" da=
+ta-location=3D"t23"><span style=3D"font-size: 11px; font-family: Helveti=
+ca, Arial, sans-serif; font-weight: 400; line-height: 16px;">Terms of Se=
+rvice</span></a></span></td>
+
+</tr>
+</tbody>
+</table>
+</th>
+
+</tr>
+</tbody>
+</table>
+</th>
+<!--End Nav 2 -->=20
+            </tr>
+          </table>
+        </td>
+        <td class=3D"drop" style=3D"line-height: 21px">
+          <table>
+            <tr>
+              <th align=3D"center" valign=3D"middle" class=3D"lineHt150 =
+hide" style=3D"padding: 0px; vertical-align: top; font-size: 14px; font-=
+weight: bold; height: inherit; line-height: 16px; color: #6001D2"><span =
+style=3D"color: #03039F; font-size: 14px; font-family: Helvetica, Arial,=
+ sans-serif; line-height: 150%" class=3D"mobile_match"><span style=3D"co=
+lor: #03039F;"><span style=3D"font-size: 11px; font-family: Helvetica, A=
+rial, sans-serif; font-weight: 400; line-height: 16px;">=E2=80=A2</span>=
+</span></span></th>
+  <!-- Start Nav 3 -->=20
+ =20
+  <th align=3D"center" valign=3D"middle" style=3D"vertical-align: middle=
+; padding: 0px; font-weight: normal" class=3D""> <table align=3D"center"=
+ role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0">
+  <tbody>
+  <tr>
+ =20
+  <th class=3D"" style=3D"vertical-align: top; padding: 0px; font-weight=
+: normal"> <table align=3D"center" role=3D"presentation" width=3D"100%" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+  <tr>
+  <td align=3D"center" valign=3D"middle" style=3D"vertical-align: middle=
+; font-weight: 400; text-align: center; padding: 0px 5px 0px 5px; letter=
+-spacing: 0px; text-transform: none" class=3D"match "><span style=3D"col=
+or: #03039F; font-size: 11px; font-family: Helvetica, Arial, sans-serif;=
+ line-height: 16px;" class=3D"mobile_match"><a data-reportingname=3D"uns=
+ub" style=3D"color: #002687; text-decoration: none; font-weight: inherit=
+;" href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZDAwOUBnbWFpb=
+C5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiOiJ5YWhvby1z=
+cG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkIjoiZ21haWwu=
+Y29tIn0/VaHR0cHM6Ly9zdWJzLmNvbW11bmljYXRpb25zLnlhaG9vLmNvbS95YWhvb191bnN=
+1Yi5odG1s/SWkhfc3BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP29iZnVpZD1=
+TeDl5NGx2STBjSjZXZVdxWlhKbGtRVUtpR1UyNHZ6SjdWTmJoaHF2WnBmNUZkb2ZlYXM2c1h=
+YaFRHYzF3d3RnU0x4RGZFcDN1dzJoR2dDak9mLWZtZz09Jm9wdGluPXltY19mcyZjPS0yMDE=
+yMDE2LTIwMjYwMzE5LTEtLUEmaW50bD11cyZzZWdtZW50X2lkPTU4OTUyMyYudHNyYz0xMzQ=
+zJm5jaWQ9Y3JtXy0yMDEyMDE2LTIwMjYwMzE5LTEtLUEmYnRfdXNlcl9pZD0lMkZuVHFYb29=
+zb1VPVEdXT2V2dDFBRzdHN2dXdVJuSlglMkJjSmhIOHNZN3FXeVRSdjFVZ1V4WkpZb1NoTkI=
+0MjByNSZidF90cz0xNzczOTE1NjMyMDgz/gabvODg/JMDMxOTIwMjZDMjAxMjAxNg/s9nffd=
+11e50" target=3D"_blank" rel=3D"noopener" data-location=3D"t24"><span st=
+yle=3D"font-size: 11px; font-family: Helvetica, Arial, sans-serif; font-=
+weight: 400; line-height: 16px;">Unsubscribe</span></a></span></td>
+  </tr>
+  </tbody>
+  </table>
+  </th>
+ =20
+  </tr>
+  </tbody>
+  </table>
+  </th>
+ =20
+  <!--End Nav 3 -->=20
+  <th align=3D"center" valign=3D"middle" class=3D"lineHt150" style=3D"pa=
+dding: 0px; vertical-align: middle; font-size: 14px; font-weight: bold; =
+height: inherit; line-height: 16px; color: #6001D2"><span style=3D"color=
+: #03039F; font-size: 14px; font-family: Helveticarial, sans-serif; line=
+-height: 150%" class=3D"mobile_match"><span style=3D"color: #03039F;"><s=
+pan style=3D"font-size: 11px; font-family: Helvetica, Arial, sans-serif;=
+ font-weight: 400; line-height: 16px;">=E2=80=A2</span></span></span></t=
+h>
+  <!-- Start Nav 4-->
+  <th align=3D"center" valign=3D"middle" style=3D"vertical-align: middle=
+; padding: 0px; font-weight: normal" class=3D""> <table align=3D"center"=
+ role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0">
+  <tbody>
+  <tr>
+ =20
+  <th class=3D"" style=3D"vertical-align: top; padding: 0px; font-weight=
+: normal"> <table align=3D"center" role=3D"presentation" width=3D"100%" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+  <tr>
+     =20
+  <td align=3D"center" valign=3D"middle" style=3D"vertical-align: middle=
+; font-weight: 400; text-align: center; padding: 0px 5px 0px 5px; letter=
+-spacing: 0px; text-transform: none" class=3D"match "><span style=3D"col=
+or: #03039F; font-size: 11px; font-family: Helvetica, Arial, sans-serif;=
+ line-height: 16px;" class=3D"mobile_match"><a data-reportingname=3D"Cus=
+tomer Support" style=3D"color: #002687; text-decoration: none; font-weig=
+ht: inherit;" href=3D"https://e.sports.comms.yahoo.net/click?EamFzbWluZD=
+AwOUBnbWFpbC5jb20/CeyJtaWQiOiIxNzczOTE1NjMyMDgxMzQ4ZWYwYTMyOTY1IiwiY3QiO=
+iJ5YWhvby1zcG9ydHMtZTc1ODkwZDAyZDFhYmIzZGNkZTQ0OTc0ZTAzZWZmN2ItMSIsInJkI=
+joiZ21haWwuY29tIn0/VaHR0cHM6Ly9oZWxwLnlhaG9vLmNvbS9rYi9hY2NvdW50/SWkhfc3=
+BvcnRzX05OVEFOMDMxOTIwMjZjMjAxMjAxNg/LeW8z/qP3NlZ21lbnRfaWQ9NTg5NTIzJi50=
+c3JjPTEzNDMmbmNpZD1jcm1fLTIwMTIwMTYtMjAyNjAzMTktMS0tQSZidF91c2VyX2lkPSUy=
+Rm5UcVhvb3NvVU9UR1dPZXZ0MUFHN0c3Z1d1Um5KWCUyQmNKaEg4c1k3cVd5VFJ2MVVnVXha=
+SllvU2hOQjQyMHI1JmJ0X3RzPTE3NzM5MTU2MzIwODM/gabvODg/JMDMxOTIwMjZDMjAxMjA=
+xNg/s5j39a0e953" target=3D"_blank" rel=3D"noopener" data-location=3D"t25=
+"><span style=3D"font-size: 11px; font-family: Helvetica, Arial, sans-se=
+rif; font-weight: 400; line-height: 16px;">Customer Support</span></a></=
+span></td>
+  </tr>
+  </tbody>
+  </table>
+  </th>
+  </tr>
+  </tbody>
+  </table>
+  </th>
+  <!--End Nav 4 -->=20
+
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+  </tr>
+ =20
+
+
+</tbody>
+</table></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+</tbody>
+</table>
+
+<!-- End 1-024: Footer Navigation -->
+</td>
+</tr>
+
+
+<tr>
+<td bgcolor=3D"#edeef2">
+<!-- Start 1-010: Paragraph | P3 -->
+<table align=3D"center" role=3D"presentation" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#edeef2">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"center">
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" class=3D"wrap">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding: 5px 20px 30px 20px" class=3D"pad2=
+0rl match"><p style=3D"font-size: 14px; mso-line-height-rule: exactly; l=
+ine-height: 16px; margin: 0px; font-weight: 400; letter-spacing: 0px; te=
+xt-transform: none; color: #000000; font-family: Helvetica, Arial, sans-=
+serif" class=3D"mobile_match"><span style=3D"font-size: 11px; line-heigh=
+t: 16px;">=C2=A92026 Yahoo Fantasy Sports LLC. All Rights Reserved. <br>=
+
+770 Broadway, New York, NY 10003</span></p></td>
+</tr>
+</tbody>
+</table>
+    =20
+ </td>
+</tr>
+</tbody>
+</table>
+<!-- End 1-010: Paragraph | P3 -->
+</td>
+</tr>
+</table>
+<!--END Email Background Color Table -->
+</td>
+</tr>
+</table>
+ =20
+</div>
+<!--END Page Overflow Color Table -->
+
+<!-- Snippet Ends: footer_us_intl -->
+			</td>
+          </tr>
+        <!-- FOOTER MODULE END -->
+		 =20
+      </table>
+     =20
+      <!-- END OF GMAIL WRAPPER -->
+</td>
+  </tr>
+</table>
+<!-- END OF MAIN BODY WRAPPER -->
+</body>
+</html>
+
+--==f18ad63c574287161259841f1a6ed613--

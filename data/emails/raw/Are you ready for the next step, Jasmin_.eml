@@ -1,0 +1,192 @@
+Delivered-To: jasmind009@gmail.com
+Received: by 2002:a05:6000:1247:b0:439:7bd1:de7f with SMTP id j7csp607238wrx;
+        Mon, 23 Feb 2026 16:12:08 -0800 (PST)
+X-Received: by 2002:a05:620a:4515:b0:8cb:62c3:3690 with SMTP id af79cd13be357-8cb8c9d156fmr1467515785a.13.1771891927966;
+        Mon, 23 Feb 2026 16:12:07 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1771891927; cv=none;
+        d=google.com; s=arc-20240605;
+        b=KRiuk8tZeoLftz4Agu7FPv9ZCjNhN4Lijt2AsMgnFUu3tGevU41wBqHmWH2MK4aUds
+         FzWvj+VEQxh7JcwJD7wA1cKGIQv2iws8M+saD3H12JdTleD3SDYvHAaoHel+kvUdSeoI
+         mIjKJl8HOvMzZ0mFVATJ9bN2NLND1IQ6a6ueejipgZeKEzYI9GXriOt7XCGryNdg2XWg
+         61C7JEeHeT1UvMxbJB9BTOxmbnWzxpblOs5xM0/xapitESJQnUlUu7siIPDYAotCCjMD
+         GNNc1ut9Y22kGyj83vaLAwXEFECvfrC6I+q0x0Zciq564PTZ/YysWQKP0KNXTQVTG3SQ
+         o2Ig==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:subject:to:from:list-unsubscribe-post
+         :list-unsubscribe:message-id:dkim-signature;
+        bh=KlYHqjOB86CoOCE0QgWTR2/KmTHbkKO/s6ZHxz2Oaj4=;
+        fh=gYIh15b8nGBadAT/ysZc0l9lwLnBlxCACkFrvbnfWaw=;
+        b=E1Ze0D0GRAADf5qBOsdn3QK2atjLYKpu5h3/CRmHyR2tdmCT31bVO7OQ4avwNya6A6
+         JzIHEj/cznE+Vcl+tlsYIZqV/ytdMqbjUsM/aQNICQs14qWEd/ZOovsNy4casur4n0sN
+         AkXLg10JKPbfH/a+KzAEo2FHQtJQh4dHd4scQLy/bRUhAiA8MXxKLrLkOvCCSHNXjSsV
+         orkZfBdCbko2ceMliIMJlQWEHQh0zYFtzutokenIaYg9bQ4MS1MdAUTuG5K49vYo9pZy
+         l509F/ISz7r8dww/1yK20iPmKz1PI1E9sSbZWVanc9s2YRtI0oZ3Witnq5EXEofd/F57
+         sRHA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@midcareercoaching.info header.s=google header.b=l2aiSEXx;
+       spf=pass (google.com: domain of danielle@midcareercoaching.info designates 209.85.220.65 as permitted sender) smtp.mailfrom=danielle@midcareercoaching.info;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=midcareercoaching.info;
+       dara=pass header.i=@gmail.com
+Return-Path: <danielle@midcareercoaching.info>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id af79cd13be357-8cb8d041545sor447333085a.1.2026.02.23.16.12.07
+        for <jasmind009@gmail.com>
+        (Google Transport Security);
+        Mon, 23 Feb 2026 16:12:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of danielle@midcareercoaching.info designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@midcareercoaching.info header.s=google header.b=l2aiSEXx;
+       spf=pass (google.com: domain of danielle@midcareercoaching.info designates 209.85.220.65 as permitted sender) smtp.mailfrom=danielle@midcareercoaching.info;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=midcareercoaching.info;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=midcareercoaching.info; s=google; t=1771891927; x=1772496727; dara=google.com;
+        h=mime-version:date:subject:to:from:list-unsubscribe-post
+         :list-unsubscribe:message-id:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=KlYHqjOB86CoOCE0QgWTR2/KmTHbkKO/s6ZHxz2Oaj4=;
+        b=l2aiSEXxLoe5pFZuwtNH0RXubw+j4WUunjVEUznesvqCZvC0vOUVMbsKVRzSyAw1fO
+         9cQ+qIlx48W8TvGLKfgezQ0FPr5dYpK0WXGGeRoD9PIoCbKcx3ThXfQDPdrOGe7cQWof
+         u1hGx7rcdJHtgrWket/SC4KgPoWJd0suh6+3jbL4KUPN24PnteD3rPRIaVUQurZR6zep
+         +DrKlE+NTLkJu6kZAjqz5t7HKDZxpWRSpUtdwn9BoHSgTvV+OMXFhYY0TAQBoTUgKc5Y
+         yrShogf46W+zUwUIFINwLH8pkQW6ZE3TFnyasyYETbAyjyUVaOw5YtC2NKAh2/+rFzh1
+         Mvsg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1771891927; x=1772496727;
+        h=mime-version:date:subject:to:from:list-unsubscribe-post
+         :list-unsubscribe:message-id:x-gm-gg:x-gm-message-state:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=KlYHqjOB86CoOCE0QgWTR2/KmTHbkKO/s6ZHxz2Oaj4=;
+        b=jNe/+CEx5VlDa5/APb3t+pjX4t6KQEhsP9peBNBIu05zBQUqO94nZhG/tpStKOc7q6
+         yHbbAFxW0IR7q0gOlippSeBzMP2xdN8jGDbL9IX/cJpKnlcjolzVI/SVtr0TQYDYX1kN
+         iB5cAijWAer6mub51KD5JG3tvWVEw4tq1DAM2oGPpzE2B/Ga38zqokxY0KX5RH/P13bv
+         bPOcWAJFRD5LyZNu9Bhj+0s1ATBALVf6WABVBCjt3BQ035bq7UJ5J+inbFKEjTjVU4lR
+         kCLP422flElFgRj7Zour97a7Fh7t8v25SM476zTunxyRObg0+H+HowL401XzTgBLoK53
+         Zegg==
+X-Gm-Message-State: AOJu0YyGahAYm7QQ54k68YqrG74lu/Z8N+ZCm7FRRGvC/7OBQUc+iyNt
+	T0tCuH7Qd71vJXv32pD+zNTKBrMndcT+bGhVgrEiJfH+VkbU79ToxwNEHeBrj5fQjeAgr3Kqr2n
+	v5oMo
+X-Gm-Gg: AZuq6aJZ4GXvsTx5MNj3y/Llbn3eu9U+8tN4kiY/B3GbPQn7QyBlzupTFjc2YSS6fWx
+	Ne5RbiO1hyMcRxqWML30IMa006mUH8uFvx/TrSFam1MrCqnw6WnBYz5TkHTDhCVX40/yA68Otxt
+	poatHS/EI0kVyJVZ9MW+kIJx1KqAT0OU5mX5OamHRYswi3UEFT0g+OkyI30CCdDRCSKFzIYpUlI
+	4hZl/Hb2mGdIu/jr7Gnl7tSGKDhtxgFD4AoRsBNBJhUXq5tNWl6GQYLlOyNQgFCjleiEOCrvBOT
+	6OX+GpwZNIAibk24oeRxPeGnzn2WXh49w/IbC3Px0o8RBUu0zBZj44ZtQFkYDUua8/yCn+GqlPn
+	agApK1IOLUWflAuhstb/3wJC50WfGNAES2cIa9k71M5afoaKMo9tRHU42Sa4mhLZAVO2rzZ81cP
+	0+Z0KAz+aIUzAw2PwhCQShAVhfJOE2a5Ox4LYR3a3m7lbPKq2ntKVAug3YLGVKN58AiNjoewWrI
+	z0vyiyy16dFRzonZ2OW6s80IbUaF2qINwqubPY9pOIrgWrfVS5J7kovTT0QA6UlRvbpjcYGopQI
+	2Lj/H9pP
+X-Received: by 2002:a05:620a:5628:b0:8c6:e0c5:7b9f with SMTP id af79cd13be357-8cb8ca72027mr983254685a.44.1771891926834;
+        Mon, 23 Feb 2026 16:12:06 -0800 (PST)
+Return-Path: <danielle@midcareercoaching.info>
+Received: from 019c8cfd-22bb-7ded-b6c8-3b3edd618ef3.local (ec2-18-118-149-193.us-east-2.compute.amazonaws.com. [18.118.149.193])
+        by smtp.gmail.com with ESMTPSA id af79cd13be357-8cb8d120080sm847920085a.47.2026.02.23.16.12.06
+        for <jasmind009@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 23 Feb 2026 16:12:06 -0800 (PST)
+Message-ID: <019c8cfd-22bb-7ded-b6c8-3b3edd618ef3@midcareercoaching.info>
+List-Unsubscribe:
+ <https://inst.midcareercoaching.info/unsub/1/019c8c72-1746-77ed-a948-19bd827aaf4b>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+From: Danielle Bradley <danielle@midcareercoaching.info>
+To: jasmind009@gmail.com
+Subject: Are you ready for the next step, Jasmin?
+Date: Tue, 24 Feb 2026 00:12:05 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--_NmP-e0fe3b624c0e6cdf-Part_1"
+
+----_NmP-e0fe3b624c0e6cdf-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello Jasmin,
+=C2=A0
+I saw your LinkedIn profile, and as Head of UX =
+Research + Project Acquisition, you seem to have an amazing career story to=
+ tell. I imagine it took considerable dedication to reach your current role=
+. Much respect! =C2=A0
+=C2=A0
+Having said that, are you in the market and =
+looking for a new role?
+
+I help mid-career professionals like you get hired=
+ faster to land their next most fulfilling, higher-paying role.
+=C2=A0
+I would love to connect with you over a complimentary Get Hired strategy =
+session where I will show you the exact steps to stand out over competing =
+candidates and where I will share :
+
+3 key strategies you can apply =
+immediately to your job search to start seeing better results
+
+How to leverage your LinkedIn profile so it becomes an =E2=80=9Cinterview =
+magnet=E2=80=9D that attracts your ideal opportunities without wasting =
+hours on job boards
+
+How to clearly amplify your strengths so =
+you=E2=80=99re positioned as the best candidate for the roles you truly =
+want.
+
+This call comes with a 100% satisfaction guarantee. You'll receive =
+specific and practical advice that you can implement immediately to see =
+rapid progress in your career.
+
+Skeptical about whether this will be =
+effective for you?
+=C2=A0
+Genevieve was skeptical when we first connected, =
+and I helped her secure a significant increase in compensation along with a=
+ promoted role in just over 4 weeks! Yes, that's possible when you know how=
+ to navigate today's competitive job market. Check out her testimonial on =
+my LinkedIn profile.
+=C2=A0
+How about a short chat to see if this might be =
+a good fit for you?
+
+Best regards,=C2=A0
+Danielle Bradley
+Founder & Career Coach=C2=A0
+
+If you no longer wish to receive emails from =
+us, simply reply with "STOP."
+
+--
+----_NmP-e0fe3b624c0e6cdf-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<div>Hello Jasmin,</div><div>=C2=A0</div><div>I saw your LinkedIn profile, =
+and as Head of UX Research + Project Acquisition, you seem to have an =
+amazing career story to tell. I imagine it took considerable dedication to =
+reach your current role. Much respect! =C2=A0</div><div>=C2=A0</div><div>Ha=
+ving said that, are you in the market and looking for a new role?=
+</div><div><br /></div><div>I help mid-career professionals like you get =
+hired faster to land their next most fulfilling, higher-paying role.=
+</div><div>=C2=A0</div><div>I would love to connect with you over a =
+complimentary Get Hired strategy session where I will show you the exact =
+steps to stand out over competing candidates and where I will share =
+:</div><div><br /></div><div>3 key strategies you can apply immediately to =
+your job search to start seeing better results</div><div><br =
+/></div><div>How to leverage your LinkedIn profile so it becomes an =
+=E2=80=9Cinterview magnet=E2=80=9D that attracts your ideal opportunities =
+without wasting hours on job boards</div><div><br /></div><div>How to =
+clearly amplify your strengths so you=E2=80=99re positioned as the best =
+candidate for the roles you truly want.</div><div><br /></div><div>This =
+call comes with a 100% satisfaction guarantee. You'll receive specific and =
+practical advice that you can implement immediately to see rapid progress =
+in your career.</div><div><br /></div><div>Skeptical about whether this =
+will be effective for you?</div><div>=C2=A0</div><div>Genevieve was =
+skeptical when we first connected, and I helped her secure a significant =
+increase in compensation along with a promoted role in just over 4 weeks! =
+Yes, that's possible when you know how to navigate today's competitive job =
+market. Check out her testimonial on my LinkedIn profile.=
+</div><div>=C2=A0</div><div>How about a short chat to see if this might be =
+a good fit for you?</div><div><br /></div><div>Best regards,=
+=C2=A0</div><div>Danielle Bradley</div><div>Founder & Career =
+Coach=C2=A0</div><div><br /></div><div>If you no longer wish to receive =
+emails from us, simply reply with "STOP."</div>
+<img src=3D'https://inst.=
+midcareercoaching.info/signature/images/w-zrK9HXuAxHzTHx0qVBt.png' =
+alt=3D'line'>
+----_NmP-e0fe3b624c0e6cdf-Part_1--
