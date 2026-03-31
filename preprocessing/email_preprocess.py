@@ -4,11 +4,11 @@ import pandas as pd
 from datetime import datetime, timezone
 
 LABEL_FILES = {
-    "duplicate":      "emails/labeled/duplicate.json",
-    "expired_offer":  "emails/labeled/expired_offers.json",
-    "old_alert":      "emails/labeled/old_alert.json",
-    "past_event":     "emails/labeled/past_event.json",
-    "spam":           "emails/labeled/spam.json",
+    "duplicate":      "emails/labeled/rc_duplicate.jsonl",
+    "expired_offer":  "emails/labeled/rc_expired_offer.jsonl",
+    "old_alert":      "emails/labeled/rc_old_alert.jsonl",
+    "past_event":     "emails/labeled/rc_past_event.jsonl",
+    "spam":           "emails/labeled/rc_spam.jsonl",
 }
 
 EMAIL_LABELS = list(LABEL_FILES.keys())
@@ -23,7 +23,7 @@ def load_all_emails() -> pd.DataFrame:
 
     for label, filepath in LABEL_FILES.items():
         with open(filepath, "r", encoding="utf-8") as f:
-            emails = json.load(f)
+            emails = [json.loads(line) for line in f if line.strip()]
 
         for email in emails:
             eid = email["id"]
