@@ -23,7 +23,7 @@ Output fields per record:
   message_id      – Message-ID header
 
 Usage:
-  python preprocess_mbox.py <input.mbox> [output.jsonl]
+  python preprocess.py emails/Trash.mbox emails/output.jsonl 
 
   If output path is omitted, writes to <input_stem>_preprocessed.jsonl
   alongside the input file.
