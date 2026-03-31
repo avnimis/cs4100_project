@@ -1,19 +1,33 @@
+import pandas as pd
 from datasketch import MinHash, MinHashLSH
 
-lsh = MinHashLSH(threshold=0.85, num_perm=128)
-email_store = {}  # id -> MinHash
 
-def get_minhash(text: str) -> MinHash:
-    m = MinHash(num_perm=128)
+def get_minhash(text: str, num_perm: int = 128) -> MinHash:
+    m = MinHash(num_perm=num_perm)
     for word in text.lower().split():
         m.update(word.encode("utf8"))
     return m
 
-def is_duplicate(email_id: str, text: str) -> bool:
-    m = get_minhash(text)
-    result = lsh.query(m)
-    if result:
-        return True
-    lsh.insert(email_id, m)
-    email_store[email_id] = m
-    return False
+
+def apply_deduplication(df: pd.DataFrame, threshold: float = 0.85) -> pd.DataFrame:
+    """
+    Scans all emails in the DataFrame for near-duplicates.
+    Sets the 'duplicate' column to 1 for any email that is
+    a near-duplicate of a previously seen email.
+    """
+    lsh = MinHashLSH(threshold=threshold, num_perm=128)
+    seen_ids = []
+
+    for idx, row in df.iterrows():
+        eid  = row["id"]
+        m    = get_minhash(row["text"])
+        hits = lsh.query(m)
+
+        if hits:
+            # This email is a near-duplicate of something already seen
+            df.at[idx, "duplicate"] = 1
+        else:
+            lsh.insert(eid, m)
+            seen_ids.append(eid)
+
+    return df
