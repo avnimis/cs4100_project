@@ -5,7 +5,7 @@ from transformers import DistilBertTokenizerFast
 
 # Import preprocessing utils
 import sys
-sys.path.append("..")  # allow imports from sibling folders
+sys.path.append("..")  
 from preprocessing.email_preprocess import extract_features, EMAIL_LABELS
 
 
@@ -36,12 +36,15 @@ class EmailDataset(Dataset):
             return_tensors="pt",
         )
 
-        # 2. Rule-based features (3 floats fused into the classifier head)
-        feats = extract_features(text)
+        # 2. Rule-based features — now uses the full row, not just text
+        feats = extract_features(row)
         rule_features = torch.tensor([
-            float(feats["has_past_date"]),
+            float(feats["email_is_old"]),
             float(feats["has_expiry_language"]),
-            float(min(feats["spam_keyword_count"], 5)) / 5.0,  # normalize to [0,1]
+            float(feats["gmail_marked_spam"]),
+            float(feats["has_unsubscribe"]),
+            float(feats["has_tracking_links"]),
+            float(feats["spam_header_count"]),
         ], dtype=torch.float32)
 
         # 3. Label vector (one float per class)

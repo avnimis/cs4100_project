@@ -10,7 +10,7 @@ from transformers import get_linear_schedule_with_warmup
 from preprocessing.email_preprocess   import load_all_emails
 from deduplication.email_deduplication import apply_deduplication
 from dataset_class.email_dataset_class import EmailDataset
-from models.email_model                import EmailClassifier
+from models.emails_model                import EmailClassifier
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
