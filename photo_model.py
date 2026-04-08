@@ -56,7 +56,7 @@ from pathlib import Path
 #    (These are what your notes call "hyperparameters" — values we choose
 #     before training that control the learning process itself.)
 # ---------------------------------------------------------------------------
-DATA_DIR      = "data"           # root folder containing class subfolders
+DATA_DIR      = "photos"         # root folder containing class subfolders
 IMG_SIZE      = 128              # resize all images to 128x128 pixels
 BATCH_SIZE    = 32               # how many images per gradient descent step
 LEARNING_RATE = 1e-3             # alpha (α) from gradient descent update: w = w - α∇L
