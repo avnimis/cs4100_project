@@ -1,0 +1,1479 @@
+[
+  {
+    "filename": "1 week till apps close sp26(1).png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/1 week till apps close sp26(1).png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "A7403812.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/A7403812.jpeg",
+    "prob_delete": 0.722,
+    "prob_keep": 0.278,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "A7404479.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/A7404479.jpeg",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "A7404562.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/A7404562.jpeg",
+    "prob_delete": 0.9839,
+    "prob_keep": 0.0161,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Frame 120.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/Frame 120.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Frame 189.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/Frame 189.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Grandma.jpg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/Grandma.jpg",
+    "prob_delete": 0.8069,
+    "prob_keep": 0.1931,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0646.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0646.jpeg",
+    "prob_delete": 0.7156,
+    "prob_keep": 0.2844,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0657_Original.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0657_Original.JPG",
+    "prob_delete": 0.2324,
+    "prob_keep": 0.7676,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_0662.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0662.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0665.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0665.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0669.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0669.jpeg",
+    "prob_delete": 0.8456,
+    "prob_keep": 0.1544,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0695.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0695.jpeg",
+    "prob_delete": 0.2522,
+    "prob_keep": 0.7478,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_0734.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0734.jpeg",
+    "prob_delete": 0.832,
+    "prob_keep": 0.168,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0753_Original.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_0753_Original.JPG",
+    "prob_delete": 0.8301,
+    "prob_keep": 0.1699,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1085_Original.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_1085_Original.JPG",
+    "prob_delete": 0.983,
+    "prob_keep": 0.017,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1105.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_1105.jpeg",
+    "prob_delete": 0.1892,
+    "prob_keep": 0.8108,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_1133.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_1133.JPG",
+    "prob_delete": 0.6792,
+    "prob_keep": 0.3208,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1136.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_1136.JPG",
+    "prob_delete": 0.8589,
+    "prob_keep": 0.1411,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1137.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_1137.JPG",
+    "prob_delete": 0.9451,
+    "prob_keep": 0.0549,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_4714.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4714.JPG",
+    "prob_delete": 0.9799,
+    "prob_keep": 0.0201,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_4737.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4737.JPG",
+    "prob_delete": 0.8164,
+    "prob_keep": 0.1836,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_4791.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4791.jpeg",
+    "prob_delete": 0.2454,
+    "prob_keep": 0.7546,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4801.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4801.jpeg",
+    "prob_delete": 0.4105,
+    "prob_keep": 0.5895,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4826.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4826.jpeg",
+    "prob_delete": 0.4764,
+    "prob_keep": 0.5236,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4832.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4832.jpeg",
+    "prob_delete": 0.4098,
+    "prob_keep": 0.5902,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4834.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4834.jpeg",
+    "prob_delete": 0.3343,
+    "prob_keep": 0.6657,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4835.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4835.jpeg",
+    "prob_delete": 0.2305,
+    "prob_keep": 0.7695,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4841.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4841.jpeg",
+    "prob_delete": 0.3519,
+    "prob_keep": 0.6481,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4842.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4842.jpeg",
+    "prob_delete": 0.3217,
+    "prob_keep": 0.6783,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_4877.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_4877.JPG",
+    "prob_delete": 0.9907,
+    "prob_keep": 0.0093,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_5075.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_5075.jpeg",
+    "prob_delete": 0.9918,
+    "prob_keep": 0.0082,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6150.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6150.jpeg",
+    "prob_delete": 0.4424,
+    "prob_keep": 0.5576,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_6161.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6161.jpeg",
+    "prob_delete": 0.9908,
+    "prob_keep": 0.0092,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6164.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6164.jpeg",
+    "prob_delete": 0.8093,
+    "prob_keep": 0.1907,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6166.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6166.jpeg",
+    "prob_delete": 0.9947,
+    "prob_keep": 0.0053,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6171.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6171.jpeg",
+    "prob_delete": 0.9699,
+    "prob_keep": 0.0301,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6187.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6187.jpeg",
+    "prob_delete": 0.9778,
+    "prob_keep": 0.0222,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6208.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6208.jpeg",
+    "prob_delete": 0.6851,
+    "prob_keep": 0.3149,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6454.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6454.jpeg",
+    "prob_delete": 0.9972,
+    "prob_keep": 0.0028,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6455.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6455.jpeg",
+    "prob_delete": 0.9991,
+    "prob_keep": 0.0009,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6466.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6466.jpeg",
+    "prob_delete": 0.9838,
+    "prob_keep": 0.0162,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6467.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6467.jpeg",
+    "prob_delete": 0.8758,
+    "prob_keep": 0.1242,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6474.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6474.jpeg",
+    "prob_delete": 0.8928,
+    "prob_keep": 0.1072,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6496.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6496.jpeg",
+    "prob_delete": 0.9646,
+    "prob_keep": 0.0354,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6504.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6504.jpeg",
+    "prob_delete": 0.8541,
+    "prob_keep": 0.1459,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6506.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6506.jpeg",
+    "prob_delete": 0.723,
+    "prob_keep": 0.277,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6511.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6511.jpeg",
+    "prob_delete": 0.9159,
+    "prob_keep": 0.0841,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6515.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6515.jpeg",
+    "prob_delete": 0.985,
+    "prob_keep": 0.015,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6523.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6523.jpeg",
+    "prob_delete": 0.8954,
+    "prob_keep": 0.1046,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6528.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6528.jpeg",
+    "prob_delete": 0.8413,
+    "prob_keep": 0.1587,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6533.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6533.jpeg",
+    "prob_delete": 0.7658,
+    "prob_keep": 0.2342,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6541.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6541.jpeg",
+    "prob_delete": 0.892,
+    "prob_keep": 0.108,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6546.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6546.jpeg",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6554.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6554.jpeg",
+    "prob_delete": 0.9323,
+    "prob_keep": 0.0677,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6575.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6575.jpeg",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6584.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6584.jpeg",
+    "prob_delete": 0.9452,
+    "prob_keep": 0.0548,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6585.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6585.jpeg",
+    "prob_delete": 0.9624,
+    "prob_keep": 0.0376,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6586.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6586.jpeg",
+    "prob_delete": 0.9202,
+    "prob_keep": 0.0798,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6616.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6616.jpeg",
+    "prob_delete": 0.981,
+    "prob_keep": 0.019,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6633.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6633.jpeg",
+    "prob_delete": 0.924,
+    "prob_keep": 0.076,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6634.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_6634.jpeg",
+    "prob_delete": 0.5118,
+    "prob_keep": 0.4882,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8602.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8602.PNG",
+    "prob_delete": 0.9881,
+    "prob_keep": 0.0119,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8616.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8616.JPG",
+    "prob_delete": 0.9111,
+    "prob_keep": 0.0889,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8620.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8620.JPG",
+    "prob_delete": 0.9662,
+    "prob_keep": 0.0338,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8621.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8621.JPG",
+    "prob_delete": 0.9608,
+    "prob_keep": 0.0392,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8622.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8622.JPG",
+    "prob_delete": 0.9506,
+    "prob_keep": 0.0494,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8623.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8623.JPG",
+    "prob_delete": 0.8258,
+    "prob_keep": 0.1742,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8624.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8624.JPG",
+    "prob_delete": 0.8077,
+    "prob_keep": 0.1923,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8625.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8625.JPG",
+    "prob_delete": 0.8485,
+    "prob_keep": 0.1515,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8636.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8636.JPG",
+    "prob_delete": 0.6148,
+    "prob_keep": 0.3852,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8637.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8637.JPG",
+    "prob_delete": 0.7077,
+    "prob_keep": 0.2923,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8638.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8638.JPG",
+    "prob_delete": 0.615,
+    "prob_keep": 0.385,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8642.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8642.JPG",
+    "prob_delete": 0.6079,
+    "prob_keep": 0.3921,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8643.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8643.JPG",
+    "prob_delete": 0.6084,
+    "prob_keep": 0.3916,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8644.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8644.JPG",
+    "prob_delete": 0.6945,
+    "prob_keep": 0.3055,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8645.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8645.JPG",
+    "prob_delete": 0.7828,
+    "prob_keep": 0.2172,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8699.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8699.PNG",
+    "prob_delete": 0.9889,
+    "prob_keep": 0.0111,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8767.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8767.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8805.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8805.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8806.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8806.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8807.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8807.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8808.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8808.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8811.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8811.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8812.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8812.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8828.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8828.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8869.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8869.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8870.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8870.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8871.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8871.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8881.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_8881.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9003.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9003.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9022.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9022.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9178.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9178.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9379.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9379.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9399.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9399.JPG",
+    "prob_delete": 0.862,
+    "prob_keep": 0.138,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9402.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9402.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9406.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9406.JPG",
+    "prob_delete": 0.9996,
+    "prob_keep": 0.0004,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9422.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9422.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9423.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9423.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9424.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9424.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9425.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9425.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9426.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9426.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9493.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9493.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9521.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9521.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9547.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9547.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9548.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9548.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9549.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9549.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9550.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9550.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9551.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9551.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9552.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9552.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9556.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/IMG_9556.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Page 5.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/Page 5.png",
+    "prob_delete": 0.9987,
+    "prob_keep": 0.0013,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Page 6.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/Page 6.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Page 7.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/Page 7.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "SS 2025-12-29 at 10.46.13.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/SS 2025-12-29 at 10.46.13.png",
+    "prob_delete": 0.9448,
+    "prob_keep": 0.0552,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "SS 2025-12-29 at 10.47.29.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/SS 2025-12-29 at 10.47.29.png",
+    "prob_delete": 0.6274,
+    "prob_keep": 0.3726,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "new1dayleftfall2025.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/new1dayleftfall2025.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "showcase w yan.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/showcase w yan.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide 16.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide 16.png",
+    "prob_delete": 0.9999,
+    "prob_keep": 0.0001,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide 17.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide 17.png",
+    "prob_delete": 0.9999,
+    "prob_keep": 0.0001,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide3.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide3.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide4.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide4.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide5-1.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide5-1.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide5.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide5.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide7.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide7.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide8.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide8.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide9.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/slide9.png",
+    "prob_delete": 0.9999,
+    "prob_keep": 0.0001,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "vertical!-1.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/vertical!-1.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "vertical!-2.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/vertical!-2.png",
+    "prob_delete": 0.9999,
+    "prob_keep": 0.0001,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "vertical!.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2025/vertical!.png",
+    "prob_delete": 0.9962,
+    "prob_keep": 0.0038,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "BA783D99-538F-4BEE-8F59-1DF05523FEA1.jpg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/BA783D99-538F-4BEE-8F59-1DF05523FEA1.jpg",
+    "prob_delete": 0.9909,
+    "prob_keep": 0.0091,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_0865.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_0865.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1002.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1002.PNG",
+    "prob_delete": 0.9709,
+    "prob_keep": 0.0291,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1015.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1015.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1020.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1020.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1021.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1021.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1037.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1037.PNG",
+    "prob_delete": 0.6999,
+    "prob_keep": 0.3001,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1078.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1078.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1081.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos from 2026/IMG_1081.PNG",
+    "prob_delete": 0.5507,
+    "prob_keep": 0.4493,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "1 week till apps close sp26(1).png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/1 week till apps close sp26(1).png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "1 week till apps close sp26.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/1 week till apps close sp26.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Bootcamp content.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Bootcamp content.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Countdown_3-2.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Countdown_3-2.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Cover.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Cover.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Cover2.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Cover2.png",
+    "prob_delete": 0.9988,
+    "prob_keep": 0.0012,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "EDF48EAC-1E37-4443-8809-0062AB50243C.jpg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/EDF48EAC-1E37-4443-8809-0062AB50243C.jpg",
+    "prob_delete": 0.9976,
+    "prob_keep": 0.0024,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Frame 120.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Frame 120.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Frame 13.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Frame 13.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Frame 18.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Frame 18.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Frame 189.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Frame 189.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1020.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_1020.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_1021.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_1021.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_4877.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_4877.JPG",
+    "prob_delete": 0.9907,
+    "prob_keep": 0.0093,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_6150.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_6150.jpeg",
+    "prob_delete": 0.4424,
+    "prob_keep": 0.5576,
+    "decision": "KEEP"
+  },
+  {
+    "filename": "IMG_6161.jpeg",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_6161.jpeg",
+    "prob_delete": 0.9908,
+    "prob_keep": 0.0092,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8331.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8331.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8341.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8341.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8367.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8367.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8498.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8498.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8526.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8526.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8535.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8535.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8696.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8696.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8767.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8767.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8805.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8805.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8806.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8806.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8807.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8807.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8808.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8808.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8811.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8811.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8812.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8812.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8828.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8828.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8869.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8869.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8870.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8870.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8871.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8871.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_8881.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_8881.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9022.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9022.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9178.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9178.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9379.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9379.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9405.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9405.JPG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9406.JPG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9406.JPG",
+    "prob_delete": 0.9996,
+    "prob_keep": 0.0004,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9422.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9422.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9423.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9423.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9424.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9424.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9425.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9425.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9426.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9426.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9436.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9436.PNG",
+    "prob_delete": 0.9986,
+    "prob_keep": 0.0014,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9448.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9448.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9493.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9493.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9521.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9521.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9659.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9659.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9669.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9669.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9720.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9720.PNG",
+    "prob_delete": 0.9992,
+    "prob_keep": 0.0008,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9721.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9721.PNG",
+    "prob_delete": 0.9974,
+    "prob_keep": 0.0026,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9722.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9722.PNG",
+    "prob_delete": 0.9982,
+    "prob_keep": 0.0018,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9723.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9723.PNG",
+    "prob_delete": 0.9993,
+    "prob_keep": 0.0007,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9724.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9724.PNG",
+    "prob_delete": 0.9982,
+    "prob_keep": 0.0018,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9725.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9725.PNG",
+    "prob_delete": 0.9159,
+    "prob_keep": 0.0841,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9726.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9726.PNG",
+    "prob_delete": 0.9973,
+    "prob_keep": 0.0027,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9731.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9731.PNG",
+    "prob_delete": 0.9918,
+    "prob_keep": 0.0082,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9780.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9780.PNG",
+    "prob_delete": 0.9976,
+    "prob_keep": 0.0024,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9836.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9836.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "IMG_9950.PNG",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/IMG_9950.PNG",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Page 5.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Page 5.png",
+    "prob_delete": 0.9987,
+    "prob_keep": 0.0013,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Page 6.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Page 6.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "Page 7.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/Page 7.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "chipopo.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/chipopo.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "new1dayleftfall2025.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/new1dayleftfall2025.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide3.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/slide3.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide5-1.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/slide5-1.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide6.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/slide6.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "slide7.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/slide7.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  },
+  {
+    "filename": "time.png",
+    "full_path": "takeout_photos/Takeout/Google Photos/Photos to train - delete/time.png",
+    "prob_delete": 1.0,
+    "prob_keep": 0.0,
+    "decision": "DELETE"
+  }
+]
