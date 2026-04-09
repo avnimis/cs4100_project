@@ -6,21 +6,19 @@ import os
 
 # Scopes define what data you can access
 '''
-Drive: 
-    1. See all your Google Docs documents
-
 Gmail: 
     1. View your email messages and settings
-    2. See and edit your email labels
 
 Photos: 
-    1. See, upload, and organize items in your Google Photos library
+    1. Append images into your google photos
+    2. Sort photos into folders 
 '''
 
-SCOPES = ['https://www.googleapis.com/auth/drive.readonly', 
-          'https://www.googleapis.com/auth/gmail.readonly',
-          'https://www.googleapis.com/auth/photoslibrary'
-          ]
+SCOPES =    [
+            'https://www.googleapis.com/auth/gmail.readonly',
+            'https://www.googleapis.com/auth/photoslibrary.appendonly',
+            'https://www.googleapis.com/auth/photoslibrary.readonly.appcreateddata',
+            ]
 
 
 def authenticate():
@@ -33,6 +31,9 @@ def authenticate():
         print("Loading saved credentials from token.pickle")
         with open('token.pickle', 'rb') as token:
             creds = pickle.load(token)
+        print("Scopes:", creds.scopes)
+        print("Valid:", creds.valid)
+        print("Expired:", creds.expired)
     else:
         print("No saved credentials found")
     
