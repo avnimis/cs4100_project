@@ -1,2 +1,5 @@
 /auth
 /models/email_classifier.pt
+/client/auth
+token.pickle
+/client/__pycache__
