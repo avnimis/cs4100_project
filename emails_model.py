@@ -4,7 +4,7 @@ from transformers import DistilBertModel
 
 
 class EmailClassifier(nn.Module):
-    def __init__(self, num_labels: int = 5, rule_feature_dim: int = 6):  # ← 6 now, not 3
+    def __init__(self, num_labels: int = 5, rule_feature_dim: int = 6): 
         super().__init__()
         self.bert   = DistilBertModel.from_pretrained("distilbert-base-uncased")
         hidden_size = self.bert.config.hidden_size  # 768

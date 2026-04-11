@@ -10,14 +10,13 @@ from email_deduplication import apply_deduplication
 from emails_model        import EmailClassifier
 
 
-# ── Config ────────────────────────────────────────────────────────────────────
+# Config
 DEVICE         = "cuda" if torch.cuda.is_available() else "cpu"
 MODEL_PATH     = "email_classifier.pt"
 THRESHOLD      = 0.5
 BATCH_SIZE     = 16
 VAL_SPLIT      = 0.15
 OUTPUT_DIR     = "results"
-# ──────────────────────────────────────────────────────────────────────────────
 
 
 def evaluate():
