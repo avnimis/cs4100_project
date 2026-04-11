@@ -1,16 +1,13 @@
-import sys
-sys.path.append("..")
-
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
 from torch.optim import AdamW
 from transformers import get_linear_schedule_with_warmup
 
-from preprocessing.email_preprocess   import load_all_emails
-from deduplication.email_deduplication import apply_deduplication
-from dataset_class.email_dataset_class import EmailDataset
-from models.emails_model                import EmailClassifier
+from email_preprocess    import load_all_emails
+from email_deduplication import apply_deduplication
+from email_dataset_class import EmailDataset
+from emails_model        import EmailClassifier
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -89,8 +86,8 @@ def main():
               f"Val Loss: {val_loss/len(val_loader):.4f}")
 
     print("\nSaving model...")
-    torch.save(model.state_dict(), "models/email_classifier.pt")
-    print("Done! Model saved to models/email_classifier.pt")
+    torch.save(model.state_dict(), "email_classifier.pt")
+    print("Done! Model saved to email_classifier.pt")
 
 
 if __name__ == "__main__":

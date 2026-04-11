@@ -1,6 +1,3 @@
-import sys
-sys.path.append("..")
-
 import torch
 import numpy as np
 import os
@@ -8,19 +5,19 @@ from datetime import datetime
 from torch.utils.data import DataLoader, random_split
 from sklearn.metrics import classification_report, multilabel_confusion_matrix
 
-from preprocessing.email_preprocess    import load_all_emails, EMAIL_LABELS
-from deduplication.email_deduplication import apply_deduplication
-from dataset_class.email_dataset_class import EmailDataset
-from models.emails_model                import EmailClassifier
+from email_preprocess    import load_all_emails, EMAIL_LABELS
+from email_deduplication import apply_deduplication
+from email_dataset_class import EmailDataset
+from emails_model        import EmailClassifier
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
 DEVICE         = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_PATH     = "models/email_classifier.pt"
+MODEL_PATH     = "email_classifier.pt"
 THRESHOLD      = 0.5
 BATCH_SIZE     = 16
 VAL_SPLIT      = 0.15
-OUTPUT_DIR     = "evaluation/results"
+OUTPUT_DIR     = "results"
 # ──────────────────────────────────────────────────────────────────────────────
 
 

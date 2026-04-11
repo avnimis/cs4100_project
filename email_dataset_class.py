@@ -3,10 +3,7 @@ import pandas as pd
 from torch.utils.data import Dataset
 from transformers import DistilBertTokenizerFast
 
-# Import preprocessing utils
-import sys
-sys.path.append("..")  
-from preprocessing.email_preprocess import extract_features, EMAIL_LABELS
+from email_preprocess import extract_features, EMAIL_LABELS
 
 
 class EmailDataset(Dataset):
