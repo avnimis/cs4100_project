@@ -11,12 +11,13 @@ from emails_model        import EmailClassifier
 
 
 # Config
+_HERE          = os.path.dirname(os.path.abspath(__file__))
 DEVICE         = "cuda" if torch.cuda.is_available() else "cpu"
-MODEL_PATH     = "email_classifier.pt"
+MODEL_PATH     = os.path.join(_HERE, "email_classifier.pt")
 THRESHOLD      = 0.5
 BATCH_SIZE     = 16
 VAL_SPLIT      = 0.15
-OUTPUT_DIR     = "results"
+OUTPUT_DIR     = os.path.join(_HERE, "evaluation", "results")
 
 
 def evaluate():

@@ -1,3 +1,4 @@
+import os
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
@@ -83,9 +84,10 @@ def main():
               f"Train Loss: {train_loss/len(train_loader):.4f} | "
               f"Val Loss: {val_loss/len(val_loader):.4f}")
 
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "email_classifier.pt")
     print("\nSaving model...")
-    torch.save(model.state_dict(), "email_classifier.pt")
-    print("Done! Model saved to email_classifier.pt")
+    torch.save(model.state_dict(), model_path)
+    print(f"Done! Model saved to {model_path}")
 
 
 if __name__ == "__main__":
