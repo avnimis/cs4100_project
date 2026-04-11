@@ -12,16 +12,15 @@ How to get your photos:
   4. Unzip into a folder, e.g. cs4100_project/takeout_photos/
 
 Then run:
-  python pipeline/run_local_pipeline.py --folder takeout_photos/
-  python pipeline/run_local_pipeline.py --folder takeout_photos/ --threshold 0.7
+  python run_local_pipeline.py --folder takeout_photos/
+  python run_local_pipeline.py --folder takeout_photos/ --threshold 0.7
 
 Output:
-  - pipeline/results/suggested_deletions/  ← copies of photos to delete
-  - pipeline/results/report.json           ← full prediction report
-  - pipeline/results/report.html           ← visual report you can open in browser
+  - results/suggested_deletions/  ← copies of photos to delete
+  - results/report.json           ← full prediction report
+  - results/report.html           ← visual report you can open in browser
 """
 
-import sys
 import json
 import shutil
 import argparse
@@ -32,12 +31,10 @@ import torch
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT  = Path(__file__).resolve().parent.parent
-MODELS_DIR    = PROJECT_ROOT / "models"
+PROJECT_ROOT  = Path(__file__).resolve().parent
 MODEL_WEIGHTS = PROJECT_ROOT / "best_photo_classifier.pth"
-RESULTS_DIR   = PROJECT_ROOT / "pipeline" / "results"
+RESULTS_DIR   = PROJECT_ROOT / "results"
 
-sys.path.insert(0, str(MODELS_DIR))
 from photo_model import ConvNet, transform, DEVICE
 
 # Supported image extensions
