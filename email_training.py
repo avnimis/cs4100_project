@@ -4,9 +4,8 @@ from torch.utils.data import DataLoader, random_split
 from torch.optim import AdamW
 from transformers import get_linear_schedule_with_warmup
 
-from email_preprocess    import load_all_emails
+from email_data          import load_all_emails, EmailDataset
 from email_deduplication import apply_deduplication
-from email_dataset_class import EmailDataset
 from emails_model        import EmailClassifier
 
 

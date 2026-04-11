@@ -5,9 +5,8 @@ from datetime import datetime
 from torch.utils.data import DataLoader, random_split
 from sklearn.metrics import classification_report, multilabel_confusion_matrix
 
-from email_preprocess    import load_all_emails, EMAIL_LABELS
+from email_data          import load_all_emails, EMAIL_LABELS, EmailDataset
 from email_deduplication import apply_deduplication
-from email_dataset_class import EmailDataset
 from emails_model        import EmailClassifier
 
 
