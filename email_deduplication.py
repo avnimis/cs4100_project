@@ -16,18 +16,18 @@ def apply_deduplication(df: pd.DataFrame, threshold: float = 0.85) -> pd.DataFra
     a near-duplicate of a previously seen email.
     """
     lsh = MinHashLSH(threshold=threshold, num_perm=128)
-    seen_ids = []
+    seen_ids = set()
 
     for idx, row in df.iterrows():
         eid  = row["id"]
         m    = get_minhash(row["text"])
         hits = lsh.query(m)
 
-        if hits:
+        if hits or eid in seen_ids:
             # This email is a near-duplicate of something already seen
             df.at[idx, "duplicate"] = 1
         else:
             lsh.insert(eid, m)
-            seen_ids.append(eid)
+            seen_ids.add(eid)
 
     return df
