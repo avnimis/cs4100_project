@@ -1,0 +1,71 @@
+EMAIL MODEL EVALUATION
+Run timestamp : 2026-03-31_03-37-38
+Model         : models/email_classifier.pt
+Threshold     : 0.5
+Device        : cpu
+
+Loading data...
+Evaluating on 393 validation emails
+
+Loading model...
+============================================================
+PER-CLASS METRICS
+============================================================
+               precision    recall  f1-score   support
+
+    duplicate       0.95      0.97      0.96       344
+expired_offer       0.92      0.83      0.87       191
+    old_alert       1.00      0.04      0.08        24
+   past_event       1.00      0.57      0.72        23
+         spam       0.95      0.92      0.94       274
+
+    micro avg       0.95      0.89      0.92       856
+    macro avg       0.96      0.67      0.71       856
+ weighted avg       0.95      0.89      0.90       856
+  samples avg       0.96      0.92      0.92       856
+
+============================================================
+PER-CLASS CONFUSION MATRICES
+  (TN  FP)
+  (FN  TP)
+============================================================
+
+duplicate:
+  TN=33  FP=16
+  FN=10  TP=334
+
+expired_offer:
+  TN=188  FP=14
+  FN=32  TP=159
+
+old_alert:
+  TN=369  FP=0
+  FN=23  TP=1
+
+past_event:
+  TN=370  FP=0
+  FN=10  TP=13
+
+spam:
+  TN=106  FP=13
+  FN=22  TP=252
+
+============================================================
+AVERAGE PREDICTED PROBABILITY PER CLASS
+============================================================
+  duplicate            0.8692
+  expired_offer        0.4475
+  old_alert            0.0730
+  past_event           0.0804
+  spam                 0.6487
+
+============================================================
+THRESHOLD SENSITIVITY  (overall F1 at different cutoffs)
+============================================================
+  threshold=0.3  macro-F1=0.7481
+  threshold=0.4  macro-F1=0.7215
+  threshold=0.5  macro-F1=0.7147 ← current
+  threshold=0.6  macro-F1=0.6582
+  threshold=0.7  macro-F1=0.5977
+
+Results saved to: evaluation/results/eval_2026-03-31_03-37-38.txt

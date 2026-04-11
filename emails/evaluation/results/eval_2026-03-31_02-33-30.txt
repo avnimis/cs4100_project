@@ -1,0 +1,71 @@
+EMAIL MODEL EVALUATION
+Run timestamp : 2026-03-31_02-33-30
+Model         : models/email_classifier.pt
+Threshold     : 0.5
+Device        : cpu
+
+Loading data...
+Evaluating on 8 validation emails
+
+Loading model...
+============================================================
+PER-CLASS METRICS
+============================================================
+               precision    recall  f1-score   support
+
+    duplicate       0.00      0.00      0.00         3
+expired_offer       0.00      0.00      0.00         0
+    old_alert       0.00      0.00      0.00         0
+   past_event       0.00      0.00      0.00         1
+         spam       0.00      0.00      0.00         7
+
+    micro avg       0.00      0.00      0.00        11
+    macro avg       0.00      0.00      0.00        11
+ weighted avg       0.00      0.00      0.00        11
+  samples avg       0.00      0.00      0.00        11
+
+============================================================
+PER-CLASS CONFUSION MATRICES
+  (TN  FP)
+  (FN  TP)
+============================================================
+
+duplicate:
+  TN=5  FP=0
+  FN=3  TP=0
+
+expired_offer:
+  TN=8  FP=0
+  FN=0  TP=0
+
+old_alert:
+  TN=4  FP=4
+  FN=0  TP=0
+
+past_event:
+  TN=7  FP=0
+  FN=1  TP=0
+
+spam:
+  TN=1  FP=0
+  FN=7  TP=0
+
+============================================================
+AVERAGE PREDICTED PROBABILITY PER CLASS
+============================================================
+  duplicate            0.4773
+  expired_offer        0.4762
+  old_alert            0.5003
+  past_event           0.4833
+  spam                 0.4815
+
+============================================================
+THRESHOLD SENSITIVITY  (overall F1 at different cutoffs)
+============================================================
+  threshold=0.3  macro-F1=0.3402
+  threshold=0.4  macro-F1=0.3402
+  threshold=0.5  macro-F1=0.0000 ← current
+  threshold=0.6  macro-F1=0.0000
+  threshold=0.7  macro-F1=0.0000
+
+Results saved to: evaluation/results/eval_2026-03-31_02-33-30.txt
