@@ -4,7 +4,7 @@ import sys
 import torch
 from torch.utils.data import DataLoader
 
-from email_data   import load_all_emails, EMAIL_LABELS, EmailDataset
+from email_data   import load_emails_from_api, EMAIL_LABELS, EmailDataset
 from emails_model import EmailClassifier
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "client"))
@@ -25,7 +25,7 @@ def run_inference():
     # ── 1. Fetch emails and build DataFrame ───────────────────────────────────
     print("Step 1: Authenticating and fetching emails...")
     creds = authenticate()
-    df = load_all_emails(max_results=MAX_EMAILS)
+    df = load_emails_from_api(max_results=MAX_EMAILS)
     print(f"  → {len(df)} emails fetched")
 
     # ── 2. Build dataset ──────────────────────────────────────────────────────

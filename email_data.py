@@ -1,6 +1,8 @@
 import os
 import sys
 import re
+import json
+import glob as glob_module
 import torch
 import pandas as pd
 from datetime import datetime, timezone
@@ -13,38 +15,58 @@ from gmail_client import scrape_emails
 
 EMAIL_LABELS = ["duplicate", "expired_offer", "old_alert", "past_event", "spam"]
 
+TRAINING_DATA_DIR = os.path.join(os.path.dirname(__file__), "emails_training_data")
 
-def load_all_emails(max_results: int = 500) -> pd.DataFrame:
+
+def _build_row(email: dict, default_labels: bool = False) -> dict:
+    subject   = email.get("subject", "") or ""
+    body_text = email.get("body_text", "") or ""
+    combined  = f"{subject}\n\n{body_text}".strip()
+
+    row = {
+        "id":               email.get("id", ""),
+        "text":             combined,
+        "subject":          subject,
+        "from_email":       email.get("from_email", ""),
+        "date_iso":         email.get("date_iso", ""),
+        "gmail_labels":     email.get("gmail_labels", []),
+        "list_unsubscribe": email.get("list_unsubscribe", ""),
+        "spam_headers":     email.get("spam_headers", {}),
+        "link_count":       len(email.get("links", [])),
+    }
+    for label in EMAIL_LABELS:
+        row[label] = 0 if default_labels else email.get(label, 0)
+
+    return row
+
+
+def load_all_emails() -> pd.DataFrame:
     """
-    Fetches emails from Gmail via the API client and returns a DataFrame
+    Loads training emails from all JSONL files inside emails_training_data/.
+    Each line in a JSONL file should be a JSON email record that may include
+    ground-truth label fields (duplicate, expired_offer, old_alert, past_event, spam).
+    """
+    rows = []
+    pattern = os.path.join(TRAINING_DATA_DIR, "**", "*.jsonl")
+    for path in glob_module.glob(pattern, recursive=True):
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    rows.append(_build_row(json.loads(line)))
+
+    return pd.DataFrame(rows)
+
+
+def load_emails_from_api(max_results: int = 500) -> pd.DataFrame:
+    """
+    Fetches live emails from Gmail via the API client and returns a DataFrame
     with the same schema expected by the model pipeline.
     Labels default to 0 (unclassified) for live inference.
     """
     creds = authenticate()
     raw_emails = scrape_emails(creds, max_results=max_results)
-
-    rows = []
-    for email in raw_emails:
-        subject   = email.get("subject", "") or ""
-        body_text = email.get("body_text", "") or ""
-        combined  = f"{subject}\n\n{body_text}".strip()
-
-        row = {
-            "id":               email["id"],
-            "text":             combined,
-            "subject":          subject,
-            "from_email":       email.get("from_email", ""),
-            "date_iso":         email.get("date_iso", ""),
-            "gmail_labels":     email.get("gmail_labels", []),
-            "list_unsubscribe": email.get("list_unsubscribe", ""),
-            "spam_headers":     email.get("spam_headers", {}),
-            "link_count":       len(email.get("links", [])),
-        }
-        for label in EMAIL_LABELS:
-            row[label] = 0
-
-        rows.append(row)
-
+    rows = [_build_row(email, default_labels=True) for email in raw_emails]
     return pd.DataFrame(rows)
 
 
