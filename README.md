@@ -2,27 +2,7 @@
 
 Collaborators: Avni Mishra, Jasmin Duong, Rebecca Choi, Jayden Ngo
 
-
 The google account storage manager is a tool that scrapes your emails and photos and tells you what items to delete so you can manage your storage without painstakingly comb through every single file in your gmail and google photos app. 
-
-
-## Userwork Flow 
-
-TODO 
-
-## The Components
-
-### Models 
-
-#### Email 
-
-TODO
-
-#### Photo 
-
-TODO 
-
-### Client 
 
 We used the Google Cloud API to set up a more seemless user workflow. 
 
