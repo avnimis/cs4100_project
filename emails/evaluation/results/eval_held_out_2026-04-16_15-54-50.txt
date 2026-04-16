@@ -1,0 +1,75 @@
+EMAIL MODEL EVALUATION — held-out eval set
+Run timestamp : 2026-04-16_15-54-50
+Model         : /Users/disco/Documents/cs4100/cs4100_project/emails/email_classifier.pt
+Threshold     : 0.5
+Device        : cpu
+
+Loading eval data...
+Evaluating on 51 labelled emails
+
+Loading model...
+============================================================
+PER-CLASS METRICS
+============================================================
+               precision    recall  f1-score   support
+
+    duplicate       0.19      1.00      0.32         8
+expired_offer       0.00      0.00      0.00         8
+    old_alert       0.00      0.00      0.00         9
+   past_event       0.00      0.00      0.00         9
+         spam       0.00      0.00      0.00         9
+
+    micro avg       0.19      0.19      0.19        43
+    macro avg       0.04      0.20      0.06        43
+ weighted avg       0.04      0.19      0.06        43
+  samples avg       0.16      0.14      0.14        43
+
+============================================================
+PER-CLASS CONFUSION MATRICES
+  (TN  FP)
+  (FN  TP)
+============================================================
+
+duplicate:
+  TN=9  FP=34
+  FN=0  TP=8
+
+expired_offer:
+  TN=43  FP=0
+  FN=8  TP=0
+
+old_alert:
+  TN=42  FP=0
+  FN=9  TP=0
+
+past_event:
+  TN=42  FP=0
+  FN=9  TP=0
+
+spam:
+  TN=42  FP=0
+  FN=9  TP=0
+
+not_delete (keep email):
+  TN=34  FP=7
+  FN=8  TP=2
+
+============================================================
+AVERAGE PREDICTED PROBABILITY PER CLASS
+============================================================
+  duplicate            0.6933
+  expired_offer        0.0030
+  old_alert            0.0028
+  past_event           0.0020
+  spam                 0.0026
+
+============================================================
+THRESHOLD SENSITIVITY  (overall F1 at different cutoffs)
+============================================================
+  threshold=0.3  macro-F1=0.0582
+  threshold=0.4  macro-F1=0.0604
+  threshold=0.5  macro-F1=0.0640 ← current
+  threshold=0.6  macro-F1=0.0744
+  threshold=0.7  macro-F1=0.0821
+
+Results saved to: /Users/disco/Documents/cs4100/cs4100_project/emails/evaluation/results/eval_held_out_2026-04-16_15-54-50.txt
